@@ -41,7 +41,7 @@
 			$francescobertele_description = get_bloginfo( 'description', 'display' );
 			if ( $francescobertele_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $francescobertele_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
