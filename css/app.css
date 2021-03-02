@@ -1,0 +1,84 @@
+
+
+
+
+/* general inizio */
+
+	/* general  general*/
+
+		body {
+			background: red;
+		}
+
+
+	/* general  extra medium*/
+
+		@media only screen and (min-width: 63.9375em)  {
+		}
+
+	/* general  medium*/
+
+		@media only screen and (max-width: 63.9375em)  {
+		}
+
+	/* general  mobile*/
+
+		@media screen and (max-width: 39.9375em) {
+		}
+
+	/* general  extra mobile*/
+		@media screen and (max-width: 28.125em) {
+		}
+
+
+/* general fine */
+/* XXXXX inizio */
+
+	/* XXXXX  general*/
+
+	/* XXXXX  extra medium*/
+
+		@media only screen and (min-width: 63.9375em)  {
+		}
+
+	/* XXXXX  medium*/
+
+		@media only screen and (max-width: 63.9375em)  {
+		}
+
+	/* XXXXX  mobile*/
+
+		@media screen and (max-width: 39.9375em) {
+		}
+
+	/* XXXXX  extra mobile*/
+		@media screen and (max-width: 28.125em) {
+		}
+
+
+/* XXXXX fine */
+/* XXXXX inizio */
+
+	/* XXXXX  general*/
+
+	/* XXXXX  extra medium*/
+
+		@media only screen and (min-width: 63.9375em)  {
+		}
+
+	/* XXXXX  medium*/
+
+		@media only screen and (max-width: 63.9375em)  {
+		}
+
+	/* XXXXX  mobile*/
+
+		@media screen and (max-width: 39.9375em) {
+		}
+
+	/* XXXXX  extra mobile*/
+		@media screen and (max-width: 28.125em) {
+		}
+
+
+/* XXXXX fine */
