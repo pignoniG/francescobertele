@@ -146,7 +146,9 @@ function francescobertele_scripts() {
 
 	wp_enqueue_style( 'francescobertele-style', get_stylesheet_uri(), array(), _S_VERSION );
 
-	wp_enqueue_style( 'francescobertele-style-app', get_template_directory_uri() . '/css/app.css' );
+	wp_enqueue_style( 'francescobertele-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
+
+	
 
 	wp_style_add_data( 'francescobertele-style', 'rtl', 'replace' );
 
@@ -156,15 +158,66 @@ function francescobertele_scripts() {
 
 	wp_enqueue_script( 'francescobertele-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
+	wp_enqueue_style( 'francescobertele-style-select', get_template_directory_uri() . '/css/select2.min.css' );
+
 	wp_enqueue_script( 'francescobertele-app', get_template_directory_uri() . '/js/app.js', array(), _S_VERSION, true );
 
+	wp_enqueue_script( 'francescobertele-general', get_template_directory_uri() . '/js/general.js', array(), _S_VERSION, true );
+	wp_enqueue_style( 'francescobertele-style-app', get_template_directory_uri() . '/css/app.css' );
 
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		/**wp_enqueue_script( 'comment-reply' ); */
-	}
+
 }
 add_action( 'wp_enqueue_scripts', 'francescobertele_scripts' );
+
+
+
+
+function home_js(){
+    if ( is_front_page()  ){
+    	wp_enqueue_script( 'francescobertele-page-home', get_template_directory_uri() . '/js/page-home.js', array(), '1', true );
+    }
+}
+add_action('wp_enqueue_scripts', 'home_js');
+
+
+function oeuvre_js(){
+   if( is_page('oeuvre') ){
+
+
+   		wp_enqueue_script( 'francescobertele-select-js', get_template_directory_uri() . '/js/select2.min.js', array(), _S_VERSION, true );
+
+
+   		wp_enqueue_script( 'francescobertele-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), _S_VERSION, true );
+
+   		wp_enqueue_script( 'francescobertele-imagesloaded', get_template_directory_uri() . '/js/	imagesloaded.pkgd.min.js', array(), _S_VERSION, true );
+
+   	
+    	wp_enqueue_script( 'francescobertele-page-oeuvre', get_template_directory_uri() . '/js/page-oeuvre.js', array(), '1', true );
+
+    }
+}
+add_action('wp_enqueue_scripts', 'oeuvre_js');
+
+
+
+
+function onair_js(){
+   if( is_page('onair') ){
+
+   		wp_enqueue_style( 'francescobertele-style-flickity', get_template_directory_uri() . '/css/flickity.css' );
+
+   		wp_enqueue_script( 'francescobertele-imagesloaded', get_template_directory_uri() . '/js/	imagesloaded.pkgd.min.js', array(), _S_VERSION, true );
+
+		wp_enqueue_script( 'francescobertele-flickity', get_template_directory_uri() . '/js/	flickity.pkgd.min.js', array(), _S_VERSION, true );
+
+    	wp_enqueue_script( 'francescobertele-page-onair', get_template_directory_uri() . '/js/page-onair.js', array(), '1', true );
+    }
+}
+add_action('wp_enqueue_scripts', 'onair_js');
+
+
+
 
 /**
  * Implement the Custom Header feature.
@@ -194,3 +247,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 add_filter( 'wpm_post_post_config', '__return_null' );
+
+
+
+
+show_admin_bar(false);
+
+remove_image_size('post-thumbnail');
+
+
+if ( function_exists( 'fly_add_image_size' ) ) {
+    fly_add_image_size( 'hd-for-interface',2500, 2500, false );
+    fly_add_image_size( 'thumbnail-medium-for-interface', 700, 700, false ); 
+    fly_add_image_size( 'thumbnail-small-for-interface', 350, 350, false ); 
+}
+
+add_filter('jpeg_quality', function($arg){return 80;});
+
+
+
