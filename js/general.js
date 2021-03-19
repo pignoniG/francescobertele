@@ -39,12 +39,11 @@ $(document).ready(function()
 		    X: ${e.clientX}, Y: ${e.clientY}`;
 		}
 
-		//ip text
 
 
-		$.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
-  			  $("#ip-log").html(JSON.stringify(data, null, 2));
-			});
+    	$.get("http://ip-api.com/json?callback=?", function (response) {
+    		$("#ip-log").html(response.query);
+    	}, "jsonp");
 
 
 
