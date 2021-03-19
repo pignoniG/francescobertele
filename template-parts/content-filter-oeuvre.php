@@ -25,7 +25,8 @@ $global_filter_items= array();
   <button class="accordion braketed" id="accordionFilters" >
   <?php echo  wpm_translate_string( "[:en]Filter[:it]Filtri[:]", $language = '' ); ?>
 </button>
-  <input type="text" id="quicksearch" class="quicksearch" placeholder="Search" disabled>
+  <input type="text" id="quicksearch" class="quicksearch" placeholder="<?php echo  wpm_translate_string( "[:en]Search[:it]Cerca[:]", $language = '' ); ?>
+   " disabled>
  
   <div class="panel filter_panel">
       <div class="label-container">

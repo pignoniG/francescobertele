@@ -41,11 +41,13 @@ $(document).ready(function()
 
 		//ip text
 
-    	$.get("https://api.ipdata.co?api-key=test", function (response) {
 
-  
-    		$("#ip-log").html(response.ip);
-    	}, "jsonp");
+		$.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
+  			  $("#ip-log").html(JSON.stringify(data, null, 2));
+			});
+
+
+
 
 
 
