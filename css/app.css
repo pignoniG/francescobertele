@@ -1039,8 +1039,8 @@ div.ouvre-grid{
 
 
             .wpm-language-switcher.switcher-list {
-                position: absolute;
-                top: calc(-100vh + 50px);
+                position: fixed;
+                top: 0;
                 right: 0;
             }
 
