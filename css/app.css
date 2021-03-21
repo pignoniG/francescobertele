@@ -1056,6 +1056,13 @@ div.ouvre-grid{
 
 		@media screen and (max-width: 39.9375em) {
 
+            div#myBanner.blocked {
+                top: 50%;
+                height: 60%;
+                width: 90%;
+            }
+
+
             div.menu-buttons .center a:hover + span{
                 font-size: 17vw;
             }
