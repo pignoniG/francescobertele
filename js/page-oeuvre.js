@@ -160,6 +160,20 @@ jQuery("#accordionFilters").on('click', function( event ){
 
       setHash(3, this);
   });
+
+  function ceckRes(){
+    if (document.body.clientWidth < 1024) {
+
+      console.log("cazz")
+      document.getElementById('btn-reset-filter').click();
+      $(".filter_panel").hide();
+      jQuery('#quicksearch').val("");
+      qsRegex = new RegExp("", "gi");
+      setHash(1);
+      filterWithHash();
+
+    }
+  }
   
   function removeDisabled() {
     jQueryfilterElements.prop('disabled', false);
@@ -563,12 +577,21 @@ jQuery("#accordionFilters").on('click', function( event ){
     evidenziaTemi();
 
     jQuery(window).on( 'hashchange', filterWithHash );
+
+
     removeDisabled();
+    ceckRes();
+
   });
 
 
+$(window).resize(function() {
+   ceckRes();
+});
 
 
 
 });
+
+
 // CLOSE FILTERING SYSTEM JS —————————————————————————————————————————————

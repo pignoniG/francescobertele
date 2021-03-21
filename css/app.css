@@ -42,12 +42,24 @@
 		body {
 			background: whitesmoke;
 			font-family: "founders-grotesk-web",sans-serif;
+            padding-bottom: 50px;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
 		font-family: "founders-grotesk-web",sans-serif;
 	
 		}
+
+        a:visited {
+            color:red;
+        }
+        a{
+            color: red;
+        }
+        a:hover{
+            color: black;
+        }
+     
 
 
 
@@ -194,16 +206,29 @@
 	/* general  extra medium*/
 
 		@media only screen and (min-width: 63.9375em)  {
+
+            .noDesktop{
+                display: none!important;
+            }
+
 		}
 
 	/* general  medium*/
 
 		@media only screen and (max-width: 63.9375em)  {
+            .noMedium{
+                display: none!important;
+            }
+
 		}
 
 	/* general  mobile*/
 
 		@media screen and (max-width: 39.9375em) {
+
+            .noMobile{
+                display: none!important;
+            }
 		}
 
 	/* general  extra mobile*/
@@ -484,6 +509,15 @@
             letter-spacing: 0.5px;
             display: inline-block;
             padding-right: 19px;
+            
+        }
+        div#sort-filter h1.title{
+            color: red;
+
+        }
+        div#sort-filter h1.title span{
+            color: black;
+            padding-left: 15px;
         }
 
         div#sort-filter {
@@ -493,7 +527,7 @@
             width: 100vw;
             left: 0;
             padding-left: 5vw;
-            background: white;
+            background: #ffffffd6;
             padding-top: 4px;
             height: 46px;
             top: 0;
@@ -559,7 +593,6 @@
             cursor: pointer;
             text-align: center;
             outline: none;
-            transition: 0.4s;
             font-size: 13px;
             font-family: PilatWide-Book;
             margin-left: 20px;
@@ -588,7 +621,7 @@
             cursor: pointer;
             text-align: center;
             outline: none;
-            transition: 0.4s;
+            
             font-size: 13px;
             font-family: PilatWide-Book;
             margin-left: 20px;
@@ -979,7 +1012,11 @@ div.menu-buttons .center a:hover + span  {
     z-index: -10;
     text-transform: uppercase;
 }
-
+div.ouvre-grid{
+    padding-top: 80px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
 
 
 
@@ -994,11 +1031,36 @@ div.menu-buttons .center a:hover + span  {
 	/* oeuvre  medium*/
 
 		@media only screen and (max-width: 63.9375em)  {
+
+
+            .wpm-language-switcher.switcher-list {
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+
+            div.ouvre_project_box {
+                margin-right: 0px;
+                width: 45%;
+                margin: 0px;
+            }
+
 		}
 
 	/* oeuvre  mobile*/
 
 		@media screen and (max-width: 39.9375em) {
+            div.ouvre-grid {
+
+            padding-top: 80px;
+            padding-left: 0;
+            padding-right: 0;}
+
+            div.ouvre_project_box {
+                margin-right: 0px;
+                width: 100%;
+                margin: 0px;
+            }
 		}
 
 	/* oeuvre  extra mobile*/
@@ -1007,28 +1069,306 @@ div.menu-buttons .center a:hover + span  {
 
 
 /* oeuvre fine */
-/* XXXXX inizio */
 
-	/* XXXXX  general*/
 
-	/* XXXXX  extra medium*/
 
-		@media only screen and (min-width: 63.9375em)  {
-		}
+/* onair inizio */
 
-	/* XXXXX  medium*/
 
-		@media only screen and (max-width: 63.9375em)  {
-		}
+    div.onair_flow{
+        margin-top: calc(50vh - 25vh);
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
 
-	/* XXXXX  mobile*/
+    div.onair_flow a.carousel-cell {
+        width: 30vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        height: 50vh;
+        background-clip: content-box;
+        max-height: 33vw;
+        background-position: center;
+        background-size: cover;
+    }
 
-		@media screen and (max-width: 39.9375em) {
-		}
+    div.onair_flow .flickity-prev-next-button.previous {
+        left: calc(-1.2vw - 22px);
+        background: transparent!important;
+    }
+    div.onair_flow .flickity-prev-next-button.next {
+        right: calc(-1.2vw - 22px);
+        background: transparent!important;
+    }
+    div.onair_flow .flickity-prev-next-button svg{
+        display: none;
+    }
 
-	/* XXXXX  extra mobile*/
-		@media screen and (max-width: 28.125em) {
-		}
+    div.onair_flow .flickity-prev-next-button.next::after{
+        content: "\2192";
+        font-size: 40px;
+        position: relative;
+        top: -8px;
+        left: -9px;
+    }
+    div.onair_flow .flickity-prev-next-button.previous::after{
+        content: "\2190";
+        font-size: 40px;
+        position: relative;
+        top: -8px;
+        left: -9px;
+    }
+    div.onair_flow p.main-carousel-caption 
+    {
+        margin-top: 20px;
+    }
+    div.onair_flow span.caption.number{
+        float: right;
+    }
+    div.onair_button{
+        text-align: center;
+    }
+    div.onair_button a{
+        color: red;
+        font-size: 16px;
+    }
+    
+
+
+    
+    /* onair  general*/
+
+    /* onair  extra medium*/
+
+        @media only screen and (min-width: 63.9375em)  {
+        }
+
+    /* onair  medium*/
+
+        @media only screen and (max-width: 63.9375em)  {
+
+
+
+            div.onair_flow{
+                margin-top: calc(50vh - 25vh);
+                margin-left: 8vw;
+                margin-right: 8vw;
+            }
+        
+            div.onair_flow a.carousel-cell {
+                width: 60vw;
+                padding-left: 2vw;
+                padding-right: 2vw;
+                height: 50vh;
+                max-height: 60vw;
+                
+            }
+        
+            div.onair_flow .flickity-prev-next-button.previous {
+                left: calc(-2.5vw - 22px);
+            }
+            div.onair_flow .flickity-prev-next-button.next {
+                right: calc(-2.5vw - 22px);
+            }
+        
+        
+            div.onair_flow .flickity-prev-next-button.next::after, 
+            div.onair_flow .flickity-prev-next-button.previous::after{
+                font-size: 30px;
+            }
+            }
+    
+
+    /* onair  mobile*/
+
+        @media screen and (max-width: 39.9375em) {
+
+
+
+            div.onair_flow{
+                margin-top: calc(40vh - 25vh);
+                margin-left: 0;
+                margin-right: 0;
+            }
+        
+            div.onair_flow a.carousel-cell {
+                width: 80vw;
+                padding-left: 2vw;
+                padding-right: 2vw;
+                height:70vh;
+                max-height: 90vw;
+                
+            }
+        
+            div.onair_flow .flickity-prev-next-button.previous,
+            div.onair_flow .flickity-prev-next-button.next {
+                display: none;
+            }
+            div.onair_flow p.main-carousel-caption 
+            {
+                padding-left: 8vw;
+                padding-right: 8vw;
+            }
+        
+    
+        }
+
+    /* onair  extra mobile*/
+        @media screen and (max-width: 28.125em) {
+        }
+
+
+/* onair fine */
+/* ask inizio */
+
+
+    /* ask  general*/
+
+    button.accordion.braketed.ask-tab {
+        float: none;
+        display: inline-block;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    div.ask-content{
+        display: none;
+        margin-top: 100px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    div.ask-themes{
+        display: none;
+
+        border-left: 1px solid black;
+        padding-left: 50px
+    }
+    div.ask-content.visible, 
+    div.ask-themes.visible{
+        display: flex;    
+    }   
+    button.accordion.braketed.ask-sidebar{
+        display: block;
+        float: left;
+        margin-right: 0vw;
+        margin-top: 0px;
+        margin-left: 0px;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-left: none;
+        font-family: PilatWide-Book;
+        font-size: 13px;
+        padding-left: 0px;
+        letter-spacing: 5px;
+
+    }
+    body.page-id-190 div#sort-filter {
+        padding-right: 113px;
+    }
+
+
+/* transition: 0.4s; 
+    
+
+    /* ask  extra medium*/
+
+        @media only screen and (min-width: 63.9375em)  {
+        }
+
+    /* ask  medium*/
+
+         @media only screen and (max-width: 63.9375em)  {
+
+            div.ask-themes{
+                
+        
+                border-left: 0px solid transparent ;
+                padding-left: 0px
+            }
+
+             div.ask-themes div.sub_title{
+                margin-bottom: 10px;
+             }
+             div.ask-themes div.sub_desc{
+                margin-bottom: 20px;
+             }
+        
+
+             button.accordion.braketed.ask-tab {
+        
+                margin: 2.5px 0;
+            }
+
+            button.accordion.braketed.ask-sidebar{
+
+                width: auto;
+                display: inline;
+            }
+            div.ask-sidebar{
+                margin-bottom: 50px;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 810px)  {
+
+            
+            body.page-id-190 div#sort-filter {
+
+                height: 80px;
+                padding-right: 113px;
+                padding-left: 85px;
+
+            }
+
+            body.page-id-190 div#sort-filter h1.title{
+                position: absolute;
+                left: 50px;
+            
+
+            }
+
+           
+        }
+
+    /* ask  mobile*/
+
+        @media screen and (max-width: 39.9375em) {
+        }
+
+    /* ask  extra mobile*/
+        @media screen and (max-width: 28.125em) {
+        }
+
+
+/* ask fine */
+
+/* XXXXX fine *//* XXXXX inizio */
+
+    /* XXXXX  general*/
+
+    /* XXXXX  extra medium*/
+
+        @media only screen and (min-width: 63.9375em)  {
+        }
+
+    /* XXXXX  medium*/
+
+        @media only screen and (max-width: 63.9375em)  {
+        }
+
+    /* XXXXX  mobile*/
+
+        @media screen and (max-width: 39.9375em) {
+        }
+
+    /* XXXXX  extra mobile*/
+        @media screen and (max-width: 28.125em) {
+        }
 
 
 /* XXXXX fine */

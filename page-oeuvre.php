@@ -46,8 +46,9 @@ get_header(); ?>
 				'post_type'         => 'progetto',
 						'cat' => 13,
         				'post_status' => 'publish',
-        				'orderby' => 'title', 
-        				'order' => 'ASC', 
+        				'meta_key'			=> 'project_date',
+						'orderby'			=> 'meta_value',
+						'order'				=> 'DESC'
 			);
 
 			$custom_query = new WP_Query( $args );

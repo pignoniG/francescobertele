@@ -48,6 +48,24 @@ $(document).ready(function()
 
 
 
+		var current_href= String(window.location.href);
+
+	   	$( ".menu-buttons a" ).each(function( index ) {
+
+	   		var element_href= String($(this).attr('href'));
+
+	   		if (element_href) {
+
+  			if ( current_href.includes(element_href) ){
+
+  				$(this).addClass("active");
+		}}
+	});
+
+
+
+
+
 
 
 

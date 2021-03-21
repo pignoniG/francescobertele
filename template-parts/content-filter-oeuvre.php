@@ -18,14 +18,14 @@ $global_filter_items= array();
 
 
 <div id="sort-filter">
-    <h1>Oeuvre  <span class="section-subtitle">
+    <h1 class="title">Oeuvre  <span class="section-subtitle">
       <?php echo  wpm_translate_string( "[:en]artist archive[:it]archivio d'artista[:]", $language = '' ); ?>
     </span></h1>
   <!-- Filter Div -->
-  <button class="accordion braketed" id="accordionFilters" >
+  <button class="accordion braketed noMedium" id="accordionFilters" >
   <?php echo  wpm_translate_string( "[:en]Filter[:it]Filtri[:]", $language = '' ); ?>
 </button>
-  <input type="text" id="quicksearch" class="quicksearch" placeholder="<?php echo  wpm_translate_string( "[:en]Search[:it]Cerca[:]", $language = '' ); ?>
+  <input type="text" id="quicksearch" class="quicksearch noMedium" placeholder="<?php echo  wpm_translate_string( "[:en]Search[:it]Cerca[:]", $language = '' ); ?>
    " disabled>
  
   <div class="panel filter_panel">
@@ -33,10 +33,6 @@ $global_filter_items= array();
 
       <div class="label-filters-container">
 
-
-      
-
-        
         <h1 class="label-filters corpus">Corpus</h1>
         <h1 class="label-filters">
         <?php echo  wpm_translate_string( "[:en]Status[:it]Stato[:]", $language = '' ); ?>
@@ -44,7 +40,6 @@ $global_filter_items= array();
         <h1 class="label-filters">
           <?php echo  wpm_translate_string( "[:en]Object[:it]Oggetto[:]", $language = '' ); ?></h1>
       </div>
-
 
 
       <div class="filters">
