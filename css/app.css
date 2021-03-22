@@ -1305,6 +1305,21 @@ div.ouvre-grid{
     body.page-id-190 div#sort-filter {
         padding-right: 113px;
     }
+    div.ask-themes div.sub_desc{
+        margin-bottom: 1rem;
+
+    }
+    div.ask-themes div.sub_title p{
+        padding-right: 15px; 
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+
+    }
+
+     
+        
 
 
 /* transition: 0.4s; 
