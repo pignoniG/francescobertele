@@ -25,6 +25,11 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'francescobertele' ); ?></a>
 
+	<span class="onlyMedium">
+
+    <?php if ( function_exists ( 'wpm_language_switcher') ) wpm_language_switcher ('list', 'name'); ?>
+    </span>
+
 <div class="cursor" >
   <div class="cursor-lines">
     <div class="vt"></div>
