@@ -1114,6 +1114,9 @@ div.ouvre-grid{
 
     div.onair_flow{
         margin-top: calc(50vh - 25vh);
+        margin-top: calc(var(--app-height) * 0.5 - var(--app-height) * 0.25);
+
+        
         margin-left: 5vw;
         margin-right: 5vw;
     }
@@ -1187,7 +1190,9 @@ div.ouvre-grid{
 
 
             div.onair_flow{
+                
                 margin-top: calc(50vh - 25vh);
+                margin-top: calc(var(--app-height) * 0.5 - var(--app-height) * 0.25);
                 margin-left: 8vw;
                 margin-right: 8vw;
             }
@@ -1224,6 +1229,8 @@ div.ouvre-grid{
 
             div.onair_flow{
                 margin-top: calc(40vh - 25vh);
+                margin-top: calc(var(--app-height) * 0.4 - var(--app-height) * 0.25);
+                
                 margin-left: 0;
                 margin-right: 0;
             }
