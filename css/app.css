@@ -35,6 +35,11 @@
 
 
 
+:root {
+   --app-height: 100%;
+}
+
+
 /* general inizio */
 
 	/* general  general*/
@@ -154,7 +159,14 @@
 		 body.home.page {
 			 margin: 0 0 0;
 			height: 100vh;
-            height: -webkit-fill-available;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            height: var(--app-height);
+            
+
 		 	background-repeat: no-repeat;
 			background-position:  center;
 			background-size: contain;
@@ -1018,7 +1030,9 @@ div.ouvre-grid{
     padding-left: 5vw;
     padding-right: 5vw;
 }
-
+.switcher-list li a, .switcher-list li>span {
+    color: #000;
+}
 
 
 
@@ -1039,9 +1053,12 @@ div.ouvre-grid{
 
 
             .wpm-language-switcher.switcher-list {
-                position: fixed;
-                top: 0;
+                position: absolute;
+                bottom: calc(100vh - 50px);
+                bottom: calc(var(--app-height) - 50px);
+                text-shadow: 0px 0px 15px #FFF;
                 right: 0;
+
             }
 
             div.ouvre_project_box {
