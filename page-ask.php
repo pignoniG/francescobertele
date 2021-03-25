@@ -15,22 +15,27 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 
-			<div id="sort-filter">
-    			<h1 class="title">Ask</h1>
+			<div id="sort-filter" class="">
+    			<h1 class="title">Ask <span class="ask-nav noDesktop arrowed">Themes</span></h1>
 
-    			  <button class="accordion braketed ask-tab"  data-targhet="#themes">
+    			  <button class="accordion braketed ask-tab"  data-targhet="#themes"
+    			  data-textnav="<?php echo  wpm_translate_string( "[:en]Themes[:it]Temi[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Themes[:it]Temi[:]", $language = '' ); ?>
 				  </button>
-				   <button class="accordion braketed ask-tab"  data-targhet="#biography">
+				   <button class="accordion braketed ask-tab"  data-targhet="#biography"
+				   data-textnav="<?php echo  wpm_translate_string( "[:en]Biography[:it]Biografia[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Biography[:it]Biografia[:]", $language = '' ); ?>
 				  </button>
-				  <button class="accordion braketed ask-tab"  data-targhet="#become-a-trustee">
+				  <button class="accordion braketed ask-tab"  data-targhet="#become-a-trustee"
+				  data-textnav="<?php echo  wpm_translate_string( "[:en]Trustee[:it]Fiduciario[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Trustee[:it]Fiduciario[:]", $language = '' ); ?>
 				  </button>
-				  <button class="accordion braketed ask-tab"  data-targhet="#bibliography">
+				  <button class="accordion braketed ask-tab"  data-targhet="#bibliography"
+				  data-textnav="<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>
 				  </button>
-				  <button class="accordion braketed ask-tab"  data-targhet="#artistic_dir">
+				  <button class="accordion braketed ask-tab"  data-targhet="#artistic_dir"
+				  data-textnav="<?php echo  wpm_translate_string( "[:en]A.D.[:it]D.A.[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Artistic direction[:it]Direzione artistica[:]", $language = '' ); ?>
 				  </button>
 
@@ -39,13 +44,13 @@ get_header(); ?>
 			<?php  include(locate_template('template-parts/content-ask-themes.php')); ?>
 
 			<div class="ask-content grid-x" id="biography">
-  					<div class="cell medium-12 large-8">
+  					<div class="cell medium-12 large-10">
 						<?php the_field('ask_biography'); ?>
 					</div>
 
 			</div>
 			<div class="ask-content grid-x" id="become-a-trustee">
-  					<div class="cell medium-12 large-8">
+  					<div class="cell medium-12 large-10">
 						<?php the_field('ask_trustee'); ?>
 					</div>
 
@@ -54,7 +59,7 @@ get_header(); ?>
 			<?php  include(locate_template('template-parts/content-ask-bibliography.php')); ?>
 
 			<div class="ask-content grid-x" id="artistic_dir">
-  					<div class="cell medium-12 large-6">
+  					<div class="cell medium-12 large-10">
   						<?php the_field('ask_ad'); ?>	
   						</div>
 			</div>

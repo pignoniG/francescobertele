@@ -56,7 +56,7 @@ get_header(); ?>
 			// The Loop!
 			if ($custom_query->have_posts()) {
 				
-				echo $progetti_counter;
+				
 			    ?>
 			    
 			   		<?php
