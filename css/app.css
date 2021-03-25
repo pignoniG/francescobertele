@@ -600,6 +600,8 @@
 
         .select2-container--default .select2-selection--single, select#specificity {
             background-color: transparent;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
             border: none !important;
             border-bottom: 1px solid black !important;
         }
@@ -687,8 +689,8 @@
             overflow: hidden;
             width: calc(100vw - 34px);
             position: fixed;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
             left: 0;
             padding-left: calc(5vw - 17px);
             padding-right: calc(5vw - 17px);
@@ -742,8 +744,8 @@
             overflow: hidden;
             width: calc(100vw - 34px);
             position: fixed;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
             left: 0;
             padding-left: calc(5vw - 17px);
             padding-right: calc(5vw - 17px);
