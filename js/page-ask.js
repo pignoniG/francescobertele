@@ -73,6 +73,11 @@ $(document).ready(function()
       $("#sort-filter").toggleClass("open");
       });   
 
+    $(window).scroll(function() {
+      $("#sort-filter").removeClass("open");
+
+    });
+
 		$("button.ask-tab").click(function(){
    
 
