@@ -972,7 +972,8 @@
         border: 1px solid black;
         transform: translate(-50%, -50%);
         background-color: #ffffffd6;
-        overflow: auto; /* Disable horizontal scroll */
+         /* Disable horizontal scroll */
+        overflow: hidden;
         padding-top: 0px; /* Place content 60px from the top */
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
@@ -987,7 +988,7 @@
         top: 50%;
         height: 50%;
         width: 50%;
-        overflow: hidden;
+        overflow: auto;
     }
 
     #banner-dimmer.blocked {
