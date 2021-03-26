@@ -1,4 +1,20 @@
 
+
+
+
+
+$(document).mouseup(function(e) 
+{
+    var container = $("#sort-filter");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        $("#sort-filter").removeClass("open");
+    }
+});
+
+
 (function( $ ){
 
   $.fn.fitText = function( kompressor, options ) {
@@ -49,6 +65,13 @@
 })( jQuery );
 
 
+
+function myPopup(myURL, title, myWidth, myHeight) {
+            var left = (screen.width - myWidth) / 2;
+            var top = (screen.height - myHeight) / 2;
+            var myWindow = window.open(myURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + myWidth + ', height=' + myHeight + ', top=' + top + ', left=' + left);
+         }
+
 $(document).ready(function() 
     { 
 
@@ -90,6 +113,7 @@ $(document).ready(function()
         jQuery("#artistic_dir div").fitText();
         jQuery("#become-a-trustee div").fitText();
         jQuery("#biography div").fitText();
+        
         $(window).scrollTop(0);
 		});    	
 

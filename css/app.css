@@ -1485,7 +1485,33 @@ div.ouvre-grid{
          height: 10px;
     }
 
-/* transition: 0.4s; 
+    td.col-title{
+        cursor: pointer;
+    }
+
+    td.col-title:hover span{
+        position: absolute;
+        padding-top: 50px;
+        padding-bottom:50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-origin: content-box;
+        background-clip: padding-box;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        background-position: center;
+        background-blend-mode: multiply;
+        background-color: whitesmoke;
+
+    }
+
+    
     
 
     /* ask  extra medium*/

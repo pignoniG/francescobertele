@@ -54,9 +54,10 @@
   								?>
 								<tr>
     								<td class="col-year"> <?php echo $biblio_current_data; ?></td>
-    								<td class="col-title">
+    								<td onclick=" myPopup ('<?php echo $biblio_current_link; ?>', 'web', 650, 450);" class="col-title ">
+    								<span style="background-image: url('<?php echo $biblio_current_image; ?>');"></span>
 
-        							<a onclick=" myPopup ('<?php echo $biblio_current_link; ?>', 'web', 650, 450);" target="_blank"  data-hoverimageid="396" data-hoverimage="<?php echo $biblio_current_mage; ?>"><?php echo $biblio_current_titolo; ?></a>
+        							<a  target="_blank"><?php echo $biblio_current_titolo; ?></a>
   
     								</td>
   								</tr>
