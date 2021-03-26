@@ -987,6 +987,7 @@
         top: 50%;
         height: 50%;
         width: 50%;
+        overflow: hidden; 
     }
 
     #banner-dimmer.blocked {
