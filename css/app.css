@@ -1376,12 +1376,12 @@ div.ouvre-grid{
     div.ask-themes{
         display: none;
         border-left: 1px solid black;
-        padding-left: 50px
+        padding-left: 50px;
     }
 
     div.ask-content.visible, 
     div.ask-themes.visible{
-        display: flex;    
+        display: flex;   
     }   
     button.accordion.braketed.ask-sidebar{
         display: block;
@@ -1524,6 +1524,26 @@ div.ouvre-grid{
     /* ask  medium*/
 
          @media only screen and (max-width: 63.9375em)  {
+            div.ask-content{
+                margin-top: 30px;
+            }
+
+            div.ask-themes{
+                display: flex;
+                border-left: 1px solid black;
+                padding-left: 50px;
+                max-height: 0;
+                transition: max-height 0.4s ease-out;
+                overflow: hidden;
+            }
+
+            div.ask-content.visible, 
+            div.ask-themes.visible{
+                display: flex;   
+                height: auto; 
+                max-height: 3000px;
+                transition: max-height 0.2s ease-in;
+            }   
 
              body.page-id-190 div#sort-filter {
 
@@ -1579,9 +1599,14 @@ div.ouvre-grid{
             }
 
             button.accordion.braketed.ask-sidebar{
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid;
+                margin-left: -6px;
+                margin-right: -6px;
 
-                width: auto;
-                display: inline;
+                
+                display: block;
             }
             div.ask-sidebar{
                 margin-bottom: 50px;
@@ -1602,13 +1627,13 @@ div.ouvre-grid{
             }
 
             div.ask-content {
-                margin-top: 60px;
-                margin-left: 25px;
-                margin-right: 25px;
+                margin-top: 30px;
+                margin-left: 23px;
+                margin-right: 12px;
             }
             button.accordion.braketed.ask-sidebar {
        
-                width: auto;
+                
 
             }
          

@@ -22,7 +22,7 @@
 	
 		        ?>
 
-		        	<button class="accordion braketed ask-sidebar"  data-targhet="<?php echo $targhet_filtered; ?>">
+		        	<button class="accordion braketed ask-sidebar noMedium"  data-targhet="<?php echo $targhet_filtered; ?>">
 					<?php echo get_sub_field('ask_theme_title'); ?>
 					</button>
 				<?php
@@ -42,6 +42,17 @@
 		    	$targhet_filtered= filter_var( "sidebar_".get_sub_field('ask_theme_title'), FILTER_SANITIZE_URL);
 	
 		        ?>
+
+		        
+
+					<div class="cell small-12 large-12 noDesktop" >
+							<button class="accordion braketed ask-sidebar"  data-targhet="<?php echo "#".$targhet_filtered; ?>">
+							<?php echo get_sub_field('ask_theme_title'); ?>
+							</button>
+						
+					</div>
+
+
 		        	<div class="cell small-12 large-8 grid-x ask-themes" id="<?php echo $targhet_filtered; ?>">
 
 		        		<?php

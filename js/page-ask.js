@@ -77,17 +77,27 @@ $(document).ready(function()
 
     	
 		$("button.ask-sidebar").click(function(){
+
+      if ($(this).hasClass("active") && window.innerWidth < 1024) {
+        $("div.ask-themes").removeClass("visible");
+        $("button.ask-sidebar").removeClass("active");
+
+      }
+      else{
+        $("div.ask-themes").removeClass("visible");
+        $("button.ask-sidebar").removeClass("active");
+        $(this).addClass("active");
+
+
+        $($(this).attr('data-targhet')).addClass("visible");
+
+
+      }
+
       
 
-  			$("div.ask-themes").removeClass("visible");
-  			$("button.ask-sidebar").removeClass("active");
-  			$(this).addClass("active");
-
-
-  			$($(this).attr('data-targhet')).addClass("visible");
-        jQuery("#artistic_dir div").fitText();
-        jQuery("#become-a-trustee div").fitText();
-        jQuery("#biography div").fitText();
+  			
+        
   			$(window).scrollTop(0);
 		});   
 
@@ -122,7 +132,12 @@ $(document).ready(function()
     	if (hash == "") { $('[data-targhet="#themes"]').trigger('click'); }
     	else{ 			  $('[data-targhet="'+hash+'"]').trigger('click');}
 
-      $('[data-targhet="#sidebar_Specificity"]').trigger('click');
+      if (window.innerWidth > 1023) {
+
+        $('[data-targhet="#sidebar_Specificity"]').trigger('click');
+
+      }
+
 
 
       const table = document.querySelector('table');
