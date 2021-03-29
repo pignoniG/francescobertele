@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="grid-x">
-		<div class="cell small-12 medium-8 large-8 conten_project_body">
+		<div class="cell small-12 medium-7 large-9 small-order-2 conten_project_body">
 	
 			<?php
 			the_content(
@@ -35,16 +35,16 @@
 			
 		</div>
 
-		<div class="cell small-12 medium-4 large-4 text-description-overflow oeuvre-header">
+		<div class="cell small-12 medium-5 small-order-1 large-3 oeuvre-header">
 
-		<div class="">
-    		<h1 class="_TitleOU" style="border-bottom: 1px solid black;"><?php the_title(); ?></h1>
+	
+    		<h1 class="_TitleOU" ><?php the_title(); ?></h1>
     		<?php if( get_field('project_code') ):?>
     			<span class="_CatOU"><?php the_field('project_code'); ?> <br></span>
     		<?php endif;?>
     	</div>
 
-    	<div class="cell small-12 medium-4 large-4 text-description-overflow">
+    	<div class="cell small-12 medium-5 large-3 small-order-3 text-description-overflow">
 
 
 
@@ -62,7 +62,7 @@
 	<!-- SCHEDA -->
 	<?php if( get_field('project_corpus') ):?>
 
-    <p class="_BodyText" style="border-bottom: 1px dashed #797979;"><br><br>CORPUS:<br><?php the_field('project_corpus'); ?></p>
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><br><br>CORPUS:<br><?php the_field('project_corpus'); ?></p>
 
 	<?php endif;?>
 
@@ -72,7 +72,7 @@
 		// Check rows exists.
 		if( have_rows('project_keywords') ):
 
-			?> <p class="_BodyText" style="border-bottom: 1px dashed #797979;">KEYWORD:<br>
+			?> <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">KEYWORD:<br>
 
 			<?php
 		
@@ -90,7 +90,7 @@
 	?>
 
 
-    <p class="_BodyText" style="border-bottom: 1px dashed #797979;">CULTURAL DEFINITION:
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">CULTURAL DEFINITION:
 
         <?php if( get_field('project_edition') ):?> <br>../Edition: <?php the_field('project_edition'); ?> <?php endif;?>
 
@@ -99,7 +99,7 @@
         <?php if( get_field('project_sitetimes') ):?> <br>../Site/times: <?php the_field('project_sitetimes'); ?> <?php endif;?>
     </p>
     
-    <p class="_BodyText" style="border-bottom: 1px dashed #797979;">TECHNICAL DATA:
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">TECHNICAL DATA:
         <?php if( get_field('project_object_type') ):?> <br>../Object: <?php the_field('project_object_type'); ?> <?php endif;?>
         <?php if( get_field('project_matter_technique') ):?> <br>../Matter and technique: <?php the_field('project_matter_technique'); ?> <?php endif;?>
         <?php if( get_field('project_measures_other') ):?> <br>../Measure: <?php the_field('project_measures_other'); ?> <?php endif;?>
@@ -107,11 +107,11 @@
 
     </p>
 
-    <?php if( get_field('project_description') ):?> <p class="_BodyText" style="border-bottom: 1px dashed #797979;">DESCRIPTION: <?php the_field('project_description'); ?> </p> <?php endif;?>
+    <?php if( get_field('project_description') ):?> <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">DESCRIPTION: <?php the_field('project_description'); ?> </p> <?php endif;?>
     
   
 
-  	<p class="_BodyText" style="border-bottom: 1px dashed #797979;">THEMES:
+  	<p class="_BodyText" style="border-bottom: 1px dashed #FFF;">THEMES:
 
   		<?php $project_items = array("project_specificity","project_body","project_breath","project_imagination","project_identity");
 
@@ -145,7 +145,7 @@
 
 
     
-    <p class="_BodyText" style="border-bottom: 1px dashed #797979;">SOURCES AND DOCUMENTS:
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">SOURCES AND DOCUMENTS:
 
 
     	<?php if( have_rows('project_images') ):
@@ -184,7 +184,7 @@
 
     
 </div>
-</div>
+
 
 
 

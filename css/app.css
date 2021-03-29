@@ -91,6 +91,7 @@
             top: 0;
             bottom: 0;
             width: 18px;
+            z-index: 11;
 
         }
 
@@ -247,7 +248,7 @@
 
 		@media screen and (max-width: 39.9375em) {
 
-            .noMobile{
+            .noMobile, #c-left, #c-right {
                 display: none!important;
             }
 		}
@@ -768,7 +769,7 @@
     div.menu-buttons {
         text-align: justify;
         position: fixed;
-        z-index: 15;
+        z-index: 10;
         bottom: 0;
         left: 0;
         right: 0;
@@ -914,10 +915,10 @@
     }
 
     div.menu-buttons .right {
-        height: 50px;
-        width: 22px;
-        padding-top: 7px;
-        margin-right: 50px; 
+        height: 30px;
+        width: 19px;
+        padding-top: 11px;
+        margin-right: 50px;
     }
 
     div#container-disclaimer {
@@ -1533,7 +1534,7 @@ div.ouvre-grid{
                 border-left: 1px solid black;
                 padding-left: 50px;
                 max-height: 0;
-                transition: max-height 0.4s ease-out;
+                transition: max-height 0.2s ease-out;
                 overflow: hidden;
             }
 
@@ -1541,8 +1542,8 @@ div.ouvre-grid{
             div.ask-themes.visible{
                 display: flex;   
                 height: auto; 
-                max-height: 3000px;
-                transition: max-height 0.2s ease-in;
+                max-height: 2000px;
+            
             }   
 
              body.page-id-190 div#sort-filter {
@@ -1670,6 +1671,230 @@ div.ouvre-grid{
 
 
 /* ask fine */
+
+
+
+
+/* project ouvreinizio */
+
+    /* project ouvre general*/
+
+    body.single.oeuvre{
+        background-color: #1b1b1b;
+
+    }
+    div.cell.conten_project_body {
+        padding-right: 5vw;
+        padding-left: 5vw;
+        padding-top: 5vw;
+    }
+
+    body.single.oeuvre div.wp-block-embed__wrapper{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+    }
+
+    body.single.oeuvre div.wp-block-embed__wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .wp-block-image img {
+        width: 100%;
+        max-width: initial;
+    }
+
+    body.single.oeuvre div.menu-buttons {
+        border-color: white;
+        box-shadow: 0px 0px 8px 4px #060606;
+        background-color: #1b1b1bbf; 
+
+    }
+
+    body.single.oeuvre div.menu-buttons .center a{
+
+        color: white;}
+
+
+
+
+      
+
+    body.single.oeuvre #c-left {
+         
+         border-right: 1px solid white;
+     }
+
+
+     body.single.oeuvre .switcher-list li.active>span,
+     body.single.oeuvre .switcher-list li>span,
+     body.single.oeuvre .switcher-list li a:hover, 
+     body.single.oeuvre .switcher-list li>span:hover,
+     body.single.oeuvre .switcher-list li a,
+      body.single.oeuvre.switcher-list li>span
+      {
+        color: #FFF;
+    }
+
+
+     body.single.oeuvre #c-left p, body.single.oeuvre #c-right p{
+    
+         
+         color: white;
+         text-shadow: 0px 0px 20px #000;
+     }
+     
+     body.single.oeuvre #c-right {
+         right: 0;
+         border-left: 1px solid white;
+     }
+
+
+
+    body.single.oeuvre ._BodyText,body.single.oeuvre ._BodyText_no_spaces {
+        color: white;
+    }
+
+    div.oeuvre-header h1._TitleOU{
+        font-family: PilatWide-Book;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.36px;
+        line-height: 21.6px;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    body.single.oeuvre div.menu-buttons .left {
+        color: white;
+    }
+
+    body.single.oeuvre div.text-description-overflow a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    body.single.oeuvre  div.text-description-overflow a:hover {
+        color: red;
+    }
+
+     body.single.oeuvre a.button-shop.oeuvre.sold {
+        height: 57px;
+        width: 57px;
+        line-height: 12px;
+        background: crimson;
+        border: 1px solid crimson;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 55px;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        font-size: 9px;
+    }
+
+    body.single.oeuvre  .fa {
+        font-size: 20px;
+        margin-right: 9px;
+    }
+
+    div.oeuvre-header span._CatOU{
+        font-family:  PilatWide-Book;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 12px;
+        color: white;
+    }
+
+    div.oeuvre-header {
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        border-bottom: 1px solid white;
+    }
+
+    div.oeuvre-header ,div.text-description-overflow {
+        border-left: 1px solid white;
+        box-shadow: 0px 0px 8px 4px #060606;
+        padding: 5px;
+        background-color: #1b1b1b;
+        padding-right: 23px;
+        padding-left: 10px;
+    }
+
+
+    div.text-description-overflow {
+        padding-bottom: 90px;
+        padding-top: 17px;
+        height: calc(100vh - 72px);
+        overflow: scroll;
+        position: fixed;
+        color: white;
+        right: 0;
+        top: 72px;  
+    } 
+    /* project ouvre extra medium*/
+
+        @media only screen and (min-width: 63.9375em)  {
+        }
+
+    /* project ouvre medium*/
+
+        @media only screen and (max-width: 63.9375em)  {
+            body.single.oeuvre .switcher-list{
+                top:37px;
+            }
+
+            body.single.oeuvre .wpm-language-switcher.switcher-list {
+                text-shadow: 0px 0px 15px #000;
+            }
+        }
+
+    /* project ouvre mobile*/
+
+        @media screen and (max-width: 39.9375em) {
+
+            div.text-description-overflow {
+                position: initial;
+                height: auto;
+            }
+
+            div.oeuvre-header{
+                background-color: #1b1b1bbf;
+            }
+
+            div.cell.conten_project_body {
+                padding-top: 100px;
+            }
+
+            div.text-description-overflow {
+                border-left: none;
+                box-shadow: none;
+                padding-right: 5vw;
+                padding-left: 5vw;
+            }
+
+        }
+
+    /* project ouvre extra mobile*/
+        @media screen and (max-width: 28.125em) {
+        }
+
+
+/* project ouvrefine */
+
 
 /* XXXXX fine *//* XXXXX inizio */
 
