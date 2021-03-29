@@ -53,7 +53,7 @@
     			<a class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net">
 
     				<?php 
-    				if ( project_statusget_field('project_status'),"en") == "activable"){ 
+    				if ( mytranslate_force(get_field('project_status'),"en") == "activable"){ 
     					echo  wpm_translate_string( "[:en]Activate[:it]Attiva[:]", $language = '' ); }
 
     				elseif (mytranslate_force(get_field('project_status'),"en") == "sold"){ 
