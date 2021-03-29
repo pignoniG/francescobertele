@@ -24,7 +24,7 @@ $(document).mouseup(function(e)
         settings = $.extend({
           'minFontSize' : 16,
           'initFontSize' : 16,
-          'maxFontSize' : 40,
+          'maxFontSize' : 30,
         }, options);
 
     return this.each(function(){
