@@ -80,7 +80,7 @@
             
             
             <a class="customfollow-icon mail" target="_blank" href="mailto:fb@francescobertele.net">
-                <img src="https://francescobertele.net/wp-content/uploads/2020/08/email-1.png">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
             </a>
             <br>
             <p class="_BodyText" style="text-align:center;">francesco bertelé 

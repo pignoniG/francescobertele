@@ -917,7 +917,7 @@
     div.menu-buttons .right {
         height: 30px;
         width: 19px;
-        padding-top: 11px;
+        padding-top: 10px;
         margin-right: 50px;
     }
 
@@ -957,6 +957,12 @@
         color: #111;
         /*display: block;*/
     }
+    .banner .fa{
+            font-size: 20px;
+            margin-bottom: 30px;
+
+
+        }
 
 
 
@@ -1526,7 +1532,7 @@ div.ouvre-grid{
 
          @media only screen and (max-width: 63.9375em)  {
             div.ask-content{
-                margin-top: 30px;
+                margin-top: 60px;
             }
 
             div.ask-themes{
@@ -1628,7 +1634,7 @@ div.ouvre-grid{
             }
 
             div.ask-content {
-                margin-top: 30px;
+                margin-top: 60px;
                 margin-left: 23px;
                 margin-right: 12px;
             }
@@ -1679,7 +1685,8 @@ div.ouvre-grid{
 
     /* project ouvre general*/
 
-    body.single.oeuvre{
+    body.single.oeuvre,
+    body.single.onair{
         background-color: #1b1b1b;
 
     }
@@ -1689,7 +1696,8 @@ div.ouvre-grid{
         padding-top: 5vw;
     }
 
-    body.single.oeuvre div.wp-block-embed__wrapper{
+    body.single.oeuvre div.wp-block-embed__wrapper,
+    body.single.onair div.wp-block-embed__wrapper{
         position: relative;
         overflow: hidden;
         width: 100%;
@@ -1697,7 +1705,8 @@ div.ouvre-grid{
 
     }
 
-    body.single.oeuvre div.wp-block-embed__wrapper iframe {
+    body.single.oeuvre div.wp-block-embed__wrapper iframe ,
+    body.single.onair div.wp-block-embed__wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -1711,54 +1720,60 @@ div.ouvre-grid{
         max-width: initial;
     }
 
-    body.single.oeuvre div.menu-buttons {
+    body.single.oeuvre div.menu-buttons,
+    body.single.onair div.menu-buttons{
         border-color: white;
         box-shadow: 0px 0px 8px 4px #060606;
         background-color: #1b1b1bbf; 
-
     }
 
-    body.single.oeuvre div.menu-buttons .center a{
+    body.single.oeuvre div.menu-buttons .center a,
+    body.single.onair div.menu-buttons .center a{
+        color: white;
+    }
 
-        color: white;}
-
-
-
-
-      
-
-    body.single.oeuvre #c-left {
-         
+    body.single.oeuvre #c-left,
+    body.single.onair #c-left {  
          border-right: 1px solid white;
-     }
+    }
 
 
-     body.single.oeuvre .switcher-list li.active>span,
-     body.single.oeuvre .switcher-list li>span,
-     body.single.oeuvre .switcher-list li a:hover, 
-     body.single.oeuvre .switcher-list li>span:hover,
-     body.single.oeuvre .switcher-list li a,
-      body.single.oeuvre.switcher-list li>span
-      {
+    body.single.oeuvre .switcher-list li.active>span,
+    body.single.oeuvre .switcher-list li>span,
+    body.single.oeuvre .switcher-list li a:hover, 
+    body.single.oeuvre .switcher-list li>span:hover,
+    body.single.oeuvre .switcher-list li a,
+    body.single.oeuvre .switcher-list li>span,
+    body.single.onair .switcher-list li.active>span,
+    body.single.onair .switcher-list li>span,
+    body.single.onair .switcher-list li a:hover, 
+    body.single.onair .switcher-list li>span:hover,
+    body.single.onair .switcher-list li a,
+    body.single.onair .switcher-list li>span
+    {
         color: #FFF;
     }
 
 
-     body.single.oeuvre #c-left p, body.single.oeuvre #c-right p{
+     body.single.oeuvre #c-left p, body.single.oeuvre #c-right p,
+     body.single.onair #c-left p, body.single.onair #c-right p{
     
          
          color: white;
          text-shadow: 0px 0px 20px #000;
      }
      
-     body.single.oeuvre #c-right {
+     body.single.oeuvre #c-right,
+     body.single.onair #c-right {
          right: 0;
          border-left: 1px solid white;
      }
 
 
 
-    body.single.oeuvre ._BodyText,body.single.oeuvre ._BodyText_no_spaces {
+    body.single.oeuvre ._BodyText,body.single.oeuvre ._BodyText_no_spaces ,
+    body.single.onair ._BodyText,body.single.onair ._BodyText_no_spaces {
+
         color: white;
     }
 
@@ -1773,9 +1788,21 @@ div.ouvre-grid{
         color: white;
     }
 
-    body.single.oeuvre div.menu-buttons .left {
+    body.single.oeuvre div.menu-buttons .left,
+    body.single.onair div.menu-buttons .left {
         color: white;
     }
+    body.single.oeuvre .banner,
+    body.single.onair .banner {
+        background-color: #5d5d5dd6;
+    }
+    body.single.oeuvre .banner a,
+    body.single.onair .banner a{
+        color: white;
+     }
+        
+    
+    
 
     body.single.oeuvre div.text-description-overflow a {
         color: white;

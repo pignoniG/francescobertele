@@ -46,7 +46,7 @@
 		        
 
 					<div class="cell small-12 large-12 noDesktop" >
-							<button class="accordion braketed ask-sidebar"  data-targhet="<?php echo "#".$targhet_filtered; ?>">
+							<button class="accordion braketed ask-sidebar noMobile"  data-targhet="<?php echo "#".$targhet_filtered; ?>">
 							<?php echo get_sub_field('ask_theme_title'); ?>
 							</button>
 						

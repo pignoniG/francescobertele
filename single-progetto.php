@@ -24,6 +24,12 @@ get_header();
 				get_template_part( 'template-parts/content-onair', get_post_type() );
 			}
 
+			elseif (has_category("bibliography")) {
+				get_template_part( 'template-parts/content-bibliography', get_post_type() );
+			}
+
+			
+
 
 		endwhile; // End of the loop.
 		?>
