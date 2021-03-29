@@ -68,7 +68,7 @@ $global_filter_items= array();
 
       <input type="checkbox" class="filter-select project_corpus_parent" name="project_corpus_parent" value=".project_corpus_parent_1">
         <label for="project_corpus_parent">
-        <?php echo  wpm_translate_string( "[:en]Only main Corpuses[:it]Solo</br>Principali[:]", $language = '' ); ?>
+        <?php echo  wpm_translate_string( "[:en]Parent Corpuses[:it]Corpus Principali[:]", $language = '' ); ?>
         </label>
       </span>
     <!-- BEGIN status-->

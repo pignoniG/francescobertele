@@ -80,7 +80,7 @@
             
             
             <a class="customfollow-icon mail" target="_blank" href="mailto:fb@francescobertele.net">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <i class="far fa-envelope"></i>
             </a>
             <br>
             <p class="_BodyText" style="text-align:center;">francesco bertelé 
@@ -91,7 +91,12 @@
                  <a style="text-decoration:underline;" href="https://www.simone-ellero.eu/">simone ellero</a></p>
             <br>
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-                <i class="fa fa-creative-commons" aria-hidden="true"></i></a>
+                <i class="fab fa-creative-commons" aria-hidden="true"></i>
+                <i class="fab fa-creative-commons-by"aria-hidden="true"></i>
+                <i class="fab fa-creative-commons-nc" aria-hidden="true"></i>
+                <i class="fab fa-creative-commons-sa" aria-hidden="true"></i>
+
+            </a>
 		</div>
 </div>
 <div id="banner-dimmer" href="#" onclick="closeBan()" class="">&nbsp;</div>

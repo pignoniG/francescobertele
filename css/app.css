@@ -548,7 +548,7 @@
         div#sort-filter {
             border-bottom: 1px solid black;
             position: fixed;
-            z-index: 13;
+            z-index: 10;
             width: 100vw;
             left: 0;
             padding-left: 5vw;
@@ -779,7 +779,7 @@
         display: flex;
         
         height: 50px;
-        background: #ffffff30;
+        background: #ffffffd6;
         border-top: 1px solid black;
     }
 
@@ -959,7 +959,7 @@
         color: #111;
         /*display: block;*/
     }
-    .banner .fa{
+    .banner .fab, .banner .far{
             font-size: 20px;
             margin-bottom: 30px;
 
@@ -1815,24 +1815,66 @@ div.ouvre-grid{
         color: red;
     }
 
-     body.single.oeuvre a.button-shop.oeuvre.sold {
+     body.single.oeuvre a.button-shop.oeuvre.sold,
+    body.single.oeuvre a.button-shop.oeuvre.onsale,
+    body.single.oeuvre a.button-shop.oeuvre.activable {
         height: 57px;
         width: 57px;
         line-height: 12px;
-        background: crimson;
-        border: 1px solid crimson;
         color: white;
-        text-transform: uppercase;
         border-radius: 55px;
         align-items: center;
         justify-content: center;
+        text-transform: uppercase;
         padding-top: 20px;
-        font-size: 9px;
+        font-size: 8px;
     }
 
-    body.single.oeuvre  .fa {
+     body.single.oeuvre a.button-shop.oeuvre.sold {
+        background: crimson;
+        border: 1px solid crimson;
+    }
+
+
+    body.single.oeuvre a.button-shop.oeuvre.onsale {
+        background: forestgreen;
+        border: 1px solid forestgreen; 
+    }
+
+    body.single.oeuvre a.button-shop.oeuvre.activable {
+        background: darkturquoise;
+        border: 1px solid darkturquoise;
+    }
+
+
+    body.single.oeuvre  .fab,
+    body.single.oeuvre  .far {
         font-size: 20px;
         margin-right: 9px;
+    }
+
+    body.single.oeuvre p:not(._BodyText){
+            font-size: 13px;
+            display: inline;
+            font-family: "founders-grotesk-mono";
+            color: #fff;
+            letter-spacing: 0em;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: none;
+            font-style: normal;
+            text-decoration: none;
+            padding: 0;
+            text-indent: 0em;
+            border-bottom: none;
+            text-align: left;
+            margin-bottom: 0px;
+            display: inline;
+            margin: 0;
+            padding: 0;
+            height: 1px;
+            margin-block-end: 0px;
+            margin-block-start: 0px;
     }
 
     div.oeuvre-header span._CatOU{

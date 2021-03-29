@@ -146,9 +146,14 @@ function francescobertele_scripts() {
 
 	wp_enqueue_style( 'francescobertele-style', get_stylesheet_uri(), array(), _S_VERSION );
 
-	wp_enqueue_style( 'francescobertele-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
+	/** wp_enqueue_style( 'francescobertele-style-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
+	*/
+
 
 	wp_style_add_data( 'francescobertele-style', 'rtl', 'replace' );
+
+	wp_enqueue_script( 'francescobertele-awesome',  'https://kit.fontawesome.com/a228223d23.js', array(), _S_VERSION, true );
+
 
 	wp_enqueue_script( 'francescobertele-foundation', get_template_directory_uri() . '/js/foundation.js', array(), _S_VERSION, true );
 
@@ -161,6 +166,7 @@ function francescobertele_scripts() {
 	wp_enqueue_script( 'francescobertele-app', get_template_directory_uri() . '/js/app.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'francescobertele-general', get_template_directory_uri() . '/js/general.js', array(), _S_VERSION, true );
+
 
 	wp_enqueue_style( 'francescobertele-style-app', get_template_directory_uri() . '/css/app.css' );
 

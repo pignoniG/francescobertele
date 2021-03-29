@@ -50,15 +50,31 @@
 
     		<?php if( get_field('project_status') ):?>
 
-    			<a class="button-shop oeuvre <?php echo filter_var( get_field('project_status'), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net"><?php the_field('project_status'); ?></a>
+    			<a class="button-shop oeuvre <?php echo filter_var( get_field('project_status'), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net">
+
+    				<?php 
+    				if (get_field('project_status') == "activable"){ 
+    					echo  wpm_translate_string( "[:en]Activate[:it]Attiva[:]", $language = '' ); }
+
+    				elseif (get_field('project_status') == "sold"){ 
+    					echo  wpm_translate_string( "[:en]Sold[:it]Venduto[:]", $language = '' ); }
+
+    				elseif (get_field('project_status') == "on sale"){ 
+    					echo  wpm_translate_string( "[:en]on sale[:it]In vendita[:]", $language = '' ); }
+    				?>
+    					
+
+    				</a>
+
     		<?php endif;?>
 
 
 
-        <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo get_permalink();?>" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
-		<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=Check%20this%20out:" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a>
-        <a style="vertical-align:bottom;" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.example.com%2Fblog%2Fphotography-website-redesign%2F&description=Photography+Website+Redesign" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.example.com%2Fblog%2Fphotography-website-redesign%2F&amp;description=Photography+Website+Redesign', '');" data-pin-do="buttonPin" data-pin-count="beside"></a>
-	
+        <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo get_permalink();?>" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
+
+		<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=Check%20this%20out:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        
+
 	<!-- SCHEDA -->
 	<?php if( get_field('project_corpus') ):?>
 
@@ -72,7 +88,7 @@
 		// Check rows exists.
 		if( have_rows('project_keywords') ):
 
-			?> <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">KEYWORD:<br>
+			?> <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]KEYWORD[:it]PAROLE CHIAVE[:]", $language = '' ); ?>:<br>
 
 			<?php
 		
@@ -90,28 +106,28 @@
 	?>
 
 
-    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">CULTURAL DEFINITION:
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]CULTURAL DEFINITION[:it]DEFINIZIONE CULTURALE[:]", $language = '' ); ?>:
 
-        <?php if( get_field('project_edition') ):?> <br>../Edition: <?php the_field('project_edition'); ?> <?php endif;?>
+        <?php if( get_field('project_edition') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Edition[:it]Edizione[:]", $language = '' ); ?>: <?php the_field('project_edition'); ?> <?php endif;?>
 
-       	<?php if( get_field('project_co-authors') ):?>  <br>../Co-authors: <a class="projects-link" href="<?php echo(get_field('project_co-authors')['url']); ?>" target="_blank"><?php echo(get_field('project_co-authors')['title']); ?></a> <?php endif;?>
+       	<?php if( get_field('project_co-authors') ):?>  <br>../<?php echo  wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ); ?>: <a class="projects-link" href="<?php echo(get_field('project_co-authors')['url']); ?>" target="_blank"><?php echo(get_field('project_co-authors')['title']); ?></a> <?php endif;?>
 
-        <?php if( get_field('project_sitetimes') ):?> <br>../Site/times: <?php the_field('project_sitetimes'); ?> <?php endif;?>
+        <?php if( get_field('project_sitetimes') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Site/times[:it]Siti/date[:]", $language = '' ); ?>: <?php the_field('project_sitetimes'); ?> <?php endif;?>
     </p>
     
-    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">TECHNICAL DATA:
-        <?php if( get_field('project_object_type') ):?> <br>../Object: <?php the_field('project_object_type'); ?> <?php endif;?>
-        <?php if( get_field('project_matter_technique') ):?> <br>../Matter and technique: <?php the_field('project_matter_technique'); ?> <?php endif;?>
-        <?php if( get_field('project_measures_other') ):?> <br>../Measure: <?php the_field('project_measures_other'); ?> <?php endif;?>
-        <?php if( get_field('project_measures_weight') ):?> <br>../Weight: <?php the_field('project_measures_weight'); ?> kg <?php endif;?>
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]TECHNICAL DATA[:it]DATI TECNICI[:]", $language = '' ); ?>:
+        <?php if( get_field('project_object_type') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Object[:it]Oggetti[:]", $language = '' ); ?>: <?php the_field('project_object_type'); ?> <?php endif;?>
+        <?php if( get_field('project_matter_technique') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Matter and technique[:it]Materiali e tecnica[:]", $language = '' ); ?>: <?php the_field('project_matter_technique'); ?> <?php endif;?>
+        <?php if( get_field('project_measures_other') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Measures[:it]Misure[:]", $language = '' ); ?>: <?php the_field('project_measures_other'); ?> <?php endif;?>
+        <?php if( get_field('project_measures_weight') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Weight[:it]Peso[:]", $language = '' ); ?>: <?php the_field('project_measures_weight'); ?><?php endif;?>
 
     </p>
 
-    <?php if( get_field('project_description') ):?> <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">DESCRIPTION: <?php the_field('project_description'); ?> </p> <?php endif;?>
+    <?php if( get_field('project_description') ):?> <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]DESCRIPTION[:it]DESCRIZIONE[:]", $language = '' ); ?>: <?php the_field('project_description'); ?> </p> <?php endif;?>
     
   
 
-  	<p class="_BodyText" style="border-bottom: 1px dashed #FFF;">THEMES:
+  	<p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]THEMES[:it]TEMI[:]", $language = '' ); ?>:
 
   		<?php $project_items = array("project_specificity","project_body","project_breath","project_imagination","project_identity");
 
@@ -134,23 +150,10 @@
   	</p>
 
 
-		
-				
-			    
-
-
-
-
-
-
-
-    
-    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">SOURCES AND DOCUMENTS:
-
-
+    <p class="_BodyText" ><?php echo  wpm_translate_string( "[:en]SOURCES AND DOCUMENTS[:it]FONTI E DOCUMENTI[:]", $language = '' ); ?>:
     	<?php if( have_rows('project_images') ):
 
-			?> <br>../Images: <?php
+			?> <br>../<?php echo  wpm_translate_string( "[:en]Images[:it]Immagini[:]", $language = '' ); ?>: <?php
 		    // Loop through rows.
 		    while( have_rows('project_images') ) : the_row();
 
@@ -162,23 +165,29 @@
 
 		<?php if( have_rows('project_videos') ):
 
-			?> <br>../Videos: <?php
+			?> <br>../<?php echo  wpm_translate_string( "[:en]Videos[:it]Video[:]", $language = '' ); ?>: <?php
 		    // Loop through rows.
 		    while( have_rows('project_videos') ) : the_row();
 
-		    	?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_video')['url']; ?>"><?php echo get_sub_field('project_video')['title']; ?></a> <?php
+		    ?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_video')['url']; ?>"><?php echo get_sub_field('project_video')['title']; ?></a> <?php
 
 		    endwhile;
 			?>  <?php 
 		endif ?> 
 
 
-        <?php if( get_field('project_pdf') ):?> <br>../Presentation [pdf]: <a target="_blank" class="customfollow-icon download" href="<?php echo get_field('project_pdf')['url']; ?>"><?php echo get_field('project_pdf')['filename']; ?></a> <?php endif;?>
 
-        <?php if( get_field('project_bibliography') ):?> <br>../Bibliography: <?php the_field('project_bibliography'); ?> <?php endif;?>
-        <?php if( get_field('project_exhibition') ):?> <br>../Exhibition: <?php the_field('project_exhibition'); ?> <?php endif;?>
-		<?php if( get_field('project_collection') ):?> <br>../Collection: <?php the_field('project_collection'); ?> <?php endif;?>
-        
+
+        <?php if( get_field('project_pdf') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Presentation[:it]Presentazione[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="customfollow-icon download" href="<?php echo get_field('project_pdf')['url']; ?>"><?php echo get_field('project_pdf')['filename']; ?></a> <?php endif;?>
+
+        </p>
+
+
+        <?php if( get_field('project_bibliography') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: <?php the_field('project_bibliography'); ?></p>  <?php endif;?>
+        <?php if( get_field('project_exhibition') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esibizioni[:]", $language = '' ); ?>: <?php the_field('project_exhibition'); ?> </p><?php endif;?>
+		<?php if( get_field('project_collection') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Collection[:it]Collezzione[:]", $language = '' ); ?>: <?php the_field('project_collection'); ?> </p><?php endif;?>
+    
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">   
     </p>
 
 

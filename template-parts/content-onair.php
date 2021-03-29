@@ -28,8 +28,8 @@
             <a class="button-shop onair more onair-show" id="onair-more">More info</a>
             <a class="button-shop onair more onair-hide">Less info</a>
                 <div class="share-it">
-                    <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
-		            <a class="twitter" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=Check%20this%20out:" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a>
+                    <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
+		            <a class="twitter" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=Check%20this%20out:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
                     <a style="vertical-align:bottom;" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.example.com%2Fblog%2Fphotography-website-redesign%2F&description=Photography+Website+Redesign" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.example.com%2Fblog%2Fphotography-website-redesign%2F&amp;description=Photography+Website+Redesign', '');" data-pin-do="buttonPin" data-pin-count="beside"></a>
                 </div>
         </div>
