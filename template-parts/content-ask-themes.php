@@ -15,7 +15,7 @@
 		<?php
 
 		$ask_themes = "ask_themes";
-		if (wpm_get_language()==it) {
+		if (wpm_get_language()=="it") {
 			$ask_themes = "ask_themes_it";
 		}
 
