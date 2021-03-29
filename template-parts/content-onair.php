@@ -89,7 +89,7 @@
 			if( $status ): ?>
 			<p class="_BodyText"><span class="_CatOU">Status</span> 
 			    <?php foreach( $status as $status_i ): ?>
-			        <?php echo wpm_translate_string($status_i) ; ?>
+			        <?php echo wpm_translate_string($status_i, $language = '' ) ; ?>
 			    <?php endforeach; ?>
 			</p>
 			<?php endif; 
@@ -98,7 +98,7 @@
 			if( $looking ): ?>
 			<p class="_BodyText"><span class="_CatOU">Looking for</span> 
 			    <?php foreach( $looking as $status_i ): ?>
-			        <?php echo  wpm_translate_string($status_i) ; ?>
+			        <?php echo  wpm_translate_string($status_i, $language = '' ) ; ?>
 			    <?php endforeach; ?>
 			</p>
 			<?php endif; ?>

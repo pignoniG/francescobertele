@@ -183,6 +183,8 @@
         </p>
 
 
+
+
         <?php if( get_field('project_bibliography') ):?> <p>../<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: <?php the_field('project_bibliography'); ?></p>  <?php endif;?>
         <?php if( get_field('project_exhibition') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esibizioni[:]", $language = '' ); ?>: <?php the_field('project_exhibition'); ?> </p><?php endif;?>
 		<?php if( get_field('project_collection') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Collection[:it]Collezzione[:]", $language = '' ); ?>: <?php the_field('project_collection'); ?> </p><?php endif;?>
