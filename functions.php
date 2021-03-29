@@ -304,13 +304,28 @@ function mytranslate($string)
 
 	$arrayString=  explode(" | ", $string );
 	$retval=$arrayString[0];
-	if (wpm_get_language()==it) {
-		$retval=$arrayString[1];
+	if (wpm_get_language()=="it") {
+		if ($arrayString[1]) {
+			$retval=$arrayString[1];
+		}
 	}
    
     return $retval;
 }
+function mytranslate_force($string,$lang)
+{
 
+	$arrayString=  explode(" | ", $string );
+	$retval=$arrayString[0];
+	if ($lang=="it") {
+		if ($arrayString[1]) {
+			$retval=$arrayString[1];
+		}
+		
+	}
+   
+    return $retval;
+}
 
 
 @ini_set( 'upload_max_size' , '64M' );

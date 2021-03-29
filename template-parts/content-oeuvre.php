@@ -129,17 +129,17 @@
 
   	<p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]THEMES[:it]TEMI[:]", $language = '' ); ?>:
 
-  		<?php $project_items = array("project_specificity","project_body","project_breath","project_imagination","project_identity");
+  		<?php $project_items = array("project_specificity | specificità","project_body | corpo","project_breath | respiro","project_imagination | immaginazione","project_identity | identità");
 
   		foreach ($project_items as $project_item):
-  			$project_theme = get_field($project_item);
+  			$project_theme = get_field(mytranslate_force($project_item,"en"));
   			$keyword = preg_split("/[\_]+/", "hypertext language, $project_item");
 			
 			if( $project_theme ): ?>
-				<br>../<?php echo "#".ucwords($keyword[1]); ?>:
+				<br>../<?php echo "#".ucwords(mytranslate($keyword[1])); ?>:
 
 				<?php foreach( $project_theme as $theme_field ): ?>
-			        <?php echo $theme_field." "; ?>
+			        <?php echo mytranslate($theme_field)." "; ?>
 			    <?php endforeach; ?>
 
 

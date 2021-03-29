@@ -24,17 +24,17 @@ foreach ($filter_items as $filter_item) {
 		if (is_array($current_field)){
 
 			foreach ($current_field as $current_field_sing) {
-			$san_filter = filter_var( $filter_item."_".$current_field_sing, FILTER_SANITIZE_URL);
+			$san_filter = filter_var( $filter_item."_".mytranslate_force($current_field_sing,"en"), FILTER_SANITIZE_URL);
 
 			array_push($global_filter_items[$filter_count],$san_filter);
-			array_push($global_filter_items_h[$filter_count],$current_field_sing);
+			array_push($global_filter_items_h[$filter_count],mytranslate($current_field_sing));
 			array_push($local_filter_items,$san_filter);
 			}
 		}
 		else{	
-			$san_filter= filter_var( $filter_item."_".$current_field, FILTER_SANITIZE_URL);
+			$san_filter= filter_var( $filter_item."_".mytranslate_force($current_field,"en"), FILTER_SANITIZE_URL);
 			array_push($global_filter_items[$filter_count],$san_filter);
-			array_push($global_filter_items_h[$filter_count],$current_field);
+			array_push($global_filter_items_h[$filter_count],mytranslate($current_field));
 			array_push($local_filter_items,$san_filter);
 		}
 
@@ -83,11 +83,11 @@ foreach ($filter_items as $filter_item) {
 		
 						<?php foreach( $project_theme as $theme_field ): 
 
-							$item_filter = filter_var( $project_item."_".$theme_field, FILTER_SANITIZE_URL);
+							$item_filter = filter_var( $project_item."_".mytranslate_force($theme_field,"en"), FILTER_SANITIZE_URL);
 
 							?>
 
-							<snip class="theme_item <?php echo $item_filter; ?>"><?php echo("#".ucwords($theme_field)); ?></snip>
+							<snip class="theme_item <?php echo $item_filter; ?>"><?php echo("#".ucwords(mytranslate($theme_field))); ?></snip>
 					       	
 					    <?php endforeach; ?>
 		
