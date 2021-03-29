@@ -115,15 +115,13 @@
         <?php if( get_field('project_sitetimes') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Site/times[:it]Siti/date[:]", $language = '' ); ?>: <?php the_field('project_sitetimes'); ?> <?php endif;?>
     </p>
     
-    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]TECHNICAL DATA[:it]DATI TECNICI[:]", $language = '' ); ?>:
-
-    	<?php $type = get_field('project_object_type');
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]TECHNICAL DATA[:it]DATI TECNICI[:]", $language = '' ); ?>:<?php $type = get_field('project_object_type');
 			if( $type ): ?>
 			 <br>../<?php echo  wpm_translate_string( "[:en]Object[:it]Oggetto[:]", $language = '' ); ?>:  
 			    <?php foreach( $type as $type_i ): ?>
 			        <?php echo mytranslate($type_i) ; ?>
 			    <?php endforeach; ?>
-			</p>
+			
 			<?php endif;?>
 
 
