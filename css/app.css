@@ -732,9 +732,7 @@
 		}
 
 		body.page-id-74 .panel {
-		-moz-box-shadow: 0 4px 4px #808080;
-		-webkit-box-shadow: 0 4px 4px #808080;
-		box-shadow: 0 4px 4px #808080;
+		box-shadow: 0 4px 4px #80808080;
 		background-color: #ffffffd6;
 		/* background-image: linear-gradient(#e8e8e8, #ffffff); */
 		}
@@ -761,9 +759,7 @@
             border-top: 1px solid black;
 
             padding-bottom: 26px;
-            -moz-box-shadow: 0 0px 14px #808080;
-            -webkit-box-shadow: 0 0px 14px #808080;
-            box-shadow: 0 0px 14px #808080;
+            box-shadow: 0 -4px 4px #80808080;
             background-color: #ffffffd6;
             /*background-image: linear-gradient(#ffffff, #e8e8e8);*/
         }/* 02.1 ACCORDION FILTER DRAWER (OEUVRE) ———————————————— CLOSE */

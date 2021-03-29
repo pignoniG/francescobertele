@@ -291,7 +291,13 @@ add_filter('body_class','add_category_to_single');
     return $classes;
   }
 
-  
+ if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+
+
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
 
