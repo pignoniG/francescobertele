@@ -50,16 +50,16 @@
 
     		<?php if( get_field('project_status') ):?>
 
-    			<a class="button-shop oeuvre <?php echo filter_var( get_field('project_status'), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net">
+    			<a class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net">
 
     				<?php 
-    				if (get_field('project_status') == "activable"){ 
+    				if ( project_statusget_field('project_status'),"en") == "activable"){ 
     					echo  wpm_translate_string( "[:en]Activate[:it]Attiva[:]", $language = '' ); }
 
-    				elseif (get_field('project_status') == "sold"){ 
+    				elseif (mytranslate_force(get_field('project_status'),"en") == "sold"){ 
     					echo  wpm_translate_string( "[:en]Sold[:it]Venduto[:]", $language = '' ); }
 
-    				elseif (get_field('project_status') == "on sale"){ 
+    				elseif (mytranslate_force(get_field('project_status'),"en") == "on sale"){ 
     					echo  wpm_translate_string( "[:en]on sale[:it]In vendita[:]", $language = '' ); }
     				?>
     					
@@ -116,7 +116,7 @@
     </p>
     
     <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]TECHNICAL DATA[:it]DATI TECNICI[:]", $language = '' ); ?>:
-        <?php if( get_field('project_object_type') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Object[:it]Oggetti[:]", $language = '' ); ?>: <?php the_field('project_object_type'); ?> <?php endif;?>
+        <?php if( get_field('project_object_type') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Object[:it]Oggetto[:]", $language = '' ); ?>: <?php echo mytranslate(get_field('project_object_type'));?> <?php endif;?>
         <?php if( get_field('project_matter_technique') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Matter and technique[:it]Materiali e tecnica[:]", $language = '' ); ?>: <?php the_field('project_matter_technique'); ?> <?php endif;?>
         <?php if( get_field('project_measures_other') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Measures[:it]Misure[:]", $language = '' ); ?>: <?php the_field('project_measures_other'); ?> <?php endif;?>
         <?php if( get_field('project_measures_weight') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Weight[:it]Peso[:]", $language = '' ); ?>: <?php the_field('project_measures_weight'); ?><?php endif;?>
@@ -187,7 +187,7 @@
 
         <?php if( get_field('project_bibliography') ):?> <p>../<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: <?php the_field('project_bibliography'); ?></p>  <?php endif;?>
         <?php if( get_field('project_exhibition') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esibizioni[:]", $language = '' ); ?>: <?php the_field('project_exhibition'); ?> </p><?php endif;?>
-		<?php if( get_field('project_collection') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Collection[:it]Collezzione[:]", $language = '' ); ?>: <?php the_field('project_collection'); ?> </p><?php endif;?>
+		<?php if( get_field('project_collection') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Collection[:it]Collezzione[:]", $language = '' ); ?>: <?php echo mytranslate(get_field('project_collection')); ?> </p><?php endif;?>
     
     <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">   
     </p>
