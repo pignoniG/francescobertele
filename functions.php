@@ -298,6 +298,21 @@ add_filter('body_class','add_category_to_single');
 }
 
 
+
+function mytranslate($string)
+{
+
+	$arrayString=  explode(" | ", $string );
+	$retval=$arrayString[0];
+	if (wpm_get_language()==it) {
+		$retval=$arrayString[1];
+	}
+   
+    return $retval;
+}
+
+
+
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
 
