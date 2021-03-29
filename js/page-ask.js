@@ -135,6 +135,8 @@ $(document).ready(function()
       if (window.innerWidth > 1023) {
 
         $('[data-targhet="#sidebar_Specificity"]').trigger('click');
+        $('[data-targhet="#sidebar_Specificit"]').trigger('click');
+       
 
       }
 
