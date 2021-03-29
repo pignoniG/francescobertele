@@ -188,7 +188,9 @@
 		  div.logo_cover svg{
 		  	margin: auto;
 		  	vertical-align: middle;
-		  	width: 40px;
+		  	width: 35px;
+            position: relative;
+            top: -50px;
 		  }
 
 		div.logo_cover p{
@@ -198,7 +200,7 @@
 			position: fixed;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, +60px);
+			transform: translate(-50%, 16px);
 		}
 
 		h3.ouvre_project {
@@ -777,14 +779,14 @@
         display: flex;
         
         height: 50px;
-        background: #ffffffd6;
+        background: #ffffff30;
         border-top: 1px solid black;
     }
 
 
     body.home div.menu-buttons {
         opacity: 0;
-        background: #ffffff90;
+        background: #ffffff30;
         transition-duration: 2s;
         transition-delay: 200ms;
         transition-property: opacity;
