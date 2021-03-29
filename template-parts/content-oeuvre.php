@@ -110,7 +110,7 @@
 
         <?php if( get_field('project_edition') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Edition[:it]Edizione[:]", $language = '' ); ?>: <?php the_field('project_edition'); ?> <?php endif;?>
 
-       	<?php if( get_field('project_co-authors') ):?>  <br>../<?php echo  wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ); ?>: <a class="projects-link" href="<?php echo(get_field('project_co-authors')['url']); ?>" target="_blank"><?php echo(get_field('project_co-authors')['title']); ?></a> <?php endif;?>
+       	<?php if( get_field('project_co-authors') ):?>  <br>../<?php echo  wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ); ?>: <a class="projects-link" href="<?php echo(get_field('project_co-authors')['url']); ?>" target="_blank"><?php echo(get_field('project_co-authors')); ?></a> <?php endif;?>
 
         <?php if( get_field('project_sitetimes') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Site/times[:it]Siti/date[:]", $language = '' ); ?>: <?php the_field('project_sitetimes'); ?> <?php endif;?>
     </p>
