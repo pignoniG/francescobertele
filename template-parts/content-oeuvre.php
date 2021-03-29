@@ -116,7 +116,19 @@
     </p>
     
     <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]TECHNICAL DATA[:it]DATI TECNICI[:]", $language = '' ); ?>:
-        <?php if( get_field('project_object_type') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Object[:it]Oggetto[:]", $language = '' ); ?>: <?php echo mytranslate(get_field('project_object_type'));?> <?php endif;?>
+
+    	<?php $type = get_field('project_object_type');
+			if( $type ): ?>
+			 <br>../<?php echo  wpm_translate_string( "[:en]Object[:it]Oggetto[:]", $language = '' ); ?>:  
+			    <?php foreach( $type as $type_i ): ?>
+			        <?php echo mytranslate($type_i) ; ?>
+			    <?php endforeach; ?>
+			</p>
+			<?php endif;?>
+
+
+
+
         <?php if( get_field('project_matter_technique') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Matter and technique[:it]Materiali e tecnica[:]", $language = '' ); ?>: <?php the_field('project_matter_technique'); ?> <?php endif;?>
         <?php if( get_field('project_measures_other') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Measures[:it]Misure[:]", $language = '' ); ?>: <?php the_field('project_measures_other'); ?> <?php endif;?>
         <?php if( get_field('project_measures_weight') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Weight[:it]Peso[:]", $language = '' ); ?>: <?php the_field('project_measures_weight'); ?><?php endif;?>
