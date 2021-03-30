@@ -40,16 +40,60 @@ $(document).ready(function()
 
     $("span.ask-nav ").click(function(){
       $("#sort-filter").toggleClass("open");
-      });   
+      });
+
+
+    var lastElement="";
+
 
     $(window).scroll(function() {
       $("#sort-filter").removeClass("open");
+
+
+
+      var topElement="_";
+      var topOffset="1000000";
+
+      $(".ask-content").each(function( index ) {
+
+        var offset = $( this ).offset();
+        var posY = offset.top - $(window).scrollTop();
+
+        if (topOffset > Math.abs(posY)) {
+            topElement = $( this );
+            topOffset = Math.abs(posY)
+        }  
+      });
+
+      
+
+      if (topElement != lastElement) {
+        var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]')
+        
+
+        $("button.ask-tab").removeClass("active")
+        bottone.addClass("active")
+
+
+        $("span.ask-nav ").text(bottone.attr('data-textnav'));
+         lastElement=topElement;
+
+      }
+
+
+      
+
+
+
 
     });
 
 		$("button.ask-tab").click(function(){
 
       $("span.ask-nav ").text($(this).attr('data-textnav'));
+      $("button.ask-tab").removeClass("active")
+      $(this).addClass("active")
+
 
       $('html, body').animate({
         scrollTop: $($(this).attr('data-targhet')).offset().top - 100
