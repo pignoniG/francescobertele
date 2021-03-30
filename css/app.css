@@ -1347,9 +1347,10 @@ div.ouvre-grid{
         margin-right: 100px;
         
     }
+
     div.ask-content .inside{
         min-height: 20vh;
-            }
+    }
 
     div.ask-separator{
         border-top: 1px solid black;
