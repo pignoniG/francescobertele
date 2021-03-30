@@ -1642,8 +1642,7 @@ div.ouvre-grid{
                 width: 100%;
                 text-align: center;
                 border-bottom: 1px solid;
-                margin-left: -6px;
-                margin-right: -6px;
+                
 
                 
                 display: block;
@@ -1668,13 +1667,10 @@ div.ouvre-grid{
 
             div.ask-content {
                 margin-top: 60px;
-                margin-left: 23px;
-                margin-right: 12px;
+                margin-left: 15px;
+                margin-right: 15px;
             }
             button.accordion.braketed.ask-sidebar {
-       
-                
-
             }
          
 
@@ -1808,6 +1804,7 @@ div.ouvre-grid{
     body.single.onair ._BodyText,body.single.onair ._BodyText_no_spaces {
 
         color: white;
+        word-break: break-word;
     }
 
     div.oeuvre-header h1._TitleOU{
