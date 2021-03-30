@@ -15,54 +15,6 @@ $(document).mouseup(function(e)
 });
 
 
-(function( $ ){
-
-  $.fn.fitText = function( kompressor, options ) {
-
-    // Setup options
-    var compressor = kompressor || 1,
-        settings = $.extend({
-          'minFontSize' : 16,
-          'initFontSize' : 16,
-          'maxFontSize' : 30,
-        }, options);
-
-    return this.each(function(){
-
-      // Store the object
-      var $this = $(this);
-
-      // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () {
-        $this.css('font-size', settings.initFontSize);
-        console.log($(window).height());
-
-
-
-        var len  = $this.text().length;
-        var calc = Math.sqrt( ($this.width() * ($(window).height()-300) )/len ) ;
-    
-
-        var min = Math.min(calc, parseFloat(settings.maxFontSize));
-
-        var max = Math.max(min, parseFloat(settings.minFontSize));
-
-
-        $this.css('font-size', max);
-
-      };
-
-      // Call once to set.
-      resizer();
-
-      // Call on resize. Opera debounces their resize by default.
-      $(window).resize(resizer);
-
-    });
-
-  };
-
-})( jQuery );
 
 
 
@@ -120,9 +72,8 @@ $(document).ready(function()
   			$(this).addClass("active")
   			$($(this).attr('data-targhet')).addClass("visible")
   			window.location.hash =  $(this).attr('data-targhet');
-        jQuery("#artistic_dir div").fitText();
-        jQuery("#become-a-trustee div").fitText();
-        jQuery("#biography div").fitText();
+     
+
         
         $(window).scrollTop(0);
 		});    	
@@ -157,9 +108,7 @@ $(document).ready(function()
         }
       }
 
-      jQuery("#artistic_dir div").fitText();
-      jQuery("#become-a-trustee div").fitText();
-      jQuery("#biography div").fitText();
+     
 
 
     } 
