@@ -81,11 +81,6 @@ $(document).ready(function()
       }
 
 
-      
-
-
-
-
     });
 
 		$("button.ask-tab").click(function(){
@@ -110,7 +105,10 @@ $(document).ready(function()
       if (window.innerWidth > 1023) {
 
         $('[data-targhet="#sidebar_Specificity"]').trigger('click');
+        $('[data-targhet="#sidebar_Specificity"]').addClass("active");
+
         $('[data-targhet="#sidebar_Specificit"]').trigger('click');
+        $('[data-targhet="#sidebar_Specificit"]').addClass("active");
        
       }
 
