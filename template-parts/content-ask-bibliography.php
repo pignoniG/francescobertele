@@ -11,7 +11,15 @@
 ?>
 
 <div class="ask-content grid-x" id="bibliography">
-		<div class="cell medium-12 large-12">
+
+	<div class="cell small-12 medium-12 large-12 ask-separator">
+		<h3>
+			<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>
+		</h3>
+	</div>
+
+
+	<div class="cell medium-12 large-12 inside">
 			
 
     <table id="table-bibliography">

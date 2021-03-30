@@ -41,16 +41,31 @@ get_header(); ?>
 
 			</div>
 
+
+			
+
+				
+
 			<?php  include(locate_template('template-parts/content-ask-themes.php')); ?>
 
-			<div class="ask-content grid-x grid-padding-x align-center" id="biography">
-  					<div class="cell small-12 medium-11 large-8">
-						<?php the_field('ask_biography'); ?>
-					</div>
+			<div class="ask-content grid-x" id="biography">
+				<div class="cell small-12 medium-12 large-12 ask-separator">
+					<h3 id="">
+						<?php echo  wpm_translate_string( "[:en]Biography[:it]Biografia[:]", $language = '' ); ?>
+					</h3>
+				</div>
+  				<div class="cell small-12 medium-10 large-8 inside large-offset-4 medium-offset-2">
+					<?php the_field('ask_biography'); ?>
+				</div>
 
 			</div>
-			<div class="ask-content grid-x grid-padding-x align-center" id="become-a-trustee">
-  					<div class="cell small-12 medium-11 large-8">
+			<div class="ask-content grid-x" id="become-a-trustee">
+				<div class="cell small-12 medium-12 large-12 ask-separator">
+					<h3 id="">
+						<?php echo  wpm_translate_string( "[:en]Trustee[:it]Fiduciario[:]", $language = '' ); ?>
+					</h3>
+				</div>
+  					<div class="cell small-12 medium-10 large-8 inside large-offset-4 medium-offset-2">
 						<?php the_field('ask_trustee'); ?>
 					</div>
 
@@ -58,10 +73,16 @@ get_header(); ?>
 
 			<?php  include(locate_template('template-parts/content-ask-bibliography.php')); ?>
 
-			<div class="ask-content grid-x grid-padding-x align-center" id="artistic_dir">
-  					<div class="cell small-12 medium-11 large-8">
-  						<?php the_field('ask_ad'); ?>	
-  						</div>
+			<div class="ask-content grid-x" id="artistic_dir">
+				<div class="cell small-12 medium-12 large-12 ask-separator">
+					<h3 id="">
+						<?php echo  wpm_translate_string( "[:en]Artistic direction[:it]Direzione artistica[:]", $language = '' ); ?>
+					</h3>
+				</div>
+
+  				<div class="cell small-12 medium-10 large-8 inside large-offset-4 medium-offset-2">
+  					<?php the_field('ask_ad'); ?>	
+  				</div>
 			</div>
 
 

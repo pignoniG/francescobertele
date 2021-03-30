@@ -1339,12 +1339,37 @@ div.ouvre-grid{
     }
     div.ask-content{
         
-        display: none;
-        margin-top: 80px;
+        margin-top: 60px;
         margin-left: 100px;
         margin-right: 100px;
+        
     }
-     div.ask-content p{
+    div.ask-content .inside{
+
+        min-height: 50vh;
+            }
+    div.ask-separator{
+        border-top: 1px solid black;
+        margin-bottom: 60px;
+        border-bottom: 1px solid black;
+        
+     }
+
+    
+     div.ask-separator h3{
+
+       color: red;
+
+        font-size: 13px;
+        font-family: PilatWide-Book;
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        display: inline-block;
+        padding-left: 50px;
+    }
+            
+    }
+    div.ask-content p{
         text-align: left;
         
     }
@@ -1497,7 +1522,7 @@ div.ouvre-grid{
     }
 
     td.col-title:hover span{
-        position: absolute;
+        position: fixed;
         padding-top: 50px;
         padding-bottom:50px;
         padding-left: 50px;
