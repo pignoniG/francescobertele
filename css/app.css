@@ -1542,6 +1542,8 @@ div.ouvre-grid{
         left: 0;
         right: 0;
         z-index: -1;
+        margin: auto;
+        max-height: 60vh;
         background-repeat: no-repeat;
         background-size: contain;
 

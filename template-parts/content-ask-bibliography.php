@@ -19,7 +19,7 @@
 	</div>
 
 
-	<div class="cell medium-12 large-12 inside">
+	<div class="cell small-12 medium-10 large-8 ask-separator large-offset-4 medium-offset-2 inside">
 			
 
     <table id="table-bibliography">
