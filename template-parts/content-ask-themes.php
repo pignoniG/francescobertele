@@ -12,7 +12,7 @@
 
 <div class="ask-content grid-x" id="themes">
 
-	<div class="cell small-12 medium-12 large-12 ask-separator">
+	<div class="cell small-12 medium-12 large-12 ask-separator top">
 		<h3 >
 			<?php echo  wpm_translate_string( "[:en]Themes[:it]Temi[:]", $language = '' ); ?>
 		</h3>
