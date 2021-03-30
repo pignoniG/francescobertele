@@ -17,7 +17,7 @@
 			<?php echo  wpm_translate_string( "[:en]Themes[:it]Temi[:]", $language = '' ); ?>
 		</h3>
 	</div>
-	<div class="cell small-12 large-4 ask-sidebar">
+	<div class="cell small-12 large-4 ask-sidebar noMedium">
 		<?php
 
 		$ask_themes = "ask_themes";
