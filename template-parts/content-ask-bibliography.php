@@ -52,6 +52,8 @@
 
 			   			     $biblio_current_data= get_field('project_date');
 			   			     $biblio_current_titolo= get_the_title();
+			   			     $biblio_current_isbn= get_field('project_isbn');
+			   			     
 			   			     $biblio_current_link= get_permalink();
 			   			     $biblio_current_image = "";
 			   			     
@@ -62,10 +64,25 @@
   								?>
 								<tr>
     								<td class="col-year"> <?php echo $biblio_current_data; ?></td>
-    								<td onclick=" myPopup ('<?php echo $biblio_current_link; ?>', 'web', 650, 450);" class="col-title ">
-    								<span style="background-image: url('<?php echo $biblio_current_image; ?>');"></span>
+    								<td  class="col-title" data-open="<?php echo('modal'.get_the_ID() )?>">
+    								
 
         							<a  target="_blank"><?php echo $biblio_current_titolo; ?></a>
+        							<a  target="_blank"><?php echo $biblio_current_isbn; ?></a>
+        							<span style="background-image: url('<?php echo $biblio_current_image; ?>');"></span>
+
+
+
+        							<div class="reveal" id="<?php echo('modal'.get_the_ID())?>" data-reveal>
+										<h1>Awesome. I Have It.</h1>
+										  <p class="lead">Your couch. It is mine.</p>
+										  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+										  <button class="close-button" data-close aria-label="Close modal" type="button">
+										    <span aria-hidden="true">&times;</span>
+										  </button>
+									</div>
+
+
   
     								</td>
   								</tr>

@@ -1554,6 +1554,8 @@ div.ouvre-grid{
     }
 
     
+
+    
     
 
     /* ask  extra medium*/
@@ -1659,6 +1661,46 @@ div.ouvre-grid{
     /* ask  mobile*/
 
         @media screen and (max-width: 39.9375em) {
+
+            
+            td.col-year {
+                top: 10px;
+            position: relative;
+
+            }
+            td.col-title a{
+                top: 10px;
+            position: relative;}
+            
+
+            td.col-title span,td.col-title:hover span{
+
+                position: relative;
+                float: right;
+                padding-top: 8px;
+                padding-bottom:00px;
+                padding-left: 00px;
+                padding-right: 00px;
+                background-origin: content-box;
+                background-clip: padding-box;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                
+                z-index: 1;
+                margin: auto;
+                height: 40px;
+                width:30px;
+                max-height: 60vh;
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-right: 10px;
+        
+                background-position: center;
+                background-blend-mode: multiply;
+                background-color: transparent;
+        
+            }
             
             div.sub_title p{
                 font-weight: bold;
@@ -1797,8 +1839,6 @@ div.ouvre-grid{
          right: 0;
          border-left: 1px solid white;
      }
-
-
 
     body.single.oeuvre ._BodyText,body.single.oeuvre ._BodyText_no_spaces ,
     body.single.onair ._BodyText,body.single.onair ._BodyText_no_spaces {
