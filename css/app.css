@@ -135,6 +135,12 @@
 
         }
 
+        @media (hover: none) {
+          .cursor {
+            display: none;
+          }
+        }
+
         .cursor-lines {
             position: relative;
         }
