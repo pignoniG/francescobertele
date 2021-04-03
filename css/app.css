@@ -1402,7 +1402,7 @@ div.ouvre-grid{
     }
 
     div.ask-content .inside{
-        min-height: 50vh;
+        min-height: 0vh;
     }
 
     div.ask-separator{
