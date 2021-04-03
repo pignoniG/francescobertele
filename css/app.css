@@ -1746,6 +1746,16 @@ div.ouvre-grid{
 
 
      }
+        div.ask-content a, div.ask-content a:visited{
+                color: black;
+                text-decoration: underline;
+
+             }
+
+            div.ask-content a:hover{
+                color: red;
+
+             }
 
     
 
@@ -1843,7 +1853,7 @@ div.ouvre-grid{
                 
                 margin-top: 10px;
              }
-
+             
              div.ask-content#biography .inside,
              div.ask-content#become-a-trustee .inside,
              div.ask-content#bibliography .inside,
