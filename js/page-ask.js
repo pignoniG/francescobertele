@@ -30,9 +30,32 @@ $(document).ready(function()
         $("button.ask-sidebar").removeClass("active");
         $(this).addClass("active");
         $($(this).attr('data-targhet')).addClass("visible");
+        var last_ask_sidebar =$(this); 
+
+        if (window.innerWidth < 1024) {
+
+        
+        setTimeout(function(){ 
 
 
-      }
+        $('html, body').stop().animate({
+          'scrollTop': last_ask_sidebar.offset().top-50
+          }, 200, 'swing', function () {});
+        }, 200);}
+
+        else{
+          $('html, body').stop().animate({
+          'scrollTop': 0
+          }, 200, 'swing', function () {});
+        }
+
+
+      
+  
+
+     
+
+    }
 
   			
 		});   
