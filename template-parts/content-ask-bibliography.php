@@ -64,22 +64,22 @@
   								?>
 								<tr>
     								<td class="col-year"> <?php echo $biblio_current_data; ?></td>
-    								<td  class="col-title" data-open="<?php echo('modal'.get_the_ID() )?>">
+    								<td  class="col-title" data-modal="<?php echo('modal'.get_the_ID() )?>">
     								
 
         							<a  target="_blank"><?php echo $biblio_current_titolo; ?></a>
         							<a  target="_blank"><?php echo $biblio_current_isbn; ?></a>
-        							<span style="background-image: url('<?php echo $biblio_current_image; ?>');"></span>
+        							<span class="bilbio_image" style="background-image: url('<?php echo $biblio_current_image; ?>');"></span>
 
 
 
-        							<div class="reveal" id="<?php echo('modal'.get_the_ID())?>" data-reveal>
-										<h1>Awesome. I Have It.</h1>
-										  <p class="lead">Your couch. It is mine.</p>
-										  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-										  <button class="close-button" data-close aria-label="Close modal" type="button">
-										    <span aria-hidden="true">&times;</span>
-										  </button>
+        							<div class="bib_modal" id="<?php echo('modal'.get_the_ID())?>" >
+        								<div class="inner_modal">
+										    		<a class="close-modal">&times;</a>
+										 		 <?php get_template_part( 'template-parts/content-bibliography', get_post_type() );?>
+        								</div>
+
+										 
 									</div>
 
 

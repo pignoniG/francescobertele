@@ -1529,7 +1529,7 @@ div.ouvre-grid{
         cursor: pointer;
     }
 
-    td.col-title:hover span{
+    td.col-title:hover span.bilbio_image{
         position: fixed;
         padding-top: 50px;
         padding-bottom:50px;
@@ -1552,6 +1552,64 @@ div.ouvre-grid{
         background-color: whitesmoke;
 
     }
+
+
+    div.bib_modal{
+        cursor: alias;
+        position: fixed;
+
+
+        z-index: 20;
+
+        width: 100vw;
+        left: -100vw;
+        top: 0;
+        bottom: 0;
+        background-color: #00000050;
+
+        transition-duration: 1ms;
+        transition-property: left;
+        transition-delay: 500ms;
+    }
+
+    body.page-id-190.modal_open{
+        overflow: hidden;
+    }
+
+    td.col-title a.close-modal{
+    position: absolute;
+    right: 17px;
+    top: 5px;
+    font-size: 35px;}
+
+    div.bib_modal .inner_modal{
+        cursor: initial;
+        width: 30vw;
+        position: absolute;
+        transition-duration: 500ms;
+        transition-property: left;
+
+        left: -30vw;
+
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        background-color: whitesmoke;
+
+    }
+
+    div.bib_modal.active{
+        left: 0;
+        transition-delay: 0ms;
+
+
+    }
+
+    div.bib_modal.active .inner_modal{
+        left: 0;
+
+    }
+
 
     
 

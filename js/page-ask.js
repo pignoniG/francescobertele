@@ -83,6 +83,43 @@ $(document).ready(function()
 
     });
 
+
+
+
+
+
+    $(".col-title").click(function(){
+
+      $("div.bib_modal").removeClass("active");
+      $("#"+$(this).attr('data-modal')).addClass("active");
+      $("body").addClass("modal_open");
+      
+  
+    });  
+
+
+  $("div.bib_modal").click(function(){
+      event.stopPropagation();
+      $("div.bib_modal").removeClass("active");
+      $("body").removeClass("modal_open");
+    }); 
+
+  $("div.inner_modal").click(function(){
+      event.stopPropagation();
+    });
+
+  
+  $("a.close-modal").click(function(){
+      event.stopPropagation();
+      $("div.bib_modal").removeClass("active");
+      $("body").removeClass("modal_open");
+    }); 
+    
+
+
+
+
+
 		$("button.ask-tab").click(function(){
 
       $("span.ask-nav ").text($(this).attr('data-textnav'));
