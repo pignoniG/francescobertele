@@ -41,7 +41,7 @@ $(document).ready(function()
         $('html, body').stop().animate({
           'scrollTop': last_ask_sidebar.offset().top-50
           }, 200, 'swing', function () {});
-        }, 200);}
+        }, 300);}
 
         else{
           $('html, body').stop().animate({
