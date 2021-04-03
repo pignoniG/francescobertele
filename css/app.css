@@ -224,6 +224,8 @@
             }
 
         div.sidenav-description{
+
+            
             height: 100px;
             position: fixed;
             border-top: 1px solid black;
@@ -1637,10 +1639,10 @@ div.ouvre-grid{
     }
 
     td.col-title a.close-modal{
-    position: absolute;
-    right: 17px;
-    top: 5px;
-    font-size: 35px;}
+        position: absolute;
+        right: 17px;
+        top: 5px;
+        font-size: 35px;}
 
     div.bib_modal .inner_modal{
         cursor: initial;
@@ -1648,15 +1650,13 @@ div.ouvre-grid{
         position: absolute;
         transition-duration: 500ms;
         transition-property: left;
-
+        overflow-y: scroll;
         left: -30vw;
-
         top: 0;
         bottom: 0;
         height: 100vh;
         padding: 10px;
         background-color: whitesmoke;
-
     }
 
     div.bib_modal.active{
