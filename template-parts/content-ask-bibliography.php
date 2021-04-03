@@ -68,7 +68,11 @@
     								
 
         							<a  target="_blank"><?php echo $biblio_current_titolo; ?></a>
-        							<a  target="_blank"><?php echo $biblio_current_isbn; ?></a>
+
+        							<?php if( get_field('project_isbn') ):?> <a class="isbn noMobile" target="_blank">ISBN:<?php echo $biblio_current_isbn; ?></a> <?php endif;?>
+
+
+
         							<span class="bilbio_image" style="background-image: url('<?php echo $biblio_current_image; ?>');"></span>
 
 
