@@ -2442,7 +2442,7 @@ div.ouvre-grid{
         @media screen and (max-width: 39.9375em) {
 
             div.oeuvre-header ,div.text-description-overflow {
-            border-left: 1px transparent ;
+            border-left: 1px transparent;
             }
 
             .w3-light-grey, .w3-tiny {
