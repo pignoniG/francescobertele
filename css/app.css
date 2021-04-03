@@ -1915,7 +1915,7 @@ div.ouvre-grid{
       
                 border-bottom: 1px solid #c1c1c1;
              }
-            td.col-title a{
+            td.col-title > a{
                 top: 10px;
             position: relative;}
             
@@ -2084,15 +2084,22 @@ div.ouvre-grid{
     }
 
     body.single.oeuvre div.menu-buttons,
-    body.single.onair div.menu-buttons{
+    body.single.onair div.menu-buttons,
+    body.single.onair div.sidenav-description,
+    body.single.oeuvre div.sidenav-description
+     {
         border-color: white;
         box-shadow: 0px 0px 8px 4px #060606;
         background-color: #1b1b1bbf; 
     }
 
+
     body.single.oeuvre div.menu-buttons .center a,
-    body.single.onair div.menu-buttons .center a{
+    body.single.onair div.menu-buttons .center a,
+    body.single.onair div.sidenav-description a,
+    body.single.oeuvre div.sidenav-description a{
         color: white;
+        fill: white;
     }
 
     body.single.oeuvre #c-left,
