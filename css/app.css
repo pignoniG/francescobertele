@@ -1746,16 +1746,27 @@ div.ouvre-grid{
 
 
      }
-        div.ask-content a, div.ask-content a:visited{
-                color: black;
-                text-decoration: underline;
+     div.ask-content#biography .inside a,
+     div.ask-content#become-a-trustee .inside a,
+      div.ask-content#themes  a,
+     div.ask-content#artistic_dir .inside a,
+     div.ask-content#biography .inside a:visited,
+     div.ask-content#themes  a:visited,
+     div.ask-content#become-a-trustee .inside a:visited,
+     div.ask-content#artistic_dir .inside a:visited{
 
-             }
+            color: black;
+            text-decoration: underline;
 
-            div.ask-content a:hover{
-                color: red;
+         }
 
-             }
+    div.ask-content#biography .inside a:hover,
+     div.ask-content#become-a-trustee .inside a:hover,
+     div.ask-content#artistic_dir .inside a:hover
+      div.ask-content#themes  a:hover,{
+            color: red;
+
+         }
 
     
 
