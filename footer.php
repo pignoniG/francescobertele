@@ -24,7 +24,7 @@
 
 <div class="menu-buttons">
 
-    <span id="about" class="about left" onclick="openNav()">#</span>
+    <span id="about" class="about left" onclick="openNav()"></span>
 
     <span class="center">
     <!-- 
@@ -59,22 +59,48 @@
     </span>
 </div> 
 
-<!-- <div id="mySidenav" class="sidenav" style="height: 200px;">
+
 
         <div class="sidenav-description">
-            <a target="_blank" href="https://www.instagram.com/franz_sella/" class="fa fa-instagram"></a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCwK35sNDRUZGncY8VFtbLWw/videos?view_as=subscriber" class="fa fa-youtube"></a>
-            <a target="_blank" href="https://vimeo.com/franzsella" class="fa fa-vimeo"></a>
-            <a target="_blank" href="https://t.me/f_nius" class="fa fa-telegram"></a>
-            <a class="customfollow-icon news" target="_blank" href="https://fbnonportfolio.blogspot.com/">
-            <img src="https://francescobertele.net/wp-content/uploads/2020/11/news.png"></a>
-            <a class="customfollow-icon pensieri" target="_blank" href="https://pensierif.blogspot.com/">
-            <img src="https://francescobertele.net/wp-content/uploads/2020/11/pensieri-blogspot.png"></a>
-            <a target="_blank" href="https://twitter.com/franzsella" class="fa fa-twitter"></a>
-           
+
+            <a target="_blank" href="https://www.instagram.com/franz_sella/"> <i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCwK35sNDRUZGncY8VFtbLWw/videos?view_as=subscriber"> <i class="fab fa-youtube-square"></i></a>
+            <a target="_blank" href="https://vimeo.com/franzsella"> <i class="fab fa-vimeo-v"></i></a>
+            <a target="_blank" href="https://t.me/f_nius"> <i class="fab fa-telegram"></i></a>
+            <a target="_blank" href="https://fbnonportfolio.blogspot.com/"> <i class="far fa-newspaper"></i></a>
+            <a target="_blank" href="https://pensierif.blogspot.com/"> 
+
+
+      
+                <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 100 81.17" style="enable-background:new 0 0 100 81.17;" xml:space="preserve">
+                <path d="M97.86,51.88c-1.8-6.96-3.56-13.93-5.33-20.91L88.78,16.2l-5.15,1.05c1.11,7.11,2.54,14.25,3.92,21.16
+                    c1.35,6.73,2.73,13.68,3.82,20.57l-0.19,0.37c-2.13,4.19-5.26,6.88-9.57,8.21c-2.92,0.9-6.19,1.32-10.34,1.28
+                    c-6.15-0.04-12.87-0.65-21.15-1.91c-7.8-1.19-15.84-2.85-24.58-5.08c1.77-1.72,3.53-3.44,5.29-5.16
+                    c5.21-5.09,10.6-10.36,15.97-15.44C59.24,29.49,72.13,18.1,83.09,8.51c0.64-0.56,1.04-0.81,1.44-0.9c1.25-0.28,2.37-1.41,2.67-2.7
+                    c0.36-1.57-0.71-2.61-1.07-2.96l-0.08-0.08l0.04,0.04l-2.02-0.94h-4.61l-5.56,0.19c-4.34,0.1-8.68,0.2-13.02,0.28l-2.59,0.04
+                    c-8.62,0.15-17.54,0.3-26.33,0.92c-2.93,0.21-5,1.53-6.17,3.94l-0.06,0.12c-0.76,1.57-1.48,3.05-2.28,4.5
+                    c-1.61,2.91-3.24,5.8-4.88,8.7l-2.11,3.74c-0.1,0.18-0.2,0.37-0.29,0.55l-0.1,0.19l3.7,3.46c0.77-0.46,1.2-1.05,1.5-1.52l2.22-3.51
+                    c2.1-3.33,4.21-6.66,6.33-9.98c0.21-0.33,0.38-0.48,0.42-0.51c1.3-0.71,2.39-1.25,3.49-1.61c3.58-1.16,7.35-1.44,11.34-1.74
+                    l1.08-0.08c3.28-0.25,6.73-0.44,10.23-0.55c3.2-0.1,6.47-0.14,9.64-0.17c-0.13,0.15-0.27,0.3-0.4,0.45
+                    c-1.57,1.76-3.18,3.58-4.85,5.25C53.49,21,45.56,28.33,36.57,36.09c-5.73,4.94-11.48,9.85-17.23,14.76c-2.93,2.5-5.86,5-8.78,7.5
+                    c-1.44,1.23-3.06,1.83-4.9,1.81c-2.98,0-3.33,2.5-3.36,2.79c-0.19,1.79,1.01,3.37,2.83,3.74c0.59,0.12,1.13,0.14,1.56,0.15l0.15,0
+                    c5.15,0.18,9.25,0.58,12.93,1.26c7.05,1.31,14.18,2.8,21.07,4.25c3.14,0.66,6.28,1.34,9.42,2.02c4.68,1.02,9.51,2.07,14.29,3.02
+                    c3.46,0.69,6.73,1.03,9.88,1.03c1.3,0,2.58-0.06,3.84-0.17c4.65-0.42,8.59-2.16,11.71-5.15c2.34-2.25,4.3-4.98,6.16-8.59
+                    c0.85-1.65,0.7-3.23,0.59-4.38c-0.01-0.09-0.01-0.17-0.02-0.26c0.24-0.62,0.47-1.23,0.67-1.83l0.27-0.78
+                    C98.27,55.51,98.34,53.74,97.86,51.88z"/>
+                </svg>
+
+            </a>
+            <a target="_blank" href="https://twitter.com/franzsella"> <i class="fab fa-twitter"></i></a>
+        
+        
+          
      </div>       
-</div>
--->
+
+
+
 <div id="myBanner" class="banner ">
         <div id="container-disclaimer" class="">
             

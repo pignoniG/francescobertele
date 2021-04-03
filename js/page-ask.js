@@ -98,7 +98,7 @@ $(document).ready(function()
     });  
 
 
-  $("div.bib_modal").click(function(){
+$("div.bib_modal").click(function(){
       event.stopPropagation();
       $("div.bib_modal").removeClass("active");
       $("body").removeClass("modal_open");
@@ -114,7 +114,6 @@ $(document).ready(function()
       $("div.bib_modal").removeClass("active");
       $("body").removeClass("modal_open");
     }); 
-    
 
 
 

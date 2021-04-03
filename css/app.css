@@ -223,6 +223,47 @@
                 display: none;
             }
 
+        div.sidenav-description{
+            height: 100px;
+            position: fixed;
+            border-top: 1px solid black;
+            padding-top: 6px;
+            text-align: center;
+            font-size: 24px;
+            left: 0;
+            right: 0;
+            bottom: -100px;
+            transition-duration: 500ms;
+            transition-property: bottom;
+            background: #ffffffd6;
+            
+        }
+        div.sidenav-description.active{
+            bottom: 0px;
+            
+        }
+        #about::before{
+            content:"#";
+        }
+        #about.active::before{
+            content:"X";
+        }
+
+        div.sidenav-description a{
+            color: black;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+        div.sidenav-description a:hover, div.sidenav-description a:hover svg{
+            color: red;
+            fill: red;
+            
+        }
+
+        div.sidenav-description a svg{
+            width: 22px;
+        }
+
 
 	/* general  extra medium*/
 
@@ -1146,6 +1187,15 @@ div.ouvre-grid{
 
 	/* oeuvre  extra mobile*/
 		@media screen and (max-width: 28.125em) {
+
+
+        div.menu-buttons .left {
+            
+            margin-left: 10px;}
+        div.menu-buttons .right {
+
+            margin-right: 23px;}
+
 		}
 
 
@@ -1580,8 +1630,9 @@ div.ouvre-grid{
         transition-delay: 500ms;
     }
 
-    body.page-id-190.modal_open{
+    body.modal_open{
         overflow: hidden;
+        max-height:  100vh;
     }
 
     td.col-title a.close-modal{
@@ -2228,6 +2279,108 @@ div.ouvre-grid{
         right: 0;
         top: 72px;  
     } 
+
+
+    div.text-description-overflow-onair {
+        height: 86px;
+        float: left;
+        overflow: hidden;
+        position: fixed;
+        padding: 5px;
+        padding-right: 5vw;
+        padding-top: 17px;
+        top: 0;
+        z-index: 11;
+        padding-left: 5vw;
+        background-color: #1b1b1bbf;
+        margin-top: 0px;
+        border-bottom: 1px solid white;
+        width: 100vw;
+        display: block;
+
+        color: white;
+    
+    }
+    div.text-description-overflow-onair ._TitleOU {
+
+    font-family: PilatWide-Book;
+    color: #FFF;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    padding: 0;
+    text-indent: 0em;
+    border-bottom: none;
+    text-align: left;
+    font-size: 18px;
+    margin: 0px 0 10px 0;}
+
+    div.text-description-overflow-onair span._CatOU.cat-n {
+    position: absolute;
+    margin-top: 7px;
+    right: 5vw;
+    font-family: PilatWide-Book;
+    color: #FFF;
+    letter-spacing: 0em;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    padding: 0;
+    text-indent: 0em;
+    border-bottom: none;
+    text-align: left;
+    font-size: 10px;
+    margin: 7px 0 20px 0;}
+
+    div.details-container-onair {
+    width: 90vw;
+    
+    }
+
+    div.share-it{
+        float: right;
+        position: relative;
+        
+
+
+    }
+
+    .w3-green, .w3-hover-green:hover {
+        color: #fff!important;
+        background-color: #4CAF50!important;
+        }
+
+        .w3-light-grey, .w3-tiny {
+        font-family: PilatWide-Book;
+        display: inline-block;
+        
+       
+        width: calc(50vw - 10vw);
+        padding: 0;
+        margin: 0;
+        height: 15px;
+        margin-right: 5vw;
+        }
+
+        div.details-container-onair .general-button.braketed{
+            color: #FFF;
+            margin-right: 5vw;
+        }
+        div.details-container-onair .general-button.braketed:hover{
+            color: #FFF;
+           
+            
+        }
+
+
+    
+
+
     /* project ouvre extra medium*/
 
         @media only screen and (min-width: 63.9375em)  {
@@ -2236,6 +2389,10 @@ div.ouvre-grid{
     /* project ouvre medium*/
 
         @media only screen and (max-width: 63.9375em)  {
+            div.text-description-overflow-onair span._CatOU.cat-n{
+                position: relative;
+                right: 0;
+            }
             body.single.oeuvre .switcher-list{
                 top:37px;
             }
@@ -2248,6 +2405,14 @@ div.ouvre-grid{
     /* project ouvre mobile*/
 
         @media screen and (max-width: 39.9375em) {
+
+            .w3-light-grey, .w3-tiny {
+                
+                width: calc(90vw);
+            margin-bottom: 10px;}
+
+            div.text-description-overflow-onair {
+            height: 115px;}
 
             div.text-description-overflow {
                 position: initial;

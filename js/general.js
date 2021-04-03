@@ -1,10 +1,19 @@
 /* Set the width of the side navigation*/
+
+function openNav() {
+     $(".sidenav-description").toggleClass("active");
+     $("#about").toggleClass("active");
+     
+
+}
+
 function openBan() {
 
        document.getElementById("myBanner").classList.add("blocked");
 
     document.getElementById("banner-dimmer").classList.add("blocked");
     document.getElementById("container-disclaimer").classList.add("blocked");
+    $("body").addClass("modal_open");
 }
 
 
@@ -14,6 +23,7 @@ function closeBan() {
     document.getElementById("myBanner").classList.remove("blocked");
     document.getElementById("banner-dimmer").classList.remove("blocked");
     document.getElementById("container-disclaimer").classList.remove("blocked");
+    $("body").removeClass("modal_open");
 }
 
 const appHeight = () => {

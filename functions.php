@@ -220,14 +220,28 @@ function onair_js(){
 
    		wp_enqueue_style( 'francescobertele-style-flickity', get_template_directory_uri() . '/css/flickity.css' );
 
-   		wp_enqueue_script( 'francescobertele-imagesloaded', get_template_directory_uri() . '/js/	imagesloaded.pkgd.min.js', array(), _S_VERSION, true );
+   		wp_enqueue_script( 'francescobertele-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), _S_VERSION, true );
 
-		wp_enqueue_script( 'francescobertele-flickity', get_template_directory_uri() . '/js/	flickity.pkgd.min.js', array(), _S_VERSION, true );
+		wp_enqueue_script( 'francescobertele-flickity', get_template_directory_uri() . '/js/flickity.pkgd.min.js', array(), _S_VERSION, true );
 
     	wp_enqueue_script( 'francescobertele-page-onair', get_template_directory_uri() . '/js/page-onair.js', array(), '1', true );
     }
 }
 add_action('wp_enqueue_scripts', 'onair_js');
+
+
+function onair_s_js(){
+    if( is_single() && has_category('onair') ){
+    	
+    	wp_enqueue_script( 'francescobertele-single-onair', get_template_directory_uri() . '/js/single-onair.js', array(), _S_VERSION, true );
+    	wp_enqueue_style( 'francescobertele-style-w3', get_template_directory_uri() . '/css/w3.css' );
+    
+
+    }
+}
+add_action('wp_enqueue_scripts', 'onair_s_js');
+
+
 
 
 

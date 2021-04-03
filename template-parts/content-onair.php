@@ -13,29 +13,38 @@
 
 	<div class="text-description-overflow-onair">
 
-    	<h1 class="_TitleOU" style="border-bottom: 1px solid black;"><?php the_title(); ?>
-
+    	<h1 class="_TitleOU" style="border-bottom: 1px solid white;"><?php the_title(); ?>
     		<?php if( get_field('project_code') ):?> <span class="_CatOU cat-n"> <?php the_field('project_code'); ?> </span> <?php endif;?>
     	</h1>
 
 
         <div class="details-container-onair">
-            <div id="c-left-onair"></div><div id="c-right-onair"></div>
+            
                 <div class="w3-light-grey w3-tiny">
                 <div class="w3-container w3-green" style="width:<?php the_field('project_progress'); ?>%"><?php the_field('project_progress'); ?>%</div>
                 </div>
-            <a class="button-shop onair" href="mailto:fb@francescobertele.net?subject=Trust <?php the_title(); ?>">Trust it</a>
-            <a class="button-shop onair more onair-show" id="onair-more">More info</a>
-            <a class="button-shop onair more onair-hide">Less info</a>
+
+                <a class="general-button braketed" href="mailto:fb@francescobertele.net?subject=Trust <?php the_title(); ?>">
+
+                	<?php echo  wpm_translate_string( "[:en]Trust it[:it]Finanziami[:]", $language = '' ); ?></a>
+
+                <a class="general-button braketed" id="onair-more" >
+
+                	<?php echo  wpm_translate_string( "[:en]More info[:it]Più Informazioni[:]", $language = '' ); ?></a>
+
+            
+    
+           
                 <div class="share-it">
-                    <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
-		            <a class="twitter" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=Check%20this%20out:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
-                    <a style="vertical-align:bottom;" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.example.com%2Fblog%2Fphotography-website-redesign%2F&description=Photography+Website+Redesign" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.example.com%2Fblog%2Fphotography-website-redesign%2F&amp;description=Photography+Website+Redesign', '');" data-pin-do="buttonPin" data-pin-count="beside"></a>
+                    <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo get_permalink();?>" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
+
+					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=Check%20this%20out:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
                 </div>
         </div>
 </div>
 
-<div id="onair-description-container">
+<div id="onair-description-container-dimmer" style="display: none;"></div>
+<div id="onair-description-container" style="display: none;">
     <div id="onair-description-container-leftcolumn">
         <p class="_BodyText sources" style="border-bottom: 1px dashed #797979;">SOURCES AND REFERENCE DOCUMENTS:
 
