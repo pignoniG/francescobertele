@@ -150,7 +150,7 @@ $("div.bib_modal").click(function(){
 
 
       $('html, body').animate({
-        scrollTop: $($(this).attr('data-targhet')).offset().top - 100
+        scrollTop: $($(this).attr('data-targhet')).offset().top - 60
     }, 200);
   			window.location.hash =  $(this).attr('data-targhet');
   
