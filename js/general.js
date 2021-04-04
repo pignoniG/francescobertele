@@ -51,7 +51,7 @@ $(document).ready(function()
 		document.addEventListener('mousemove', logKey);
 		
 		function logKey(e) {
-		  mouseLog.innerText = `X: ${e.clientX}, Y: ${e.clientY}`;
+		  mouseLog.innerText = 'X: '+e.clientX+', Y: '+e.clientY;
 		}
 
 
