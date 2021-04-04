@@ -28,7 +28,7 @@
 
                 	<?php echo  wpm_translate_string( "[:en]Trust it[:it]Finanziami[:]", $language = '' ); ?></a>
 
-                <a class="general-button braketed" id="onair-more" >
+                <a class="general-button braketed modal_control" id="onair-more" >
 
                 	<?php echo  wpm_translate_string( "[:en]More info[:it]Più Informazioni[:]", $language = '' ); ?></a>
 
@@ -43,10 +43,11 @@
         </div>
 </div>
 
-<div id="onair-description-container-dimmer" style="display: none;"></div>
-<div id="onair-description-container" style="display: none;">
+<div id="onair-description-container-dimmer" class="modal_control"></div>
+<div id="onair-description-container" >
+	<a class="close-modal modal_control">×</a>
     <div id="onair-description-container-leftcolumn">
-        <p class="_BodyText sources" style="border-bottom: 1px dashed #797979;">SOURCES AND REFERENCE DOCUMENTS:
+        <p class="_BodyText sources" style="border-bottom: 1px dashed #797979;"><?php echo  wpm_translate_string( "[:en]SOURCES AND REFERENCE DOCUMENTS[:it]FONTI E DOCUMENTI DI RIFERIMENTO[:]", $language = '' ); ?>:
 
 
     	    
@@ -65,7 +66,7 @@
 
     	 <?php if( have_rows('project_images') ):
 
-			?> <br>../Images: <?php
+			?> <br>../<?php echo  wpm_translate_string( "[:en]Images[:it]Immagini[:]", $language = '' ); ?>: <?php
 		    // Loop through rows.
 		    while( have_rows('project_images') ) : the_row();
 
@@ -77,7 +78,7 @@
 
 		<?php if( have_rows('project_videos') ):
 
-			?> <br>../Videos: <?php
+			?> <br>../<?php echo  wpm_translate_string( "[:en]Videos[:it]Video[:]", $language = '' ); ?>: <?php
 		    // Loop through rows.
 		    while( have_rows('project_videos') ) : the_row();
 
@@ -96,7 +97,7 @@
     		<?php
     		$status = get_field('project_bar_status');
 			if( $status ): ?>
-			<p class="_BodyText"><span class="_CatOU">Status</span> 
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Status[:it]Stato[:]", $language = '' ); ?></span> 
 			    <?php foreach( $status as $status_i ): ?>
 			        <?php echo mytranslate($status_i) ; ?>
 			    <?php endforeach; ?>
@@ -105,7 +106,7 @@
 
 			$looking = get_field('project_bar_looking');
 			if( $looking ): ?>
-			<p class="_BodyText"><span class="_CatOU">Looking for</span> 
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Looking for[:it]Cercando[:]", $language = '' ); ?></span> 
 			    <?php foreach( $looking as $status_i ): ?>
 			        <?php echo  mytranslate($status_i) ; ?>
 			    <?php endforeach; ?>

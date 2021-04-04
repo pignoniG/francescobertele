@@ -5,17 +5,17 @@
 $( document ).ready(
     function(){ 
 
-  
 
- $("#onair-more").click(function(){
-  
-      $("#onair-description-container").toggleClass("blocked");
-      $("#onair-description-container-dimmer").toggleClass("blocked");
-      $(this).toggleClass("active");
 
-      $("body").toggleClass("modal_open");
+  $(".modal_control").click(function(){
+        $("#onair-description-container").toggleClass("blocked");
+        $("#onair-description-container-dimmer").toggleClass("blocked");
+        $("#onair-more").toggleClass("active");
+
+        $("body").toggleClass("modal_open");
     }); 
-    
+
+
 
 
     
