@@ -2493,7 +2493,7 @@ div.ouvre-grid{
             padding-top: 20px;
             padding-right: 0vw;
             
-            overflow-x: scroll;}
+            overflow-y: scroll;}
 
 
             #onair-description-container .close-modal{
@@ -2510,7 +2510,7 @@ div.ouvre-grid{
                 vertical-align: top;
                 width: 58vw;
                 overflow: auto;
-                height: 50vh;
+                
             }
             .status-p-onair p._BodyText {
             margin: 0;
@@ -2583,6 +2583,17 @@ div.ouvre-grid{
     /* project ouvre mobile*/
 
         @media screen and (max-width: 39.9375em) {
+            p._BodyText.abstract {
+                
+                width: calc(100% - 3vw);
+                
+                
+            }
+            div#onair-description-container-leftcolumn {
+                display: inline-block;
+                width: calc(100% - 3vw);
+                margin-bottom: 3vw;
+                }
 
             div.oeuvre-header ,div.text-description-overflow {
             border-left: 1px transparent;
