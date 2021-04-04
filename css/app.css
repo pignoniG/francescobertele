@@ -2126,14 +2126,25 @@ div.ouvre-grid{
         background-color: #1b1b1bbf; 
     }
 
-
+    .share-it a,
+    .share-it a:visited,
     body.single.oeuvre div.menu-buttons .center a,
     body.single.onair div.menu-buttons .center a,
     body.single.onair div.sidenav-description a,
-    body.single.oeuvre div.sidenav-description a{
+    body.single.oeuvre div.sidenav-description a,
+    body.single.oeuvre div.menu-buttons .center a:visited,
+    body.single.onair div.menu-buttons .center a:visited,
+    body.single.onair div.sidenav-description a:visited,
+    body.single.oeuvre div.sidenav-description a:visited{
         color: white;
         fill: white;
     }
+
+    .share-it a:hover{
+        color: red;
+    }
+
+
 
     body.single.oeuvre #c-left,
     body.single.onair #c-left {  

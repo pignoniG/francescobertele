@@ -50,17 +50,24 @@
 
     		<?php if( get_field('project_status') ):?>
 
-    			<a class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net">
-
-    				<?php 
+    			<?php 
     				if ( mytranslate_force(get_field('project_status'),"en") == "activable"){ 
-    					echo  wpm_translate_string( "[:en]Activate[:it]Attiva[:]", $language = '' ); }
+    					$status = wpm_translate_string( "[:en]Activate[:it]Attiva[:]", $language = '' ); }
 
     				elseif (mytranslate_force(get_field('project_status'),"en") == "sold"){ 
-    					echo  wpm_translate_string( "[:en]Sold[:it]Venduto[:]", $language = '' ); }
+    					$status = wpm_translate_string( "[:en]Sold[:it]Venduto[:]", $language = '' ); }
 
     				elseif (mytranslate_force(get_field('project_status'),"en") == "on sale"){ 
-    					echo  wpm_translate_string( "[:en]on sale[:it]In vendita[:]", $language = '' ); }
+    					$status = wpm_translate_string( "[:en]on sale[:it]Acquista[:]", $language = '' ); }
+    				?>
+
+
+
+    			<a class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net?subject=<?php echo  $status;?>-<?php the_field('project_code'); ?>-<?php the_title(); ?>">
+
+    				<?php 
+    				
+    					echo  $status;
     				?>
     					
 
@@ -72,7 +79,7 @@
 
         <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo get_permalink();?>" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
 
-		<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=Check%20this%20out:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
+		<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=<?php echo  wpm_translate_string( "[:en]Check%20this%20out[:it]Dai%20un'occhiata%20a%20questo[:]", $language = '' ); ?>:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
         
 
 	<!-- SCHEDA -->

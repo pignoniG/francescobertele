@@ -24,7 +24,7 @@
                 <div class="w3-container w3-green" style="width:<?php the_field('project_progress'); ?>%"><?php the_field('project_progress'); ?>%</div>
                 </div>
 
-                <a class="general-button braketed" href="mailto:fb@francescobertele.net?subject=Trust <?php the_title(); ?>">
+                <a class="general-button braketed" href="mailto:fb@francescobertele.net?subject=Trust-<?php the_field('project_code'); ?>-<?php the_title(); ?>">
 
                 	<?php echo  wpm_translate_string( "[:en]Trust it[:it]Finanziami[:]", $language = '' ); ?></a>
 
@@ -38,7 +38,7 @@
                 <div class="share-it">
                     <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo get_permalink();?>" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
 
-					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=Check%20this%20out:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
+					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=<?php echo  wpm_translate_string( "[:en]Check%20this%20out[:it]Dai%20un'occhiata%20a%20questo[:]", $language = '' ); ?>:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
                 </div>
         </div>
 </div>
