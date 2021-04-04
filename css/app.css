@@ -1045,6 +1045,12 @@
         width: 50%;
         overflow: auto;
     }
+    #myBanner a.close-modal{
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        font-size: 28px;
+    }
 
     #banner-dimmer.blocked {
         opacity: 1;

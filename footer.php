@@ -102,6 +102,7 @@
 
 
 <div id="myBanner" class="banner ">
+    <a class="close-modal" onclick="closeBan()" >×</a>
         <div id="container-disclaimer" class="">
             
             
