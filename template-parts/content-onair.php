@@ -47,6 +47,34 @@
 <div id="onair-description-container" >
 	<a class="close-modal modal_control">×</a>
     <div id="onair-description-container-leftcolumn">
+
+    	<div class="status-p-onair">
+
+
+    		<?php
+    		$status = get_field('project_bar_status');
+			if( $status ): ?>
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Status[:it]Stato[:]", $language = '' ); ?></span> 
+			    <?php foreach( $status as $status_i ): ?>
+			        <?php echo mytranslate($status_i) ; ?>
+			    <?php endforeach; ?>
+			</p>
+			<?php endif; 
+
+			$looking = get_field('project_bar_looking');
+			if( $looking ): ?>
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Looking for[:it]Cercando[:]", $language = '' ); ?></span> 
+			    <?php foreach( $looking as $status_i ): ?>
+			        <?php echo  mytranslate($status_i) ; ?>
+			    <?php endforeach; ?>
+			</p>
+			<?php endif; ?>
+
+
+
+        </div>
+
+        
         <p class="_BodyText sources" style="border-bottom: 1px dashed #797979;"><?php echo  wpm_translate_string( "[:en]SOURCES AND REFERENCE DOCUMENTS[:it]FONTI E DOCUMENTI DI RIFERIMENTO[:]", $language = '' ); ?>:
 
 
@@ -91,31 +119,7 @@
 
 
     	</p>
-    	<div class="status-p-onair">
-
-
-    		<?php
-    		$status = get_field('project_bar_status');
-			if( $status ): ?>
-			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Status[:it]Stato[:]", $language = '' ); ?></span> 
-			    <?php foreach( $status as $status_i ): ?>
-			        <?php echo mytranslate($status_i) ; ?>
-			    <?php endforeach; ?>
-			</p>
-			<?php endif; 
-
-			$looking = get_field('project_bar_looking');
-			if( $looking ): ?>
-			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Looking for[:it]Cercando[:]", $language = '' ); ?></span> 
-			    <?php foreach( $looking as $status_i ): ?>
-			        <?php echo  mytranslate($status_i) ; ?>
-			    <?php endforeach; ?>
-			</p>
-			<?php endif; ?>
-
-
-
-        </div>
+    	
     </div>
 
     <?php if( get_field('project_abstract') ):?>  

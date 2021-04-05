@@ -2507,7 +2507,7 @@ div.ouvre-grid{
             width: 90vw;
             padding-left: 3vw;
             padding-bottom: 30px;
-            padding-top: 20px;
+            padding-top: 30px;
             padding-right: 0vw;
             
             overflow-y: scroll;}
@@ -2521,13 +2521,17 @@ div.ouvre-grid{
             div#onair-description-container-leftcolumn {
                 display: inline-block;
                 width: 27vw;
+                padding-top: 19px;
             }
             p._BodyText.abstract {
                 display: inline-block;
                 vertical-align: top;
-                width: 58vw;
+                width: 56vw;
                 overflow: auto;
                 
+            }
+            .status-p-onair{
+                margin-bottom: 10px;
             }
             .status-p-onair p._BodyText {
             margin: 0;
