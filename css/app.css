@@ -1652,7 +1652,7 @@ div.ouvre-grid{
 
     td.col-title a.close-modal{
         position: absolute;
-        right: 17px;
+        right: 2vw;
         top: 5px;
         font-size: 35px;}
 
@@ -1668,7 +1668,7 @@ div.ouvre-grid{
         bottom: 0;
         height: 100vh;
         padding: 10px;
-        background-color: whitesmoke;
+        background-color: white;
     }
 
     div.bib_modal.active{
@@ -1685,17 +1685,18 @@ div.ouvre-grid{
     }
 
     div.text-description-overflow-bibliography h1._TitleOU{
-        font-family: PilatWide-Book;
+       font-family: PilatWide-Book;
         color: #000;
         letter-spacing: 0.02em;
-        line-height: 3.2;
+        line-height: 2.2;
         font-weight: 400;
         text-transform: none;
         font-style: normal;
         text-decoration: none;
         padding: 0;
-        margin-top: -10px;
+        margin-top: 0px;
         text-indent: 0em;
+        padding-left: 2vw;
         border-bottom: none;
         text-align: left;
         font-size: 16px;
@@ -1716,11 +1717,26 @@ div.ouvre-grid{
         text-indent: 0em;
         border-bottom: none;
         text-align: left;
-        font-size: 13px;
+        font-size: 10px;
         margin-bottom: 10px;
     }
 
     .text-description-overflow-bibliography p{
+
+        font-family:  founders-grotesk-mono;
+        color: #000;
+        letter-spacing: 0em;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: none;
+        font-style: normal;
+        text-decoration: none;
+        padding: 0;
+        text-indent: 0em;
+        border-bottom: none;
+        text-align: left;
+        font-size: 13px;
+        
         margin-bottom: 10px;}
 
     td.col-title .text-description-overflow-bibliography a,
