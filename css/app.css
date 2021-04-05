@@ -1654,7 +1654,8 @@ div.ouvre-grid{
         position: absolute;
         right: 2vw;
         top: 5px;
-        font-size: 35px;}
+        font-size: 35px;
+    }
 
     div.bib_modal .inner_modal{
         cursor: initial;
