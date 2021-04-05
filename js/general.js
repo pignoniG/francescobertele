@@ -54,12 +54,11 @@ $(document).ready(function()
 		  mouseLog.innerText = 'X: '+e.clientX+', Y: '+e.clientY;
 		}
 
+		$.getJSON('https://ipapi.co/json/', function(data) {
+	  		$("#ip-log").html(data.ip);
+		});
 
-
-    	$.get("http://ip-api.com/json?callback=?", function (response) {
-    		$("#ip-log").html(response.query);
-    	}, "jsonp");
-
+    	
 
 
 

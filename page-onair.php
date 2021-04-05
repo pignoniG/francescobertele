@@ -85,7 +85,7 @@ get_header(); ?>
 
 
 		<div class="onair_button">
-			<a class="general-button braketed" href="<?php echo wpm_translate_url( get_page_link(190), $language = '' )."#become-a-trustee" ;?>"><?php echo  wpm_translate_string( "[:en]Become a Trustee[:it]Diventa un Fiduciario[:]", $language = '' ); ?></a>
+			<a class="general-button braketed" href="<?php echo wpm_translate_url( get_page_link(190), $language = '' )."#trustee" ;?>"><?php echo  wpm_translate_string( "[:en]Become a Trustee[:it]Diventa un Fiduciario[:]", $language = '' ); ?></a>
 		</div>
 
 			

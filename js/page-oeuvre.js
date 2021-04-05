@@ -164,7 +164,6 @@ jQuery("#accordionFilters").on('click', function( event ){
   function ceckRes(){
     if (document.body.clientWidth < 1024) {
 
-      console.log("cazz")
       document.getElementById('btn-reset-filter').click();
       $(".filter_panel").hide();
       jQuery('#quicksearch').val("");
