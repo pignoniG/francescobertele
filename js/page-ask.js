@@ -108,9 +108,6 @@ $(document).ready(function()
 
 
 
-
-
-
     $(".col-title").click(function(){
 
       $("div.bib_modal").removeClass("active");
@@ -156,20 +153,23 @@ $("div.bib_modal").click(function(){
   
 		});    	
 
+    if (window.innerWidth > 1023) {
+
+        
+        $('#sidebar_Specificity').addClass("visible");
+        $('[data-targhet="#sidebar_Specificity"]').addClass("active");
+
+        $('#sidebar_Specificita').addClass("visible");
+        $('[data-targhet="#sidebar_Specificita"]').addClass("active");
+       
+      }
+
     	var hash = $(location).attr('hash');
 
     	if (hash == "") { $('[data-targhet="#themes"]').trigger('click'); }
     	else{ 			  $('[data-targhet="'+hash+'"]').trigger('click');}
 
-      if (window.innerWidth > 1023) {
-
-        $('[data-targhet="#sidebar_Specificity"]').trigger('click');
-        $('[data-targhet="#sidebar_Specificity"]').addClass("active");
-
-        $('[data-targhet="#sidebar_Specificit"]').trigger('click');
-        $('[data-targhet="#sidebar_Specificit"]').addClass("active");
-       
-      }
+      
 
       const table = document.querySelector('table');
 
