@@ -156,10 +156,10 @@ $("div.bib_modal").click(function(){
     if (window.innerWidth > 1023) {
 
         
-        $('#sidebar_Specificity').addClass("visible");
+        $('#sidebar_specificity').addClass("visible");
         $('[data-targhet="#sidebar_specificity"]').addClass("active");
 
-        $('#sidebar_Specificita').addClass("visible");
+        $('#sidebar_specificit').addClass("visible");
         $('[data-targhet="#sidebar_specificit"]').addClass("active");
        
       }
