@@ -87,7 +87,7 @@ foreach ($filter_items as $filter_item) {
 
 							?>
 
-							<snip class="theme_item <?php echo $item_filter; ?>"><?php echo("#".ucwords(mytranslate($theme_field))); ?></snip>
+							<snip class="theme_item <?php echo $item_filter; ?>"><?php echo("#".mytranslate($theme_field)); ?></snip>
 					       	
 					    <?php endforeach; ?>
 		

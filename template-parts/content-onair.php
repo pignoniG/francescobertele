@@ -63,7 +63,7 @@
 
 			$looking = get_field('project_bar_looking');
 			if( $looking ): ?>
-			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Looking for[:it]Cercando[:]", $language = '' ); ?></span> 
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Looking for[:it]In cerca di[:]", $language = '' ); ?></span> 
 			    <?php foreach( $looking as $status_i ): ?>
 			        <?php echo  mytranslate($status_i) ; ?>
 			    <?php endforeach; ?>

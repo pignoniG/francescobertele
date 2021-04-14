@@ -115,7 +115,11 @@
             | P.IVA: 03687100135 | f’ archive 2021</p>
             <p class="_BodyText" style="text-align:center;">
                  <?php echo  wpm_translate_string( "[:en]web design and development by [:it]web design e sviluppo di [:]", $language = '' ); ?>
-                 <a style="text-decoration:underline;" href="https://www.simone-ellero.eu/">simone ellero</a> e <a style="text-decoration:underline;" href="https://giovannipignoni.com/">giovanni pignoni</a> </p>
+                 <a style="text-decoration:underline;" target="_blank" href="https://www.simone-ellero.eu/">simone ellero</a> e <a style="text-decoration:underline;" target="_blank" href="https://giovannipignoni.com/">giovanni pignoni</a> <br> 
+                  <?php echo  wpm_translate_string( "[:en]copy by [:it]copy di [:]", $language = '' ); ?>
+                  <a style="text-decoration:underline;" target="_blank" href="https://www.instagram.com/gaiascrivecose/">gaia greco</a>.
+
+            </p>
             <br>
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
                 <i class="fab fa-creative-commons" aria-hidden="true"></i>

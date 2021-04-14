@@ -153,7 +153,7 @@
   			$keyword = preg_split("/[\_]+/", "hypertext language, $project_item");
 			
 			if( $project_theme ): ?>
-				<br>../<?php echo "#".ucwords(mytranslate($keyword[1])); ?>:
+				<br>../<?php echo "#".mytranslate($keyword[1]); ?>:
 
 				<?php foreach( $project_theme as $theme_field ): ?>
 			        <?php echo mytranslate($theme_field)." "; ?>
@@ -203,8 +203,8 @@
 
 
         <?php if( get_field('project_bibliography') ):?> <p>../<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: <?php the_field('project_bibliography'); ?></p>  <?php endif;?>
-        <?php if( get_field('project_exhibition') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esibizioni[:]", $language = '' ); ?>: <?php the_field('project_exhibition'); ?> </p><?php endif;?>
-		<?php if( get_field('project_collection') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Collection[:it]Collezzione[:]", $language = '' ); ?>: <?php echo mytranslate(get_field('project_collection')); ?> </p><?php endif;?>
+        <?php if( get_field('project_exhibition') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esposta a[:]", $language = '' ); ?>: <?php the_field('project_exhibition'); ?> </p><?php endif;?>
+		<?php if( get_field('project_collection') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Collection[:it]Collezione[:]", $language = '' ); ?>: <?php echo mytranslate(get_field('project_collection')); ?> </p><?php endif;?>
     
     <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">   
     </p>
