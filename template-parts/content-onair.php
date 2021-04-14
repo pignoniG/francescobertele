@@ -26,7 +26,7 @@
 
                 <a class="general-button braketed" href="mailto:fb@francescobertele.net?subject=Trust-<?php the_field('project_code'); ?>-<?php the_title(); ?>">
 
-                	<?php echo  wpm_translate_string( "[:en]Trust it[:it]Finanziami[:]", $language = '' ); ?></a>
+                	<?php echo  wpm_translate_string( "[:en]Trust it[:it]Produci[:]", $language = '' ); ?></a>
 
                 <a class="general-button braketed modal_control" id="onair-more" >
 

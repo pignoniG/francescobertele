@@ -27,8 +27,8 @@ get_header(); ?>
   					<?php echo  wpm_translate_string( "[:en]Biography[:it]Biografia[:]", $language = '' ); ?>
 				  </button>
 				  <button class="accordion braketed ask-tab"  data-targhet="#become-a-trustee"
-				  data-textnav="<?php echo  wpm_translate_string( "[:en]Trustee[:it]Fiduciario[:]", $language = '' ); ?>">
-  					<?php echo  wpm_translate_string( "[:en]Trustee[:it]Fiduciario[:]", $language = '' ); ?>
+				  data-textnav="<?php echo  wpm_translate_string( "[:en]Trustee[:it]Produci[:]", $language = '' ); ?>">
+  					<?php echo  wpm_translate_string( "[:en]Trustee[:it]Produci[:]", $language = '' ); ?>
 				  </button>
 				  <button class="accordion braketed ask-tab"  data-targhet="#bibliography"
 				  data-textnav="<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>">
@@ -55,18 +55,22 @@ get_header(); ?>
 					</h3>
 				</div>
   				<div class="cell small-12 medium-10 large-8 inside large-offset-4 medium-offset-2">
-					<?php the_field('ask_biography'); ?>
+				
+					<?php if (wpm_get_language()=="it") {the_field('ask_biography_it'); }?>	
+  					<?php if (wpm_get_language()=="en") {the_field('ask_biography'); }?>	
 				</div>
 
 			</div>
 			<div class="ask-content grid-x" id="become-a-trustee">
 				<div class="cell small-12 medium-12 large-12 ask-separator">
 					<h3 id="">
-						<?php echo  wpm_translate_string( "[:en]Trustee[:it]Fiduciario[:]", $language = '' ); ?>
+						<?php echo  wpm_translate_string( "[:en]Trustee[:it]Produci[:]", $language = '' ); ?>
 					</h3>
 				</div>
   					<div class="cell small-12 medium-10 large-8 inside large-offset-4 medium-offset-2">
-						<?php the_field('ask_trustee'); ?>
+						
+						<?php if (wpm_get_language()=="it") {the_field('ask_trustee_it'); }?>	
+  						<?php if (wpm_get_language()=="en") {the_field('ask_trustee'); }?>	
 					</div>
 
 			</div>
@@ -81,7 +85,8 @@ get_header(); ?>
 				</div>
 
   				<div class="cell small-12 medium-10 large-8 inside large-offset-4 medium-offset-2">
-  					<?php the_field('ask_ad'); ?>	
+  					<?php if (wpm_get_language()=="it") {the_field('ask_ad_it'); }?>	
+  					<?php if (wpm_get_language()=="en") {the_field('ask_ad'); }?>	
   				</div>
 			</div>
 

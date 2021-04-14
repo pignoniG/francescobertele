@@ -157,10 +157,10 @@ $("div.bib_modal").click(function(){
 
         
         $('#sidebar_Specificity').addClass("visible");
-        $('[data-targhet="#sidebar_Specificity"]').addClass("active");
+        $('[data-targhet="#sidebar_specificity"]').addClass("active");
 
         $('#sidebar_Specificita').addClass("visible");
-        $('[data-targhet="#sidebar_Specificita"]').addClass("active");
+        $('[data-targhet="#sidebar_specificit"]').addClass("active");
        
       }
 
