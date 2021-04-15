@@ -68,7 +68,17 @@
     				<?php 
     				
     					echo  $status;
+
+
+    				if ( mytranslate_force(get_field('project_status'),"en") == "activable"):
+    				
+
     				?>
+
+    					<span><?php echo  wpm_translate_string( "[:en]reactivation involves buying the project and his ex-novo production[:it]la riattivazione comporta l'acquisto del progetto e la sua produzione ex-novo[:]", $language = '' );?></span>
+    					<?php endif;?>
+
+
     					
 
     				</a>
