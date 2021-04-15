@@ -2363,7 +2363,7 @@ div.ouvre-grid{
 
 
     div.text-description-overflow {
-        padding-bottom: 90px;
+    
         padding-top: 17px;
         height: calc(100vh - 72px);
         overflow: scroll;
