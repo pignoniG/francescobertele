@@ -7,7 +7,15 @@
   "post_fields": {
 
 	"project_bar_looking": {},
-	"project_bar_status": {}
+	"project_bar_status": {},
+	"ask_trustee_it": {},
+	"ask_trustee": {},
+	"ask_biography_it": {},
+	"ask_biography": {},
+	"ask_themes_it": {},
+	"ask_themes": {},
+	"ask_ad_it": {},
+	"ask_ad": {}
 
 
   }
