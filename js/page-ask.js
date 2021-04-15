@@ -155,6 +155,12 @@ $("div.bib_modal").click(function(){
 
     if (window.innerWidth > 1023) {
 
+        $('#sidebar_Specificity').addClass("visible");
+        $('[data-targhet="#Sidebar_specificity"]').addClass("active");
+
+        $('#sidebar_Specificit').addClass("visible");
+        $('[data-targhet="#Sidebar_specificit"]').addClass("active");
+
         
         $('#sidebar_specificity').addClass("visible");
         $('[data-targhet="#sidebar_specificity"]').addClass("active");

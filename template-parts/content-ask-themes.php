@@ -19,11 +19,11 @@
 	</div>
 	<div class="cell small-12 large-4 ask-sidebar noMedium">
 		<?php
-
+		
 		$ask_themes = "ask_themes";
-		if (wpm_get_language()=="it") {
+		/** if (wpm_get_language()=="it") {
 			$ask_themes = "ask_themes_it";
-		}
+		} */
 
 		
 
