@@ -1274,12 +1274,14 @@ div.ouvre-grid{
     div.onair_flow .flickity-prev-next-button.next::after{
         content: "\2192";
         font-size: 40px;
+        font-family: 'PilatWide-Book';
         position: relative;
         top: -8px;
         left: -9px;
     }
     div.onair_flow .flickity-prev-next-button.previous::after{
         content: "\2190";
+        font-family: 'PilatWide-Book';
         font-size: 40px;
         position: relative;
         top: -8px;
