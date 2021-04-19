@@ -1043,7 +1043,7 @@
         top: 50%;
         left: 50%;
         border: 1px solid black;
-        transform: translate(-50%, -50%);
+       
         background-color: #ffffffd6;
          /* Disable horizontal scroll */
         overflow: hidden;
@@ -1058,7 +1058,10 @@
       box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
     }
     div#myBanner.blocked {
-        top: 50%;
+        top: 25%;
+        left: 25%;
+        padding-left: 20px;
+        padding-right:20px;
         height: 50%;
         width: 50%;
         overflow: auto;
@@ -1192,7 +1195,8 @@ div.ouvre-grid{
 		@media screen and (max-width: 39.9375em) {
 
             div#myBanner.blocked {
-                top: 50%;
+                top: 25%;
+                left: 5%;
                 height: 60%;
                 width: 90%;
             }
@@ -2501,15 +2505,13 @@ div.ouvre-grid{
             left: 50%;
             top: 50%;
             
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
+          
             margin: auto;
            
             color: white;
             border-color: white!important;
             transition-duration: 0.3s;
-            transition-property: height,width,opacity;
+            transition-property: height,width,opacity,top,left;
             opacity: 0;
 
             height: 0;
@@ -2525,12 +2527,18 @@ div.ouvre-grid{
         }
 
         #onair-description-container.blocked {
+
+            left: 5vw;
+            top: 21.75vh;
             background: #000000d9;
+            transition-duration: 0.1s;
             box-shadow: 0px 0px 8px 4px #060606;
             border: 1px solid #ffffff!important;
             opacity: 1;
             height: 56.5vh;
             width: 90vw;
+
+            
             padding-left: 3vw;
             padding-bottom: 30px;
             padding-top: 30px;
