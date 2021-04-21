@@ -123,7 +123,7 @@
 	?>
 
 
-    <p class="_BodyText" ><?php echo  wpm_translate_string( "[:en]CULTURAL DEFINITION[:it]DEFINIZIONE CULTURALE[:]", $language = '' ); ?>:
+    <p class="_BodyText" style="margin-bottom: 0;"><?php echo  wpm_translate_string( "[:en]CULTURAL DEFINITION[:it]DEFINIZIONE CULTURALE[:]", $language = '' ); ?>:
 
         <?php if( get_field('project_edition') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Edition[:it]Edizione[:]", $language = '' ); ?>: <?php the_field('project_edition'); ?> <?php endif;?>
 
