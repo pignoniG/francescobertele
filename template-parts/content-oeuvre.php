@@ -123,14 +123,20 @@
 	?>
 
 
-    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]CULTURAL DEFINITION[:it]DEFINIZIONE CULTURALE[:]", $language = '' ); ?>:
+    <p class="_BodyText" ><?php echo  wpm_translate_string( "[:en]CULTURAL DEFINITION[:it]DEFINIZIONE CULTURALE[:]", $language = '' ); ?>:
 
         <?php if( get_field('project_edition') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Edition[:it]Edizione[:]", $language = '' ); ?>: <?php the_field('project_edition'); ?> <?php endif;?>
 
-       	<?php if( get_field('project_co-authors') ):?>  <br>../<?php echo  wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ); ?>: <a class="projects-link" href="<?php echo(get_field('project_co-authors')['url']); ?>" target="_blank"><?php echo(get_field('project_co-authors')); ?></a> <?php endif;?>
+       
 
         <?php if( get_field('project_sitetimes') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Site/times[:it]Siti/date[:]", $language = '' ); ?>: <?php the_field('project_sitetimes'); ?> <?php endif;?>
+
+        <?php if( get_field('project_co-authors') ):?>  <br>../<?php echo  wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ); ?>: <a class="projects-link" href="<?php echo(get_field('project_co-authors')['url']); ?>" target="_blank"><?php echo(get_field('project_co-authors')); ?></a> <?php endif;?>
     </p>
+
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"></p>
+
+
     
     <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><?php echo  wpm_translate_string( "[:en]TECHNICAL DATA[:it]DATI TECNICI[:]", $language = '' ); ?>:<?php $type = get_field('project_object_type');
 			if( $type ): ?>
