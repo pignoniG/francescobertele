@@ -130,9 +130,11 @@
        
 
         <?php if( get_field('project_sitetimes') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Site/times[:it]Siti/date[:]", $language = '' ); ?>: <?php the_field('project_sitetimes'); ?> <?php endif;?>
+   	</p>
+   	<p>
 
-        <?php if( get_field('project_co-authors') ):?>  <br>../<?php echo  wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ); ?>: <a class="projects-link" href="<?php echo(get_field('project_co-authors')['url']); ?>" target="_blank"><?php echo(get_field('project_co-authors')); ?></a> <?php endif;?>
-    </p>
+        <?php if( get_field('project_co-authors') ):?>  <br>../<?php echo  wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ); ?>: </p> <?php echo(get_field('project_co-authors')); ?>  <?php endif;?>
+   
 
     <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"></p>
 
