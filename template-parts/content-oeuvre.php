@@ -240,17 +240,54 @@
 					<div id="oeuvre-buy-container" >
 						<a class="close-modal modal_control">×</a>
 					    <div id="oeuvre-buy-container-leftcolumn">
+
+   							<div class="status-p-onair">
+
+   								<?php
+   								// Check rows exists.
+								if( have_rows('project_prices') ):
+
+								    // Loop through rows.
+								    while( have_rows('project_prices') ) : the_row();
+
+								        $project_price = get_sub_field('project_price');
+								        $project_price_description = get_sub_field('project_price_description');
+								        ?>
+								        <p class="_BodyText"><span class="_CatOU"><?php echo  $project_price_description; ?></span> <?php  echo $project_price;  ?> </p>
+								        
+								    <?php endwhile;
+								endif;
+
+
+
+    							$status_detailed = get_field('project_status_detailed');
+								if( $status_detailed ): ?>
+								<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Availability[:it]Disponibilità[:]", $language = '' ); ?></span> 
+								    <?php  echo mytranslate($status_detailed) ;  ?>
+								</p>
+								<?php endif; ?>
 					
-					    	BUY ME!
-					
-					    	  <a class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net?subject=<?php echo  $status;?>-<?php the_field('project_code'); ?>-<?php the_title(); ?>"></a>
-					
-					    </div>
+
+					    	</div>
+
+
+						</div>
+
+						<p class="" style="padding-bottom: 5px;"></p> 
+
+		
+
+
+						<p class="_BodyText">
+
+        					<?php echo  wpm_translate_string( "[:en]To finalize your purchase and arrange delivery of the work, write to[:it]Per finalizzare il tuo acquisto e concordare la consegna dell'opera, scrivi a[:]", $language = '' ); ?>
+        						<a href="mailto:f_archive@francescobertele.net?subject=<?php echo  $status;?>-<?php the_field('project_code'); ?>-<?php the_title(); ?>">f_archive@francescobertele.net</a>
+
+    					</p>
+
+				</div>
 					
 					  
-					</div>
-
-
 
 
 

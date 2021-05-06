@@ -2557,6 +2557,18 @@ div.ouvre-grid{
             overflow-y: scroll;}
 
 
+            #onair-trust-container.blocked,
+            #oeuvre-buy-container.blocked{
+            left: 25vw;
+    
+            width: 50vw;
+            
+            padding-right: 3vw;
+
+            }
+
+
+
             #onair-description-container .close-modal, 
             #onair-trust-container .close-modal,
             #oeuvre-buy-container .close-modal{
@@ -2647,6 +2659,31 @@ div.ouvre-grid{
     /* project ouvre medium*/
 
         @media only screen and (max-width: 63.9375em)  {
+
+             div#onair-trust-container-leftcolumn {
+                display: inline-block;
+    
+                width: 100% ;
+                margin-bottom: 3vw;
+          
+                }
+            div#oeuvre-buy-container-leftcolumn {
+                display: inline-block;
+    
+                width: 100% ;
+                margin-bottom: 3vw;
+          
+                }
+
+                
+
+            #onair-trust-container.blocked,
+            #oeuvre-buy-container.blocked{
+                left: 5vw;
+                width: 90vw;
+            }
+            
+
             div.text-description-overflow-onair span._CatOU.cat-n{
                 position: relative;
                 right: 0;
@@ -2669,11 +2706,14 @@ div.ouvre-grid{
                 
                 
             }
-            div#onair-description-container-leftcolumn {
+
+            div#onair-description-container-leftcolumn{
                 display: inline-block;
                 width: calc(100% - 3vw);
                 margin-bottom: 3vw;
+                
                 }
+           
 
             div.oeuvre-header ,div.text-description-overflow {
             border-left: 1px transparent;

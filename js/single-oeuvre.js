@@ -8,10 +8,11 @@ $( document ).ready(
 
 
   $("#button-shop-modal").click(function(){
+        if (!$(this).hasClass( "sold" )) {
         $("#oeuvre-buy-container").toggleClass("blocked");
         $("#oeuvre-buy-container-dimmer").toggleClass("blocked");
         $("#button-shop-modal").toggleClass("active");
-        $("body").toggleClass("modal_open");
+        $("body").toggleClass("modal_open");}
     }); 
 
 

@@ -49,13 +49,55 @@
 	<a class="close-modal modal_control">×</a>
     <div id="onair-trust-container-leftcolumn">
 
-    	TRUST ME!
 
-    	   <a class="general-button braketed" href="mailto:fb@francescobertele.net?subject=Trust-<?php the_field('project_code'); ?>-<?php the_title(); ?>">
-    	   <?php echo  wpm_translate_string( "[:en]Trust it[:it]Finanzia[:]", $language = '' ); ?></a>
+   	<div class="status-p-onair">
+
+
+    		<?php
+    		$production_cost = get_field('project_production_cost');
+			if( $production_cost ): ?>
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Total production cost[:it]Costo totale di produzione[:]", $language = '' ); ?></span> 
+			    <?php  echo $production_cost ;  ?>
+			</p>
+			<?php endif; 
+
+			$informativa = get_field('project_informativa');
+			if( $informativa ): ?>
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Disclosure[:it]Informativa[:]", $language = '' ); ?></span> 
+			    <?php  echo $informativa ;  ?>
+			</p>
+			<?php endif; ?>
+
+			
+
+		</div>
+			<?php
+			$slots = get_field('project_slots');
+			if( $slots ): ?>
+
+				<p class="_BodyText sources" style="border-bottom: 1px dashed #797979;"><?php echo  wpm_translate_string( "[[:en]SLOTS DISPONIBILI[:it]AVAILABLE SLOTS[:]", $language = '' ); ?>:
+			
+				
+				    <?php foreach( $slots as $slot): ?>
+				      <br>  <?php echo mytranslate($slot) ; ?> 
+				    <?php endforeach; ?>
+				 </p>
+				
+			
+			<?php endif; ?>
+
+        </div>
+
+
+
+        <p class="_BodyText">
+
+        	<?php echo  wpm_translate_string( "[:en]To finalize your financing to support production and find out all the associated benefits, write to[:it]Per finalizzare il tuo finanziamento a sostegno della produzione e scoprire tutti i benefit associati, scrivi a[:]", $language = '' ); ?>
+        	<a href="mailto:f_archive@francescobertele.net?subject=Trust-<?php the_field('project_code'); ?>-<?php the_title(); ?>">f_archive@francescobertele.net</a>
+
+    	</p>
 
     </div>
-
   
 </div>
 
