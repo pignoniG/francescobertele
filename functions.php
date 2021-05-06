@@ -242,7 +242,16 @@ function onair_s_js(){
 add_action('wp_enqueue_scripts', 'onair_s_js');
 
 
+function oeuvre_s_js(){
+    if( is_single() && has_category('oeuvre') ){
+    	
+    	wp_enqueue_script( 'francescobertele-single-oeuvre', get_template_directory_uri() . '/js/single-oeuvre.js', array(), _S_VERSION, true );
+    	wp_enqueue_style( 'francescobertele-style-w3', get_template_directory_uri() . '/css/w3.css' );
+    
 
+    }
+}
+add_action('wp_enqueue_scripts', 'oeuvre_s_js');
 
 
 

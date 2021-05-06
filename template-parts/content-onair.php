@@ -24,11 +24,11 @@
                 <div class="w3-container w3-green" style="width:<?php the_field('project_progress'); ?>%"><?php the_field('project_progress'); ?>%</div>
                 </div>
 
-                <a class="general-button braketed" href="mailto:fb@francescobertele.net?subject=Trust-<?php the_field('project_code'); ?>-<?php the_title(); ?>">
+                <a class="general-button braketed " id="onair-trust">
 
                 	<?php echo  wpm_translate_string( "[:en]Trust it[:it]Finanzia[:]", $language = '' ); ?></a>
 
-                <a class="general-button braketed modal_control" id="onair-more" >
+                <a class="general-button braketed " id="onair-more" >
 
                 	<?php echo  wpm_translate_string( "[:en]More info[:it]Più Informazioni[:]", $language = '' ); ?></a>
 
@@ -42,6 +42,25 @@
                 </div>
         </div>
 </div>
+
+
+<div id="onair-trust-container-dimmer" class="modal_control"></div>
+<div id="onair-trust-container" >
+	<a class="close-modal modal_control">×</a>
+    <div id="onair-trust-container-leftcolumn">
+
+    	TRUST ME!
+
+    	   <a class="general-button braketed" href="mailto:fb@francescobertele.net?subject=Trust-<?php the_field('project_code'); ?>-<?php the_title(); ?>">
+    	   <?php echo  wpm_translate_string( "[:en]Trust it[:it]Finanzia[:]", $language = '' ); ?></a>
+
+    </div>
+
+  
+</div>
+
+
+
 
 <div id="onair-description-container-dimmer" class="modal_control"></div>
 <div id="onair-description-container" >

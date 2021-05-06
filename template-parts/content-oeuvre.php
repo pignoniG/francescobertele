@@ -63,7 +63,10 @@
 
 
 
-    			<a class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net?subject=<?php echo  $status;?>-<?php the_field('project_code'); ?>-<?php the_title(); ?>">
+    			
+
+
+    			<a id="button-shop-modal" class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>">
 
     				<?php 
     				
@@ -233,6 +236,19 @@
     
 </div>
 
+	<div id="oeuvre-buy-container-dimmer" class="modal_control"></div>
+					<div id="oeuvre-buy-container" >
+						<a class="close-modal modal_control">×</a>
+					    <div id="oeuvre-buy-container-leftcolumn">
+					
+					    	BUY ME!
+					
+					    	  <a class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>" href="mailto:fb@francescobertele.net?subject=<?php echo  $status;?>-<?php the_field('project_code'); ?>-<?php the_title(); ?>"></a>
+					
+					    </div>
+					
+					  
+					</div>
 
 
 

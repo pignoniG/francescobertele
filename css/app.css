@@ -2476,7 +2476,9 @@ div.ouvre-grid{
            
             
         }
-       #onair-description-container-dimmer{
+       #onair-description-container-dimmer,
+       #onair-trust-container-dimmer,
+       #oeuvre-buy-container-dimmer{
 
             position: fixed;
             background-color: #00000070;
@@ -2492,7 +2494,9 @@ div.ouvre-grid{
 
        } 
 
-        #onair-description-container{
+        #onair-description-container ,
+        #onair-trust-container,
+        #oeuvre-buy-container{
            font-size: 30px;
             z-index: 10000;
             position: fixed;
@@ -2521,13 +2525,18 @@ div.ouvre-grid{
             position: fixed;
         }
 
-        #onair-description-container-dimmer.blocked{
+        #onair-description-container-dimmer.blocked, 
+        #onair-trust-container-dimmer.blocked,
+        #oeuvre-buy-container-dimmer.blocked
+        {
             opacity: 1;
             display: block;
 
         }
 
-        #onair-description-container.blocked {
+        #onair-description-container.blocked, 
+        #onair-trust-container.blocked,
+         #oeuvre-buy-container.blocked{
 
             left: 5vw;
             top: 21.75vh;
@@ -2548,12 +2557,17 @@ div.ouvre-grid{
             overflow-y: scroll;}
 
 
-            #onair-description-container .close-modal{
+            #onair-description-container .close-modal, 
+            #onair-trust-container .close-modal,
+            #oeuvre-buy-container .close-modal{
                 position: absolute;
                 right: 10px;
                 top: -1px;
             }
-            div#onair-description-container-leftcolumn {
+            div#onair-description-container-leftcolumn, 
+            div#onair-trust-container-leftcolumn,
+            div#oeuvre-buy-container-leftcolumn
+            {
                 display: inline-block;
                 width: 27vw;
                 padding-top: 19px;
@@ -2574,18 +2588,28 @@ div.ouvre-grid{
             color: white!important;
             background-color: #6f6f6f!important;
             margin-bottom: 6px;
+            padding: 0;
             }
 
-            #onair-description-container a,#onair-description-container a:visited{
+            #onair-description-container a,
+            #onair-description-container a:visited,
+            #onair-trust-container a,
+            #onair-trust-container a:visited,
+            #oeuvre-buy-container a,
+            #oeuvre-buy-container a:visited{
                 color: white;
                 text-decoration: underline;
 
             }
 
-            #onair-description-container a.close-modal.modal_control{
+            #onair-description-container a.close-modal.modal_control,
+            #onair-trust-container a.close-modal.modal_control,
+            #oeuvre-buy-container a.close-modal.modal_control{
             text-decoration: none;
             }
-            #onair-description-container a:hover{
+            #onair-description-container a:hover,
+            #onair-trust-container a:hover,
+            #oeuvre-buy-container a:hover{
                 color: red;
             }
 
