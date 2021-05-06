@@ -241,6 +241,8 @@
 						<a class="close-modal modal_control">×</a>
 					    <div id="oeuvre-buy-container-leftcolumn">
 
+					    	<h1 class="_TitleOU"><?php echo  wpm_translate_string( "[:en]Purchase contact form[:it]Modulo di contatto acquisti[:]", $language = '' ); ?></h1>
+
    							<div class="status-p-onair">
 
    								<?php
@@ -262,6 +264,7 @@
 
     							$status_detailed = get_field('project_status_detailed');
 								if( $status_detailed ): ?>
+								<p class="" style="padding-bottom: 5px;"></p> 
 								<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Availability[:it]Disponibilità[:]", $language = '' ); ?></span> 
 								    <?php  echo mytranslate($status_detailed) ;  ?>
 								</p>

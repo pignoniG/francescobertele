@@ -49,6 +49,8 @@
 	<a class="close-modal modal_control">×</a>
     <div id="onair-trust-container-leftcolumn">
 
+    	<h1 class="_TitleOU"><?php echo  wpm_translate_string( "[:en]Trust contact form[:it]Modulo di contatto finanziamento[:]", $language = '' ); ?></h1>
+
 
    	<div class="status-p-onair">
 

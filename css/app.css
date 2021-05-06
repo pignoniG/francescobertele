@@ -2525,6 +2525,19 @@ div.ouvre-grid{
             position: fixed;
         }
 
+        #onair-trust-container h1._TitleOU,
+        #oeuvre-buy-container h1._TitleOU {
+            font-family: PilatWide-Book;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.36px;
+            line-height: 21.6px;
+            margin-top: -15px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
         #onair-description-container-dimmer.blocked, 
         #onair-trust-container-dimmer.blocked,
         #oeuvre-buy-container-dimmer.blocked
