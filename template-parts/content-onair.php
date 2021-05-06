@@ -75,7 +75,7 @@
 			$slots = get_field('project_slots');
 			if( $slots ): ?>
 
-				<p class="_BodyText sources" style="border-bottom: 1px dashed #797979;"><?php echo  wpm_translate_string( "[[:en]SLOTS DISPONIBILI[:it]AVAILABLE SLOTS[:]", $language = '' ); ?>:
+				<p class="_BodyText sources" style="border-bottom: 1px dashed #797979;"><?php echo  wpm_translate_string( "[[:en]AVAILABLE SLOTS[:it]SLOTS DISPONIBILI[:]", $language = '' ); ?>:
 			
 				
 				    <?php foreach( $slots as $slot): ?>
