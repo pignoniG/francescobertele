@@ -313,15 +313,14 @@
 /* general fine */
 /* oeuvre inizio */
 	div.ouvre_project_box{
-		margin-right: 10px;
-		width: 33%;
-
-		height: auto;
-		margin: 2px;
-		padding: 10px 5px;
-		text-align: center;
-		box-sizing: border-box;
-		padding-bottom: 45px;
+		/* margin-right: 10px; */
+        width: 30%;
+        height: auto;
+        margin: 0px;
+        /* padding: 10px 5px; */
+        text-align: center;
+        box-sizing: border-box;
+        padding-bottom: 45px;
         cursor: pointer;
 	}
 
