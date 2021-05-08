@@ -314,7 +314,7 @@
 /* oeuvre inizio */
 	div.ouvre_project_box{
 		/* margin-right: 10px; */
-        width: calc(33% - 40px);
+       	width: calc(33% - 3.5vw);
         height: auto;
         margin: 0px;
         /* padding: 10px 5px; */
@@ -1184,7 +1184,7 @@ div.ouvre-grid{
 
             div.ouvre_project_box {
                 margin-right: 0px;
-                width: calc(50% - 50px);
+                width: calc(50% - 5vw);
                 margin: 0px;
             }
 
