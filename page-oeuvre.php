@@ -45,6 +45,8 @@ get_header(); ?>
 			$args = array(
 				'post_type'         => 'progetto',
 						'cat' => 13,
+						
+						'nopaging' => true,
         				'post_status' => 'publish',
         				'meta_key'			=> 'project_date',
 						'orderby'			=> 'meta_value',
