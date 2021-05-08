@@ -255,7 +255,7 @@
 								        $project_price = get_sub_field('project_price');
 								        $project_price_description = get_sub_field('project_price_description');
 								        ?>
-								        <p class="_BodyText"><span class="_CatOU"><?php echo  $project_price_description; ?></span> <?php  echo $project_price;  ?> </p>
+								        <p class="_BodyText"><span class="_CatOU"><?php echo  $project_price; ?></span> <?php  echo $project_price_description;  ?> </p>
 								        
 								    <?php endwhile;
 								endif;
