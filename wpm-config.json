@@ -1,6 +1,8 @@
 {
   "post_types": {
-    "progetto": {}
+    "progetto": {
+    	"post_content": null
+    }
     
 
   },
