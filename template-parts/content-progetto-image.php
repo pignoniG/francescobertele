@@ -25,6 +25,7 @@ foreach ($filter_items as $filter_item) {
 
 			foreach ($current_field as $current_field_sing) {
 			$san_filter = filter_var( $filter_item."_".mytranslate_force($current_field_sing,"en"), FILTER_SANITIZE_URL);
+			$san_filter =myUrlEncode ($san_filter);
 
 			array_push($global_filter_items[$filter_count],$san_filter);
 			array_push($global_filter_items_h[$filter_count],mytranslate($current_field_sing));
@@ -33,6 +34,7 @@ foreach ($filter_items as $filter_item) {
 		}
 		else{	
 			$san_filter= filter_var( $filter_item."_".mytranslate_force($current_field,"en"), FILTER_SANITIZE_URL);
+			$san_filter =myUrlEncode ($san_filter);
 			array_push($global_filter_items[$filter_count],$san_filter);
 			array_push($global_filter_items_h[$filter_count],mytranslate($current_field));
 			array_push($local_filter_items,$san_filter);

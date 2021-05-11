@@ -378,4 +378,13 @@ function remove_draft_widget(){
     remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
 }
 
+
+function myUrlEncode($string) {
+    $entities = array('.','!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]");
+
+
+    return str_replace($entities,"_",  strtolower($string));
+}
+
+
 // End remove post type
