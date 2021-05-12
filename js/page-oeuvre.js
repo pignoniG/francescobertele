@@ -532,7 +532,7 @@ jQuery("#accordionFilters").on('click', function( event ){
       jQuery("select").select2({ minimumResultsForSearch: -1 });
       jQuerygriglia = jQuery(".ouvre-grid").isotope({
                 itemSelector: ".ouvre_project_box",
-                layoutMode: "fitRows",
+                layoutMode: "masonry",
                 getSortData: {
                   price: '.t-price parseInt',
                   category: '[data-category]',
