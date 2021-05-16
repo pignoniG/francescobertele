@@ -243,7 +243,14 @@
 
 					    	<h1 class="_TitleOU"><?php echo  wpm_translate_string( "[:en]Purchase contact form[:it]Modulo di contatto acquisti[:]", $language = '' ); ?></h1>
 
+					    	<p class="_BodyText"><?php echo  wpm_translate_string( "[:en]The work is delivered with a sales contract and specific ACC (authentic cataloging card) issued by the archive.[:it]l'opera è consegnata con contratto di vendita e specifica SCA (scheda di catalogazione autentica) rilasciati dall’archivio.[:]", $language = '' ); ?>
+								</p>
+
    							<div class="status-p-onair">
+
+
+
+   								
 
    								<?php
    								// Check rows exists.
