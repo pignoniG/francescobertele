@@ -1,4 +1,4 @@
-
+button-shop
 
 
 
@@ -479,24 +479,7 @@
             border: 1px solid darkturquoise;
             color: white;
         }
-        a.button-shop.oeuvre.activable span {
-            display: none;
-        }
-        a.button-shop.oeuvre.activable:hover span {
-            display: block;
-            position: relative;
-            left: -186px;
-            top: -100%;
-            height: 56px;
-            width: 170px;
-            padding: 8px;
-            color: #000;
-            box-shadow: 0 0px 10px #80808080;
-            background-color: #ffffffd6;
-          
-            text-transform: none;
-            font-size: 11px;
-        }
+    
 
         div#title-line {
             display: flex;
@@ -1276,16 +1259,16 @@ div.ouvre-grid{
     }
 
     div.onair_flow .flickity-prev-next-button.next::after{
-        content: "\2192";
+        content: ">";
         font-size: 40px;
-        font-family: 'PilatWide-Book';
+        font-family: 'founders-grotesk-web';
         position: relative;
         top: -8px;
         left: -9px;
     }
     div.onair_flow .flickity-prev-next-button.previous::after{
-        content: "\2190";
-        font-family: 'PilatWide-Book';
+        content: "<";
+        font-family: 'founders-grotesk-web';
         font-size: 40px;
         position: relative;
         top: -8px;
@@ -1587,7 +1570,7 @@ div.ouvre-grid{
 
     }
         
-    td.col-title a{
+    td.col-title > a{
 
             text-transform: lowercase;
             color: black;
