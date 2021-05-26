@@ -574,7 +574,7 @@ jQuery("#accordionFilters").on('click', function( event ){
   jQuery('.griglia').imagesLoaded( function() {
     filterWithHash();
     evidenziaTemi();
-    jQuery('.griglia').isotope('layout');
+    jQuerygriglia.isotope('layout');
 
     jQuery(window).on( 'hashchange', filterWithHash );
 
@@ -586,7 +586,7 @@ jQuery("#accordionFilters").on('click', function( event ){
 
 
 jQuerygriglia.imagesLoaded().progress( function() {
-  jQuerygriglia.masonry();
+  jQuerygriglia.isotope('layout');
 });  
 
 
