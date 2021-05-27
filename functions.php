@@ -377,6 +377,10 @@ add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
 function remove_draft_widget(){
     remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
 }
+function page_title_sc( ){
+   return get_the_title();
+}
+add_shortcode( 'page_title', 'page_title_sc' );
 
 
 function myUrlEncode($string) {
