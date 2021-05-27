@@ -571,21 +571,14 @@ jQuery("#accordionFilters").on('click', function( event ){
     } else jQuerygriglia.isotope({ sortBy: sortValue , sortAscending: sortAscending});
   }
   
-  jQuery('.griglia').imagesLoaded( function() {
+jQuery('body').imagesLoaded().progress( function() {
     filterWithHash();
     evidenziaTemi();
-
     jQuery(window).on( 'hashchange', filterWithHash );
-
-
     removeDisabled();
     ceckRes();
+    jQuery('.ouvre-grid').isotope('layout');
 
-  });
-
-
- jQuery('.griglia').imagesLoaded().progress( function() {
-   jQuery('.griglia').isotope('layout');
 });
 
 
