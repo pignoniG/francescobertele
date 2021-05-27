@@ -92,13 +92,7 @@
 
 
 
-        <p class="_BodyText">
-
-        	<?php echo  wpm_translate_string( "[:en]To finalize your financing to support production and find out all the associated benefits, write to[:it]Per finalizzare il tuo finanziamento a sostegno della produzione e scoprire tutti i benefit associati, scrivi a[:]", $language = '' ); ?>
-        	<a href="mailto:f_archive@francescobertele.net?subject=Trust-<?php the_field('project_code'); ?>-<?php the_title(); ?>">f_archive@francescobertele.net</a>
-
-    	</p>
-
+        <?php the_field('disclaimer_onair',549); ?>
     </div>
   
 </div>

@@ -237,8 +237,7 @@
 
 					    	<h1 class="_TitleOU"><?php echo  wpm_translate_string( "[:en]Purchase contact form[:it]Modulo di contatto acquisti[:]", $language = '' ); ?></h1>
 
-					    	<p class="_BodyText"><?php echo  wpm_translate_string( "[:en]The work is delivered with a sales contract and specific ACC (authentic cataloging card) issued by the archive.[:it]l'opera è consegnata con contratto di vendita e specifica SCA (scheda di catalogazione autentica) rilasciati dall’archivio.[:]", $language = '' ); ?>
-								</p>
+					    	<?php the_field('disclaimer_ouvre_top',549); ?>
 
    							<div class="status-p-onair">
 
@@ -280,14 +279,9 @@
 						<p class="" style="padding-bottom: 5px;"></p> 
 
 		
+						<?php the_field('disclaimer_ouvre_bottom',549); ?>
 
-
-						<p class="_BodyText">
-
-        					<?php echo  wpm_translate_string( "[:en]To finalize your purchase and arrange delivery of the work, write to[:it]Per finalizzare il tuo acquisto e concordare la consegna dell'opera, scrivi a[:]", $language = '' ); ?>
-        						<a href="mailto:f_archive@francescobertele.net?subject=<?php echo  $status;?>-<?php the_field('project_code'); ?>-<?php the_title(); ?>">f_archive@francescobertele.net</a>
-
-    					</p>
+	
 
 				</div>
 					
