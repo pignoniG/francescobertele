@@ -98,7 +98,7 @@ foreach ($filter_items as $filter_item) {
   				<?php endforeach; ?>
 
 
-	   
+
 	    	
 		   
 			<?php
@@ -111,7 +111,7 @@ foreach ($filter_items as $filter_item) {
 			
 			        // Load sub field value.
 			        $sub_value = get_sub_field('project_keyword');
-			        ?><snip class="keyword_item"><?php echo($sub_value); ?></snip>
+			        ?><snip class="keyword_item">#<?php echo($sub_value); ?></snip>
 			
 			
 			     <?php endwhile;
