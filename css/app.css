@@ -880,6 +880,10 @@ button-shop
     snip{
         display: inline-block;
     }
+    snip.keyword_item{
+        display: none;
+    }
+    
 
     snip.selected{
         color: red;

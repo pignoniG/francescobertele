@@ -86,7 +86,6 @@ foreach ($filter_items as $filter_item) {
 						<?php foreach( $project_theme as $theme_field ): 
 
 							$item_filter = filter_var( $project_item."_".mytranslate_force($theme_field,"en"), FILTER_SANITIZE_URL);
-
 							?>
 
 							<snip class="theme_item <?php echo $item_filter; ?>"><?php echo("#".mytranslate($theme_field)); ?></snip>
@@ -99,8 +98,30 @@ foreach ($filter_items as $filter_item) {
   				<?php endforeach; ?>
 
 
+	   
+	    	
+		   
+			<?php
+			
+			// Check rows exists.
+			if( have_rows('project_keywords') ):
+			
+			    // Loop through rows.
+			    while( have_rows('project_keywords') ) : the_row();
+			
+			        // Load sub field value.
+			        $sub_value = get_sub_field('project_keyword');
+			        ?><snip class="keyword_item"><?php echo($sub_value); ?></snip>
+			
+			
+			     <?php endwhile;
+			
+			// No value.
+			else :
+			    // Do something...
+			endif; ?>
+		
 	    </span>
-	    
 	    
 	  </div>
 	</div> 
