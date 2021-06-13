@@ -40,7 +40,7 @@
 			        $permalink = get_permalink( $featured_post->ID );
         			$title = get_the_title( $featured_post->ID );
 
-        			?><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>, 
+        			?><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
 
 			
 			    
