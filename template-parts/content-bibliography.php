@@ -23,17 +23,31 @@
 
 
 
-		    <?php if( get_field('project_related') ):
-		    	$featured_post = get_field('project_related');
+		    <?php
 
-		    	$permalink = get_permalink( $featured_post->ID );
-        		$title = get_the_title( $featured_post->ID );
+			// Check rows exists.
+			if( have_rows('project_related_list') ):
 
+				?> <p class="_BodyText" style="margin-bottom: 10px;"><?php echo  wpm_translate_string( "[:en]RELATED WORK[:it]LAVORI CORRELATI[:]", $language = '' ); ?>:<br>
+					<?php
 
-		    	?> <p class="_BodyText" style="margin-bottom: 10px;"><?php echo  wpm_translate_string( "[:en]RELATED WORK[:it]LAVORI CORRELATI[:]", $language = '' ); ?>:<br>
-		    <a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
-		    </p><?php endif;?>
+			
+			    // Loop through rows.
+			    while( have_rows('project_related_list') ) : the_row();
+			
+			        // Load sub field value.
+			        $featured_post = get_sub_field('project_related');
+			        $permalink = get_permalink( $featured_post->ID );
+        			$title = get_the_title( $featured_post->ID );
 
+        			?><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
+
+			
+			    // End loop.
+			   <?php endwhile;?>
+			
+		
+			</p><?php endif;?>
 
 
 		    <?php if( get_field('project_exhibition') ):?> <p class="_BodyText" style="margin-bottom: 0px;"><?php echo  wpm_translate_string( "[:en]EXHIBITION[:it]ESPOSIZIONE[:]", $language = '' ); ?>:</p><?php the_field('project_exhibition'); ?><?php endif;?>
