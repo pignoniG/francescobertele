@@ -112,9 +112,14 @@
     		$status = get_field('project_bar_status');
 			if( $status ): ?>
 			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Status[:it]Stato[:]", $language = '' ); ?></span> 
-			    <?php foreach( $status as $status_i ): ?>
-			        <?php echo mytranslate($status_i) ; ?>
-			    <?php endforeach; ?>
+			    <?php 
+				$first  = True;  
+				foreach( $status as $status_i ):
+			        if ($first){$first = False;}
+				else{ echo ", " ; }
+				echo (mytranslate($status_i)) ;
+			    	endforeach;
+				echo (".") ;?>
 			</p>
 			<?php endif; 
 
