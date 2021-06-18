@@ -125,13 +125,11 @@
 			<?php 
 				$first  = True;  
 				foreach( $looking as $status_i ):
-					if ($first){
-						$first = False;
-					}
-				else{ echo  "," ; }
-			      	echo  mytranslate($status_i) ; ?>
-			    <?php endforeach; 
-				echo  "." ;?>
+					if ($first){$first = False;}
+				else{ echo ", " ; }
+			      	echo  (mytranslate($status_i)) ; 
+				endforeach; 
+				echo ("." ;?>
 				
 			</p>
 			<?php endif; ?>
