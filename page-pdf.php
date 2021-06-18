@@ -19,7 +19,7 @@ $pdf->SetY(90);
 	if( has_post_thumbnail($project_id)){
 		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id($project_id),'thumbnail-medium-for-interface' )['src'];
 
-		$pdf->Image($tumbnail_url,10,30,90,0,'jpg');
+		$pdf->Image($tumbnail_url,10,30,90,0);
 	}
 
 	if( get_field('project_corpus',$project_id) ):
