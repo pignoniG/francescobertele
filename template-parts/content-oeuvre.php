@@ -210,7 +210,15 @@
 
 
 
-        <?php if( get_field('project_pdf') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Presentation[:it]Presentazione[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="customfollow-icon download" href="<?php echo get_field('project_pdf')['url']; ?>"><?php echo get_field('project_pdf')['filename']; ?></a> <?php endif;?>
+        <?php if( get_field('project_pdf') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Presentation[:it]Presentazione[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="customfollow-icon download" href="<?php echo get_field('project_pdf')['url']; ?>"><?php echo get_field('project_pdf')['filename']; ?></a> 
+
+        <?php endif;?>
+
+      	<br>../<?php echo  wpm_translate_string( "[:en]Information card[:it]
+Scheda informativa[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="customfollow-icon download" href="<?php echo get_permalink(649)."?post=".get_the_ID(); ?>"><?php echo get_the_title().".pdf"?></a> 
+
+       
+
 
         </p>
 
