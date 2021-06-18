@@ -126,10 +126,10 @@
 				$first  = True;  
 				foreach( $looking as $status_i ):
 					if ($first){$first = False;}
-				else{ echo ", " ; }
-			      	echo  (mytranslate($status_i)) ; 
+					else{ echo ", " ; }
+			      		echo (mytranslate($status_i)) ; 
 				endforeach; 
-				echo ("." ;?>
+				echo (".") ;?>
 				
 			</p>
 			<?php endif; ?>
