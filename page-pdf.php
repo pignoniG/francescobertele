@@ -85,9 +85,7 @@ $pdf->SetY(90);
 		$pdf->Write(5,"\n\nDESCRIPTION: \n".get_field('project_description',$project_id));
 	endif;
 
-	if( get_field('project_description',$project_id) ):
-		$pdf->Write(5,"\n\nDESCRIPTION: \n".get_field('project_description',$project_id));
-	endif;
+
 
 
 
