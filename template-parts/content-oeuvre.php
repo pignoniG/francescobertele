@@ -215,7 +215,7 @@
         <?php endif;?>
 
       	<br>../<?php echo  wpm_translate_string( "[:en]Information card[:it]
-Scheda informativa[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="customfollow-icon download" href="<?php echo get_permalink(649)."?post=".get_the_ID(); ?>"><?php echo get_the_title().".pdf"?></a> 
+Scheda informativa[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="customfollow-icon download" href="<?php echo get_permalink(649)."?project=".get_the_ID(); ?>"><?php echo get_the_title().".pdf"?></a> 
 
        
 

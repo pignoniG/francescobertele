@@ -2,7 +2,7 @@
 require('fpdf/fpdf.php');
 
 
-$project_id= $_REQUEST['post'];
+$project_id= $_REQUEST['project'];
 $project_title= get_the_title( $project_id);
 
 
