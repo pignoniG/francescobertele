@@ -206,6 +206,9 @@ $global_filter_items= array();
                     </select>
                   </div>
                   </div>
+      <button type="button" class="braketed" id="btn-expt-filter">
+        <?php echo  wpm_translate_string( "[:en]Export Selection[:it]Esporta Selezione[:]", $language = '' ); ?>
+      </button>
         <button type="button" class="braketed" id="btn-reset-filter">
         <?php echo  wpm_translate_string( "[:en]Reset Filter[:it]Reset Filtri[:]", $language = '' ); ?>
       </button>

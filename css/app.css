@@ -678,7 +678,7 @@ button-shop
 
     
 
-        #btn-reset-filter:hover {
+        #btn-reset-filter:hover,#btn-expt-filter:hover {
             background: black;
             color: white;
         }
@@ -686,7 +686,7 @@ button-shop
 
 
 
-        button.accordion , #btn-reset-filter{
+        button.accordion , #btn-reset-filter,#btn-expt-filter{
             border: transparent;
             border-radius: 0px;
             width: auto;
@@ -721,10 +721,19 @@ button-shop
             bottom: 13px;
 
         }
+        #btn-expt-filter{
+            padding-bottom: 3px;
+            cursor: pointer;
+            right: calc(15vw + 5px);
+            position: absolute;
+            bottom: 13px;
+
+        }
 
 
 
-        .active, .accordion:hover, button.accordion-themes.active, button.accordion-themes:hover , #btn-reset-filter:hover  {
+
+        .active, .accordion:hover, button.accordion-themes.active, button.accordion-themes:hover , #btn-reset-filter:hover , #btn-expt-filter:hover  {
    
             background-color: transparent;
             color: black;

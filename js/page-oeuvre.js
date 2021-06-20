@@ -588,6 +588,22 @@ $(window).resize(function() {
 
 
 
+$( "#btn-expt-filter" ).click(function() {
+      var urlpdfist="https://francescobertele.net/pdf/?project="
+
+      $( ".ouvre_project_box" ).each(function( index ) {
+
+        if($( this ).is(':visible')) {
+          urlpdfist=urlpdfist+$( this ).attr('data-postid')+",";
+
+        }
+
+      
+      });
+
+      window.location=urlpdfist;
+});
+
 });
 
 

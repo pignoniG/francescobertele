@@ -266,7 +266,7 @@ foreach ($projects as $project_id) {
 		// code...
 	
 
-	$project_title= get_the_title( $project_id);
+	$project_title= utf8_decode(get_the_title( $project_id));
 
 	
 	
@@ -304,7 +304,7 @@ foreach ($projects as $project_id) {
 		endif;
 
 		if( get_field('project_corpus',$project_id) ):
-			$pdf->Write(5,"\nCORPUS: ".implode(", ",get_field('project_corpus',$project_id)));
+			$pdf->Write(5,"\nCORPUS: ".utf8_decode(implode(", ",get_field('project_corpus',$project_id))));
 		endif;
 	
 		if( have_rows('project_keywords',$project_id) ):
@@ -317,7 +317,7 @@ foreach ($projects as $project_id) {
 			    $string = $string."#".get_sub_field('project_keyword')." ";
 			       
 			endwhile;
-			$pdf->Write(5,"\n\n".$string);
+			$pdf->Write(5,"\n\n".utf8_decode($string));
 		endif;
 	
 			$pdf->Write(5,"\n\nCULTURAL DEFINITION:");
