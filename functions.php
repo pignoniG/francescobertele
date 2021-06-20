@@ -294,6 +294,7 @@ remove_image_size('post-thumbnail');
 
 if ( function_exists( 'fly_add_image_size' ) ) {
     fly_add_image_size( 'hd-for-interface',2500, 2500, false );
+    fly_add_image_size( 'hd-for-pdf',1000, 1000, false );
     fly_add_image_size( 'thumbnail-medium-for-interface', 700, 700, false ); 
     fly_add_image_size( 'thumbnail-small-for-interface', 350, 350, false ); 
 }
