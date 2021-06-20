@@ -280,7 +280,7 @@ foreach ($projects as $project_id) {
 		
 		$pdf->SetFont('Courier','',10);
 
-		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id($project_id),'thumbnail-medium-for-interface' )['src'];
+		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id($project_id),'hd-for-interface' )['src'];
 
 
 		$pdf->imageUniformToFill($tumbnail_url, 10, 25,175, 240, "C");//$alignment "B", "T", "L", "R", "C"
