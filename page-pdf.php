@@ -219,7 +219,7 @@ function Header()
     // Arial bold 15
     $this->SetFont('Courier','B',16);
 	
-	$this->Cell(40,10,$project_title);
+	$this->WriteHTML( utf8_decode($project_title));
 	$this->SetFont('Courier','',10);
 
 	$this->TextWithDirection(200,150,$_SERVER['REMOTE_ADDR'],'U');
@@ -266,7 +266,7 @@ foreach ($projects as $project_id) {
 		// code...
 	
 
-	$project_title= utf8_decode(get_the_title( $project_id));
+	$project_title= get_the_title( $project_id);
 
 	
 	
@@ -298,9 +298,9 @@ foreach ($projects as $project_id) {
 
 
 
-	
+		$pdf->Write(5,"\n\n");
 		if( get_field('project_code',$project_id) ):
-			$pdf->Write(5,"\n\n\n".get_field('project_code',$project_id));
+			$pdf->Write(5,"\n".get_field('project_code',$project_id));
 		endif;
 
 		if( get_field('project_corpus',$project_id) ):
