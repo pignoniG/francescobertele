@@ -217,10 +217,10 @@ function Header()
     // Logo
     $this->imageUniformToFill("https://www.francescobertele.net/logo.png", 195, 10,10, 10, "C");//$alignment "B", "T", "L", "R", "C"
     // Arial bold 15
-    $this->SetFont('Courier','B',16);
+    $this->SetFont('foundersmono','',16);
 	
 	$this->Write(5,utf8_decode($project_title));
-	$this->SetFont('Courier','',10);
+	$this->SetFont('foundersmono','',10);
 
 	$this->TextWithDirection(200,150,$_SERVER['REMOTE_ADDR'],'U');
 
@@ -228,7 +228,7 @@ function Header()
     // Position at 1.5 cm from bottom
     $this->SetY(-15);
     // Arial italic 8
-    $this->SetFont('Courier','',10);
+    $this->SetFont('foundersmono','',10);
     // Page number
 
     $this->WriteHTML("<a href=".get_permalink($project_id).">".get_permalink($project_id)."</a>");
@@ -249,12 +249,12 @@ function Footer()
 
 
 
-
 $projects=array(44,45);
 $projects=$_REQUEST['project'];
 $projects= preg_split('/,/', $projects); 
 
 $pdf = new PDF();
+$pdf->AddFont('foundersmono','','founders-grotesk-mono-web-regular.php');
 
 $file_title = date("m.d.y"); 
 $filecounter=0;     
@@ -277,7 +277,7 @@ foreach ($projects as $project_id) {
 		$pdf->SetTopMargin(10);
 		$pdf->AddPage();
 		
-		$pdf->SetFont('Courier','',10);
+		$pdf->SetFont('foundersmono','',10);
 
 		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id($project_id),'hd-for-pdf' )['src'];
 
@@ -291,7 +291,7 @@ foreach ($projects as $project_id) {
 	
 		$pdf->AddPage();
 		
-		$pdf->SetFont('Courier','',10);
+		$pdf->SetFont('foundersmono','',10);
 		$pdf->SetRightMargin(30);
 		$pdf->SetTopMargin(30);
 
