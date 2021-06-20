@@ -218,8 +218,10 @@ function Header()
     $this->imageUniformToFill("https://www.francescobertele.net/logo.png", 195, 10,10, 10, "C");//$alignment "B", "T", "L", "R", "C"
     // Arial bold 15
     $this->SetFont('foundersmono','',16);
+
+    $project_title = str_replace("&#039;","'",$project_title);
 	
-	$this->Write(5,utf8_decode($project_title));
+	$this->WriteHTML(htmlspecialchars_decode($project_title));
 	$this->SetFont('foundersmono','',10);
 
 	$this->TextWithDirection(200,150,$_SERVER['REMOTE_ADDR'],'U');
