@@ -253,17 +253,13 @@ $projects= preg_split('/,/', $projects);
 
 $pdf = new PDF();
 
-
-
-
-
-
-
-
-
+$file_title = date("m.d.y"); 
+$filecounter=0;     
 
 foreach ($projects as $project_id) {
 	if( has_category('oeuvre',$project_id) ){
+		
+		$filecounter=$filecounter+1;
 		// code...
 	
 
@@ -381,7 +377,14 @@ foreach ($projects as $project_id) {
 	}
 	};
 	
+if ($filecounter==1) {
+	$file_title = "export_".$project_title."_".date("m.d.y"); 
+}
+else{
+	$file_title = "export_"."collection_".date("m.d.y"); 
 
+}
+    
 
-$pdf->Output("I",$project_title);
+$pdf->Output("I",$file_title);
 ?>
