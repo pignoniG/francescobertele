@@ -219,7 +219,7 @@ function Header()
     // Arial bold 15
     $this->SetFont('Courier','B',16);
 	
-	$this->WriteHTML( utf8_decode($project_title));
+	$this->Write(5,utf8_decode($project_title));
 	$this->SetFont('Courier','',10);
 
 	$this->TextWithDirection(200,150,$_SERVER['REMOTE_ADDR'],'U');
