@@ -220,6 +220,9 @@ function Header()
     $this->SetFont('foundersmono','',16);
 
     $project_title = str_replace("&#039;","'",$project_title);
+    $project_title = str_replace("&#8217;","'",$project_title);
+	
+
 	
 	$this->WriteHTML(htmlspecialchars_decode($project_title));
 	$this->SetFont('foundersmono','',10);
