@@ -167,7 +167,7 @@ function SetStyle($tag, $enable)
 function PutLink($URL, $txt)
 {
     // Put a hyperlink
-    $this->SetTextColor(0,0,255);
+    $this->SetTextColor(0,0,0);
     $this->SetStyle('U',true);
     $this->Write(5,$txt,$URL);
     $this->SetStyle('U',false);
