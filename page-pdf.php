@@ -389,5 +389,5 @@ else{
 }
     
 
-$pdf->Output("I",$file_title);
+$pdf->Output("I",$file_title.".pdf");
 ?>
