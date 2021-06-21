@@ -589,7 +589,14 @@ $(window).resize(function() {
 
 
 $( "#btn-expt-filter" ).click(function() {
-      var urlpdfist="https://francescobertele.net/pdf/?project="
+      if (window.location.href.indexOf("/it/") > -1) {
+
+        var urlpdfist="https://francescobertele.net/it/pdf/?project="
+      }
+      else{
+          var urlpdfist="https://francescobertele.net/pdf/?project="
+      
+      }
 
       $( ".ouvre_project_box" ).each(function( index ) {
 

@@ -236,7 +236,7 @@ function Header()
     $this->SetFont('foundersmono','',10);
     // Page number
 
-    $this->WriteHTML("<a href=".get_permalink($project_id).">".get_permalink($project_id)."</a>");
+    $this->WriteHTML("<a target='_blank' href=".get_permalink($project_id).">".get_permalink($project_id)."</a>");
     $this->SetY(10);
 }
 
@@ -314,7 +314,7 @@ foreach ($projects as $project_id) {
 	
 		if( have_rows('project_keywords',$project_id) ):
 	
-			$string = "KEYWORDS: ";
+			$string = wpm_translate_string( "[:en]KEYWORD[:it]PAROLE CHIAVE[:]", $language = '' ).": ";
 	
 			while( have_rows('project_keywords',$project_id) ) : 
 				the_row();
@@ -325,28 +325,28 @@ foreach ($projects as $project_id) {
 			$pdf->Write(5,"\n\n".utf8_decode($string));
 		endif;
 	
-			$pdf->Write(5,"\n\nCULTURAL DEFINITION:");
+			$pdf->Write(5,"\n\n".wpm_translate_string( "[:en]CULTURAL DEFINITION[:it]DEFINIZIONE CULTURALE[:]", $language = '' ).":");
 	
 	
 	
 		if( get_field('project_edition',$project_id) ):
-			$pdf->Write(5,"\n../Edition: ".utf8_decode(get_field('project_edition',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Edition[:it]Edizione[:]", $language = '' ).": ".utf8_decode(get_field('project_edition',$project_id)));
 		endif;
 	
 		if( get_field('project_sitetimes',$project_id) ):
-			$pdf->Write(5,"\n../Site/times: ".utf8_decode(get_field('project_sitetimes',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Site/times[:it]Siti/date[:]", $language = '' ).": ".utf8_decode(get_field('project_sitetimes',$project_id)));
 		endif;
 	
 		if( get_field('project_co-authors',$project_id) ):
-			$pdf->Write(5,"\n../Co-authors: ");
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ).": ");
 			$pdf->WriteHTML(utf8_decode(get_field('project_co-authors',$project_id)));
 		endif;
 	
-		$pdf->Write(5,"\n\nTECHNICAL DATA:");
+		$pdf->Write(5,"\n\n".wpm_translate_string( "[:en]TECHNICAL DATA[:it]DATI TECNICI[:]", $language = '' ).":");
 	
 	
 		if( get_field('project_object_type',$project_id)): 
-			$string = "../Object ";
+			$string = "../".wpm_translate_string( "[:en]Object[:it]Oggetto[:]", $language = '' )." ";
 				
 				 
 			foreach( get_field('project_object_type',$project_id) as $type_i ): 
@@ -358,19 +358,19 @@ foreach ($projects as $project_id) {
 		if( get_field('project_matter_technique',$project_id) ):
 
 			
-			$pdf->Write(5,"\n../Matter and technique: ".utf8_decode(get_field('project_matter_technique',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Matter and technique[:it]Materiali e tecnica[:]", $language = '' ).": ".utf8_decode(get_field('project_matter_technique',$project_id)));
 		endif;
 	
 		if( get_field('project_measures_weight',$project_id) ):
-			$pdf->Write(5,"\n../Weight: ".utf8_decode(get_field('project_measures_weight',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Weight[:it]Peso[:]", $language = '' ).": ".utf8_decode(get_field('project_measures_weight',$project_id)));
 		endif;
 	
 		if( get_field('project_measures',$project_id) ):
-			$pdf->Write(5,"\n../Measures: ".utf8_decode(get_field('project_measures',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Measures[:it]Misure[:]", $language = '' ).": ".utf8_decode(get_field('project_measures',$project_id)));
 		endif;
 	
 		if( get_field('project_description',$project_id) ):
-			$pdf->Write(5,"\n\nDESCRIPTION: \n");
+			$pdf->Write(5,"\n\n".wpm_translate_string( "[:en]DESCRIPTION[:it]DESCRIZIONE[:]", $language = '' ).": \n");
 			
 			$text=  utf8_decode(get_field('project_description',$project_id));
 			$pdf->WriteHTML($text);
@@ -378,7 +378,7 @@ foreach ($projects as $project_id) {
 		endif;
 
 		if( get_field('project_collection',$project_id) ):
-			$pdf->Write(5,"\n\nCOLLECTION: ".mytranslate(get_field('project_collection',$project_id)));
+			$pdf->Write(5,"\n\n".wpm_translate_string( "[:en]Collection[:it]Collezione[:]", $language = '' ).": ".mytranslate(get_field('project_collection',$project_id)));
 		endif;
 	
 	
@@ -389,7 +389,7 @@ if ($filecounter==1) {
 	$file_title = "export_".$project_title."_".date("m_d_y"); 
 }
 else{
-	$file_title = "export_"."collection_".date("m_d_y"); 
+	$file_title = "export_".wpm_translate_string( "[:en]collection_[:it]collezione_[:]", $language = '' ).date("m_d_y"); 
 
 }
     
