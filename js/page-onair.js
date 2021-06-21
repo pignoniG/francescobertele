@@ -11,7 +11,7 @@ $( document ).ready(
       cellAlign: 'center',
       contain: true,
       autoPlay: true,
-      wrapAround: false,
+      wrapAround: true,
       imagesLoaded: true,
       "pageDots": false,
 
