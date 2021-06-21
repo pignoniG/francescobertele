@@ -150,7 +150,9 @@
 
 
         <?php if( get_field('project_matter_technique') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Matter and technique[:it]Materiali e tecnica[:]", $language = '' ); ?>: <?php the_field('project_matter_technique'); ?> <?php endif;?>
-        <?php if( get_field('project_measures_other') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Measures[:it]Misure[:]", $language = '' ); ?>: <?php the_field('project_measures_other'); ?> <?php endif;?>
+        
+        <?php if( get_field('project_measures') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Measures[:it]Misure[:]", $language = '' ); ?>: <?php the_field('project_measures'); ?> <?php endif;?>
+
         <?php if( get_field('project_measures_weight') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Weight[:it]Peso[:]", $language = '' ); ?>: <?php the_field('project_measures_weight'); ?><?php endif;?>
 
     </p>
