@@ -601,7 +601,7 @@ $( "#btn-expt-filter" ).click(function() {
       
       });
 
-      window.location=urlpdfist;
+      window.open(urlpdfist, "_blank");
 });
 
 });

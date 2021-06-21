@@ -227,7 +227,7 @@ function Header()
 	$this->WriteHTML(htmlspecialchars_decode($project_title));
 	$this->SetFont('foundersmono','',10);
 
-	$this->TextWithDirection(200,150,$_SERVER['REMOTE_ADDR'],'U');
+	$this->TextWithDirection(200,150,$_SERVER['REMOTE_ADDR']." _ ".date("m/d/y h:m:s") ,'D');
 
 	GLOBAL $project_id;
     // Position at 1.5 cm from bottom
@@ -386,10 +386,10 @@ foreach ($projects as $project_id) {
 	};
 	
 if ($filecounter==1) {
-	$file_title = "export_".$project_title."_".date("m.d.y"); 
+	$file_title = "export_".$project_title."_".date("m_d_y"); 
 }
 else{
-	$file_title = "export_"."collection_".date("m.d.y"); 
+	$file_title = "export_"."collection_".date("m_d_y"); 
 
 }
     
