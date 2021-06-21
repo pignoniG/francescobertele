@@ -227,7 +227,7 @@ function Header()
 	$this->WriteHTML(htmlspecialchars_decode($project_title));
 	$this->SetFont('foundersmono','',10);
 
-	$this->TextWithDirection(200,150,$_SERVER['REMOTE_ADDR']." _ ".date("m/d/y h:m:s") ,'D');
+	$this->TextWithDirection(200,150,$_SERVER['REMOTE_ADDR']." _ ".date("m/d/y") ,'D');
 
 	GLOBAL $project_id;
     // Position at 1.5 cm from bottom
