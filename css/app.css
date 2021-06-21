@@ -1761,7 +1761,10 @@ div.ouvre-grid{
     td.col-title .text-description-overflow-bibliography a,
     .text-description-overflow-bibliography a{
         color: black;
-        text-decoration: underline;}
+        text-decoration: underline;
+        display: inline-block;
+        line-break: normal;
+      }
     
 
     div.cell.content_bib_body{
