@@ -365,8 +365,8 @@ foreach ($projects as $project_id) {
 			$pdf->Write(5,"\n../Weight: ".utf8_decode(get_field('project_measures_weight',$project_id)));
 		endif;
 	
-		if( get_field('project_measures_other',$project_id) ):
-			$pdf->Write(5,"\n../Measures: ".utf8_decode(get_field('project_measures_other',$project_id)));
+		if( get_field('project_measures',$project_id) ):
+			$pdf->Write(5,"\n../Measures: ".utf8_decode(get_field('project_measures',$project_id)));
 		endif;
 	
 		if( get_field('project_description',$project_id) ):
