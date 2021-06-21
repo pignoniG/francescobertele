@@ -1257,11 +1257,11 @@ div.ouvre-grid{
     }
 
     div.onair_flow .flickity-prev-next-button.previous {
-        left: calc(-1.2vw - 22px);
+        left: calc(-1.2vw - 24px);
         background: transparent!important;
     }
     div.onair_flow .flickity-prev-next-button.next {
-        right: calc(-1.2vw - 22px);
+        right: calc(-1.2vw - 34px);
         background: transparent!important;
     }
     div.onair_flow .flickity-prev-next-button svg{
