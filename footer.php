@@ -17,7 +17,7 @@
 
 <div class="clip-mask">
 	<div id="c-left"><p id="mouse-log"></p></div>
-	<div id="c-right"><p id="ip-log"></p></div>
+	<div id="c-right"><p id="ip-log"> <?php  echo $_SERVER['REMOTE_ADDR'];?></p></div>
 
 </div>
 

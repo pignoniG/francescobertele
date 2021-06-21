@@ -54,9 +54,9 @@ $(document).ready(function()
 		  mouseLog.innerText = 'X: '+e.clientX+', Y: '+e.clientY;
 		}
 
-		$.getJSON('https://ipapi.co/json/', function(data) {
-	  		$("#ip-log").html(data.ip);
-		});
+		//$.getJSON('https://ipapi.co/json/', function(data) {
+	  		//$("#ip-log").html(data.ip);
+		//});
 
     	
 
