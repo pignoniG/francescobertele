@@ -2257,7 +2257,11 @@ div.ouvre-grid{
     body.single.onair .banner a{
         color: white;
      }
-        
+
+     body.single.oeuvre div.text-description-overflow{
+        margin-right: 18px;
+       
+     }
     
     
 
@@ -2366,8 +2370,8 @@ div.ouvre-grid{
         box-shadow: 0px 0px 8px 4px #060606;
         padding: 5px;
         background-color: #1b1b1b;
-        padding-right: 23px;
-        padding-left: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
 
 
@@ -2664,7 +2668,10 @@ div.ouvre-grid{
             }
 
     
-
+ body.single.oeuvre div.text-description-overflow{
+ 
+        width: calc(25% - 18px);
+     }
 
     /* project ouvre extra medium*/
 
@@ -2674,6 +2681,11 @@ div.ouvre-grid{
     /* project ouvre medium*/
 
         @media only screen and (max-width: 63.9375em)  {
+
+             body.single.oeuvre div.text-description-overflow{
+
+                width: calc(41.66667% - 18px);
+            }
 
              div#onair-trust-container-leftcolumn {
                 display: inline-block;
@@ -2715,6 +2727,12 @@ div.ouvre-grid{
     /* project ouvre mobile*/
 
         @media screen and (max-width: 39.9375em) {
+            body.single.oeuvre div.text-description-overflow{
+
+                width:100%;
+                margin-right: 0px;
+            }
+
             p._BodyText.abstract {
                 
                 width: calc(100% - 3vw);
