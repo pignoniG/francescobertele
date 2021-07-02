@@ -218,13 +218,15 @@ function Header()
     $this->imageUniformToFill("https://www.francescobertele.net/logo.png", 195, 10,10, 10, "C");//$alignment "B", "T", "L", "R", "C"
     // Arial bold 15
     $this->SetFont('foundersmono','',16);
+    
+    $project_title = html_entity_decode($project_title );
 
-    $project_title = str_replace("&#039;","'",$project_title);
-    $project_title = str_replace("&#8217;","'",$project_title);
-	
+    //$project_title = str_replace("&#039;","'",$project_title);
+    //$project_title = str_replace("&#8217;","’",$project_title);
+    $project_title = iconv('utf-8', 'cp1252', $project_title);
+	//$project_title =htmlspecialchars_decode($project_title);
 
-	
-	$this->WriteHTML(htmlspecialchars_decode($project_title));
+	$this->WriteHTML($project_title);
 	$this->SetFont('foundersmono','',10);
 
 	$this->TextWithDirection(200,115,$_SERVER['REMOTE_ADDR']." _ ".date("m/d/y") ,'D');
@@ -372,7 +374,28 @@ foreach ($projects as $project_id) {
 		if( get_field('project_description',$project_id) ):
 			$pdf->Write(5,"\n\n".wpm_translate_string( "[:en]DESCRIPTION[:it]DESCRIZIONE[:]", $language = '' ).": \n");
 			
-			$text=  utf8_decode(get_field('project_description',$project_id));
+			$text=  get_field('project_description',$project_id);
+            //$text=  utf8_decode($text);
+
+            $text = iconv('utf-8', 'cp1252', $text);
+
+            // $text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
+
+            //$text = htmlspecialchars_decode($text );
+            
+            //$text = str_replace("&#8217;","'",$text);
+            //$text = str_replace("&#039;","'",$text);
+    
+    
+            //
+            
+    
+                
+
+
+                
+
+
 			$pdf->WriteHTML($text);
 
 		endif;
