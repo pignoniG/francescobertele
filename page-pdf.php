@@ -220,10 +220,11 @@ function Header()
     $this->SetFont('foundersmono','',16);
     
     $project_title = html_entity_decode($project_title );
-
-    //$project_title = str_replace("&#039;","'",$project_title);
+$project_title = str_replace("&#039;","'",$project_title);
+    
     //$project_title = str_replace("&#8217;","’",$project_title);
     $project_title = iconv('utf-8', 'cp1252', $project_title);
+    
 	//$project_title =htmlspecialchars_decode($project_title);
 
 	$this->WriteHTML($project_title);
