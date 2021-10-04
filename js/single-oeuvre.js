@@ -19,12 +19,12 @@ $( document ).ready(
        
         $("body").removeClass("modal_open");
     }); 
- $(".text-description-overflow").css("top", $(".oeuvre-header").height()+15);
+ $(".text-description-overflow").css("top", $(".oeuvre-header").height()+5);
 
 });
 
 
 $(window).on('resize', function () {
    
-    $(".text-description-overflow").css("top", $(".oeuvre-header").height()+15);
+    $(".text-description-overflow").css("top", $(".oeuvre-header").height()+5);
 });
