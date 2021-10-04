@@ -56,7 +56,9 @@ $global_filter_items= array();
       <?php 
            $n=0;
            $f=0;
-       
+
+        array_multisort($global_filter_items_h[$f],$global_filter_items[$f]);
+
            foreach ($global_filter_items[$f] as $global_filter_item) {
              echo ('<option value=".'.$global_filter_item.'">'.$global_filter_items_h[$f][$n].'</option>');
              $n=$n+1;
@@ -79,6 +81,7 @@ $global_filter_items= array();
         <?php 
            $n=0;
            $f=1;
+           array_multisort($global_filter_items_h[$f],$global_filter_items[$f]);
        
            foreach ($global_filter_items[$f] as $global_filter_item) {
              echo ('<option value=".'.$global_filter_item.'">'.$global_filter_items_h[$f][$n].'</option>');
@@ -94,6 +97,7 @@ $global_filter_items= array();
        <?php 
            $n=0;
            $f=2;
+           array_multisort($global_filter_items_h[$f],$global_filter_items[$f]);
        
            foreach ($global_filter_items[$f] as $global_filter_item) {
              echo ('<option value=".'.$global_filter_item.'">'.$global_filter_items_h[$f][$n].'</option>');
@@ -133,6 +137,7 @@ $global_filter_items= array();
                       <?php 
                           $n=0;
                           $f=3;
+                          array_multisort($global_filter_items_h[$f],$global_filter_items[$f]);
                       
                           foreach ($global_filter_items[$f] as $global_filter_item) {
                             echo ('<option value=".'.$global_filter_item.'">'.$global_filter_items_h[$f][$n].'</option>');
@@ -149,6 +154,7 @@ $global_filter_items= array();
                        <?php 
                           $n=0;
                           $f=4;
+                          array_multisort($global_filter_items_h[$f],$global_filter_items[$f]);
                       
                           foreach ($global_filter_items[$f] as $global_filter_item) {
                             echo ('<option value=".'.$global_filter_item.'">'.$global_filter_items_h[$f][$n].'</option>');
@@ -165,6 +171,7 @@ $global_filter_items= array();
                       <?php 
                           $n=0;
                           $f=5;
+                          array_multisort($global_filter_items_h[$f],$global_filter_items[$f]);
                       
                           foreach ($global_filter_items[$f] as $global_filter_item) {
                             echo ('<option value=".'.$global_filter_item.'">'.$global_filter_items_h[$f][$n].'</option>');
@@ -181,6 +188,7 @@ $global_filter_items= array();
                       <?php 
                           $n=0;
                           $f=6;
+                          array_multisort($global_filter_items_h[$f],$global_filter_items[$f]);
                       
                           foreach ($global_filter_items[$f] as $global_filter_item) {
                             echo ('<option value=".'.$global_filter_item.'">'.$global_filter_items_h[$f][$n].'</option>');
@@ -197,6 +205,7 @@ $global_filter_items= array();
                        <?php 
                           $n=0;
                           $f=7;
+                          array_multisort($global_filter_items_h[$f],$global_filter_items[$f]);
                       
                           foreach ($global_filter_items[$f] as $global_filter_item) {
                             echo ('<option value=".'.$global_filter_item.'">'.$global_filter_items_h[$f][$n].'</option>');
