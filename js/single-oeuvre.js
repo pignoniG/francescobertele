@@ -1,10 +1,6 @@
 
-
-
-
 $( document ).ready(
     function(){ 
-
 
 
   $("#button-shop-modal").click(function(){
@@ -23,13 +19,12 @@ $( document ).ready(
        
         $("body").removeClass("modal_open");
     }); 
+ $(".text-description-overflow").css("top", $(".oeuvre-header").height()+15);
 
-
-
-
-
-
-    
 });
 
 
+$(window).on('resize', function () {
+   
+    $(".text-description-overflow").css("top", $(".oeuvre-header").height()+15);
+});
