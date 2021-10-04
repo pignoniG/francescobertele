@@ -19,12 +19,21 @@ $( document ).ready(
        
         $("body").removeClass("modal_open");
     }); 
- $(".text-description-overflow").css("top", $(".oeuvre-header").height()+5);
+
+  $(".text-description-overflow").css("top", $(".oeuvre-header").height()+5);
+if ($(window).width() < 1024) {$(".wpm-language-switcher.switcher-list").css("top", $(".oeuvre-header").height()-30);}
+else {$(".wpm-language-switcher.switcher-list").css("top", "initial");}
 
 });
+ $(".text-description-overflow").css("top", $(".oeuvre-header").height()+5);
+if ($(window).width() < 1024) {$(".wpm-language-switcher.switcher-list").css("top", $(".oeuvre-header").height()-30);}
+else {$(".wpm-language-switcher.switcher-list").css("top", "initial");}
 
 
 $(window).on('resize', function () {
-   
+
     $(".text-description-overflow").css("top", $(".oeuvre-header").height()+5);
+    if ($(window).width() < 1024) {$(".wpm-language-switcher.switcher-list").css("top", $(".oeuvre-header").height()-30);}
+else {$(".wpm-language-switcher.switcher-list").css("top", "initial");}
+
 });
