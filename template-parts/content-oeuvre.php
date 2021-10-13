@@ -85,9 +85,9 @@
 
 
 <!--         <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php/** echo get_permalink(); */?>" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
- -->
-		<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=<?php echo  wpm_translate_string( "[:en]Check%20this%20out[:it]Dai%20un'occhiata%20a%20questo[:]", $language = '' ); ?>:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
-        
+
+		<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php /**echo get_permalink();?>&text=<?php echo  wpm_translate_string( "[:en]Check%20this%20out[:it]Dai%20un'occhiata%20a%20questo[:]", $language = '' );  */?>:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
+         -->
 
 	<!-- SCHEDA -->
 	<?php if( get_field('project_corpus') ):?>
