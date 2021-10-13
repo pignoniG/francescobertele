@@ -19,6 +19,21 @@ $( document ).ready(
     });
 
 
+  $("#onair-ask_trustee").click(function(){
+        $("#onair-trust-container").toggleClass("blocked");
+        $("#onair-trust-container-dimmer").toggleClass("blocked");
+        $("#onair-trust").toggleClass("active");
+
+        $("body").toggleClass("modal_open");
+    }); 
+    $(".modal_control").click(function(){
+        $(".blocked").removeClass("blocked");
+        $(".blocked").removeClass("blocked");
+        $("#onair-trust").removeClass("active");
+        $("body").removeClass("modal_open");
+    }); 
+
+
 
 
 

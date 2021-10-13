@@ -85,11 +85,30 @@ get_header(); ?>
 
 
 		<div class="onair_button">
-			<a class="general-button braketed" href="<?php echo wpm_translate_url( get_page_link(190), $language = '' )."#become-a-trustee" ;?>"><?php echo  wpm_translate_string( "[:en]Become a Trustee[:it]Produci[:]", $language = '' ); ?></a>
+			<a class="general-button braketed" id="onair-ask_trustee" ><?php echo  wpm_translate_string( "[:en]Become a Trustee[:it]Produci[:]", $language = '' ); ?></a>
 		</div>
 
-			
 
+
+<div id="onair-trust-container-dimmer" class="modal_control"></div>
+<div id="onair-trust-container" >
+	<a class="close-modal modal_control">×</a>
+    <div id="onair-trust-container-leftcolumn">
+
+    	<h1 class="_TitleOU"><?php echo  wpm_translate_string( "[:en]Trustee[:it]Produci[:]", $language = '' ); ?></h1>
+
+
+
+    	<div class=" _BodyText _BodyText_no_spaces" style="color: #FFF; ">
+   			<?php if (wpm_get_language()=="it") {the_field('ask_trustee',190); }?>	
+  			<?php if (wpm_get_language()=="en") {the_field('ask_trustee',190); }?>	
+  		</div>
+  		
+
+    </div>
+
+
+ </div>
 
 
 		
