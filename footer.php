@@ -101,6 +101,36 @@
 
 
 
+<div id="myBanner" class="banner ">
+    <a class="close-modal" onclick="closeBan()" >×</a>
+        <div id="container-disclaimer" class="">
+            
+            
+            <a class="customfollow-icon mail" target="_blank" href="mailto:fb@francescobertele.net">
+                <i class="far fa-envelope"></i>
+            </a>
+            <br>
+            <p class="_BodyText" style="text-align:center;">francesco bertelé 
+             <?php echo  wpm_translate_string( "[:en]official website [:it]sito web ufficiale [:]", $language = '' ); ?>
+            | P.IVA: 03687100135 | f’ archive 2021</p>
+            <p class="_BodyText" style="text-align:center;">
+                 <?php echo  wpm_translate_string( "[:en]web design and development by [:it]web design e sviluppo di [:]", $language = '' ); ?>
+                 <a style="text-decoration:underline;" target="_blank" href="https://www.simone-ellero.eu/">simone ellero</a> e <a style="text-decoration:underline;" target="_blank" href="https://giovannipignoni.com/">giovanni pignoni</a> <br> 
+                  <?php echo  wpm_translate_string( "[:en]copy by [:it]copy di [:]", $language = '' ); ?>
+                  <a style="text-decoration:underline;" target="_blank" href="https://www.instagram.com/gaiascrivecose/">gaia greco</a>.
+
+            </p>
+            <br>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                <i class="fab fa-creative-commons" aria-hidden="true"></i>
+                <i class="fab fa-creative-commons-by"aria-hidden="true"></i>
+                <i class="fab fa-creative-commons-nc" aria-hidden="true"></i>
+                <i class="fab fa-creative-commons-sa" aria-hidden="true"></i>
+
+            </a>
+		</div>
+</div>
+<div id="banner-dimmer" href="#" onclick="closeBan()" class="">&nbsp;</div>
 
 <?php wp_footer(); ?>
 <style></style>
