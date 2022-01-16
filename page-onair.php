@@ -93,7 +93,7 @@ get_header(); ?>
 <div id="onair-trust-container-dimmer" class="modal_control"></div>
 <div id="onair-trust-container" >
 	<a class="close-modal modal_control">×</a>
-    <div id="onair-trust-container-leftcolumn">
+    <div style="padding-top: 19px;">
 
     	<h1 class="_TitleOU"><?php echo  wpm_translate_string( "[:en]Trustee[:it]Produci[:]", $language = '' ); ?></h1>
 
