@@ -38,7 +38,7 @@ foreach ($filter_items as $filter_item) {
 get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
-		<div class="ouvre-grid">
+		<div class="ouvre-grid repaint">
 	
 			<?php
 
