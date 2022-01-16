@@ -2831,5 +2831,6 @@ div.ouvre-grid{
 }
 
 .repaint {
+  animation-iteration-count: infinite;
   animation: repaint 5000ms;
 }
