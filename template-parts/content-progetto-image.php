@@ -56,7 +56,7 @@ foreach ($filter_items as $filter_item) {
 ?>
 
 
-<div class="ouvre_project_box <?php echo implode( " ", $local_filter_items ); ?>" data-postid="<?php echo  get_the_ID()?>" onclick="location.href=' <?php echo get_permalink();?>';" > 
+<div class="ouvre_project_box repaint <?php echo implode( " ", $local_filter_items ); ?>" data-postid="<?php echo  get_the_ID()?>" onclick="location.href=' <?php echo get_permalink();?>';" > 
 
 
 	<div class="title-line">
@@ -69,7 +69,7 @@ foreach ($filter_items as $filter_item) {
 	<?php 
 	if( has_post_thumbnail()){
 		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail-medium-for-interface' )['src'];
-		echo '<img class="repaint" src="'. $tumbnail_url.'">';
+		echo '<img src="'. $tumbnail_url.'">';
 	}
 	?>
 

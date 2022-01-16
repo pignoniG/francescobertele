@@ -2823,7 +2823,7 @@ div.ouvre-grid{
 
 @keyframes repaint {
   from {
-    width: 99.999%
+    width: 80%
   }
   to {
     width: 100%
