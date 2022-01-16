@@ -2820,3 +2820,16 @@ div.ouvre-grid{
 
 
 /* XXXXX fine */
+
+@keyframes repaint {
+  from {
+    width: 99.999%
+  }
+  to {
+    width: 100%
+  }
+}
+
+.repaint {
+  animation: repaint 5000ms;
+}

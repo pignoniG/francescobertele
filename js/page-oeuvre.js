@@ -578,14 +578,12 @@ jQuery('body').imagesLoaded().progress( function() {
     removeDisabled();
     ceckRes();
     jQuery('.ouvre-grid').isotope('layout');
-    $('<style></style>').appendTo($(document.body)).remove();
 
 });
 
 
 $(window).resize(function() {
    ceckRes();
-   $('<style></style>').appendTo($(document.body)).remove();
 });
 
 
