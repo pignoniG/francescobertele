@@ -2820,17 +2820,3 @@ div.ouvre-grid{
 
 
 /* XXXXX fine */
-
-@keyframes repaint {
-  from {
-    width: 80%
-  }
-  to {
-    width: 100%
-  }
-}
-
-.repaint {
-  animation-iteration-count: infinite;
-  animation: repaint 5000ms;
-}
