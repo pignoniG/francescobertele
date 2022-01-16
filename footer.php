@@ -133,6 +133,6 @@
 <div id="banner-dimmer" href="#" onclick="closeBan()" class="">&nbsp;</div>
 
 <?php wp_footer(); ?>
-<style></style>
+
 </body>
 </html>
