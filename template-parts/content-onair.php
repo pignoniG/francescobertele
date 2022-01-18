@@ -24,9 +24,9 @@
                 <div class="w3-container w3-green" style="width:<?php the_field('project_progress'); ?>%"><?php the_field('project_progress'); ?>%</div>
                 </div>
 
-                <a class="general-button braketed " id="onair-trust">
+<!--                 <a class="general-button braketed " id="onair-trust">
 
-                	<?php echo  wpm_translate_string( "[:en]Trust it[:it]Finanzia[:]", $language = '' ); ?></a>
+                	<?php /**echo  wpm_translate_string( "[:en]Trust it[:it]Finanzia[:]", $language = '' );*/ ?></a> -->
 
                 <a class="general-button braketed " id="onair-more" >
 
@@ -35,11 +35,6 @@
             
     
            
-                <div class="share-it">
-                    <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo get_permalink();?>" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
-
-					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink();?>&text=<?php echo  wpm_translate_string( "[:en]Check%20this%20out[:it]Dai%20un'occhiata%20a%20questo[:]", $language = '' ); ?>:" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
-                </div>
         </div>
 </div>
 
@@ -47,52 +42,7 @@
 <div id="onair-trust-container-dimmer" class="modal_control"></div>
 <div id="onair-trust-container" >
 	<a class="close-modal modal_control">×</a>
-    <div id="onair-trust-container-leftcolumn">
-
-    	<h1 class="_TitleOU"><?php echo  wpm_translate_string( "[:en]Trust contact form[:it]Modulo di contatto finanziamento[:]", $language = '' ); ?></h1>
-
-
-   	<div class="status-p-onair">
-
-
-    		<?php
-    		$production_cost = get_field('project_production_cost');
-			if( $production_cost ): ?>
-			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Total production cost[:it]Costo totale di produzione[:]", $language = '' ); ?></span> 
-			    <?php  echo $production_cost ;  ?>
-			</p>
-			<?php endif; 
-
-			$informativa = get_field('project_informativa');
-			if( $informativa ): ?>
-			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Disclosure[:it]Informativa[:]", $language = '' ); ?></span> 
-			    <?php  echo $informativa ;  ?>
-			</p>
-			<?php endif; ?>
-
-			
-
-		</div>
-			<?php
-			$slots = get_field('project_slots');
-			if( $slots ): ?>
-
-				<p class="_BodyText sources" style="border-bottom: 1px dashed #797979;"><?php echo  wpm_translate_string( "[[:en]AVAILABLE SLOTS[:it]SLOTS DISPONIBILI[:]", $language = '' ); ?>:
-			
-				
-				    <?php foreach( $slots as $slot): ?>
-				      <br>  <?php echo mytranslate($slot) ; ?> 
-				    <?php endforeach; ?>
-				 </p>
-				
-			
-			<?php endif; ?>
-
-        </div>
-
-
-
-        <?php the_field('disclaimer_onair',549); ?>
+    
     </div>
   
 </div>
@@ -188,7 +138,6 @@
 
 
     	</p>
-    	
     </div>
 
     <?php if( get_field('project_abstract') ):?>  
@@ -196,8 +145,65 @@
     	<p class="_BodyText abstract" style="border-bottom: 1px dashed #797979;">
 		ABSTRACT:<br>
     		<?php the_field('project_abstract'); ?>
+  
 
     	 </p> <?php endif;?>
+
+   <div>
+
+   <p class="_BodyText" ><?php echo  wpm_translate_string( "[:en]BECOME A PATRON[:it]DIVENTA UN MECENATE[:]", $language = '' ); ?></p>
+   
+   <div id="onair-description-container-leftcolumn" style="padding-top: 0;">
+
+
+
+
+   	<div class="status-p-onair">
+
+
+    		<?php 
+
+
+    		$production_cost = get_field('project_production_cost');
+			if( $production_cost ): ?>
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Total production cost[:it]Costo totale di produzione[:]", $language = '' ); ?></span> 
+			    <?php  echo $production_cost ;  ?>
+			</p>
+			<?php endif; 
+
+			$informativa = get_field('project_informativa');
+			if( $informativa ): ?>
+			<p class="_BodyText"><span class="_CatOU"><?php echo  wpm_translate_string( "[:en]Disclosure[:it]Informativa[:]", $language = '' ); ?></span> 
+			    <?php  echo $informativa ;  ?>
+			</p>
+			<?php endif; ?>
+
+			
+			<?php
+			$slots = get_field('project_slots');
+			if( $slots ): ?>
+
+				<p class="_BodyText sources" style="border-bottom: 1px dashed #797979;"><?php echo  wpm_translate_string( "[[:en]AVAILABLE SLOTS[:it]SLOTS DISPONIBILI[:]", $language = '' ); ?>:
+			
+				
+				    <?php foreach( $slots as $slot): ?>
+				      <br>  <?php echo mytranslate($slot) ; ?> 
+				    <?php endforeach; ?>
+				 </p>
+				
+			
+			<?php endif; ?>
+
+	</div>
+    	
+    </div>
+
+    <?php the_field('disclaimer_onair',549); ?>
+    	
+  </div>
+
+
+
 </div>
 	<div class="grid-x grid-padding-x align-center">
 		<div class="cell small-12 medium-8 large-8 conten_project_body">

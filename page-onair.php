@@ -84,10 +84,10 @@ get_header(); ?>
 
 
 
-		<div class="onair_button">
-			<a class="general-button braketed" id="onair-ask_trustee" ><?php echo  wpm_translate_string( "[:en]Become a Trustee[:it]Produci[:]", $language = '' ); ?></a>
+<!-- 		<div class="onair_button">
+			<a class="general-button braketed" id="onair-ask_trustee" ><?php /**echo  wpm_translate_string( "[:en]Become a Trustee[:it]Produci[:]", $language = '' ); */ ?></a>
 		</div>
-
+ -->
 
 
 <div id="onair-trust-container-dimmer" class="modal_control"></div>
