@@ -576,7 +576,7 @@ jQuery('body').imagesLoaded().progress( function() {
     evidenziaTemi();
     jQuery(window).on( 'hashchange', filterWithHash );
     removeDisabled();
-    ceckRes();
+
     jQuery('.ouvre-grid').isotope('layout');
 
 });
