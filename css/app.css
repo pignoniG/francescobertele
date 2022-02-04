@@ -1161,6 +1161,17 @@ div.ouvre-grid{
 
 		@media only screen and (max-width: 63.9375em)  {
 
+            button.accordion, #btn-reset-filter, #btn-expt-filter{
+
+                            margin-right: calc(5vw + 120px);
+                            margin-top: 0px !important;
+                            border-top-style: solid !important;
+                            border-top-width: 4px !important;
+
+            }
+
+
+
             div.menu-buttons .center a:hover + span{
                 font-size: 7vw;
             }
@@ -1319,6 +1330,16 @@ div.ouvre-grid{
 
         @media only screen and (max-width: 63.9375em)  {
 
+            .panel {
+                height: 100px;
+            }
+            p.filter_banner{
+                margin-right: 15px;
+                margin-left: 15px;
+                font-size: 18px;
+
+            }
+
             div.onair_flow p.main-carousel-caption 
             {
                 
@@ -1403,6 +1424,9 @@ div.ouvre-grid{
 
     /* onair  extra mobile*/
         @media screen and (max-width: 28.125em) {
+            .panel {
+                height: 130px;
+            }
         }
 
 

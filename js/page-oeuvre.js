@@ -611,6 +611,26 @@ $( "#btn-expt-filter" ).click(function() {
       window.open(urlpdfist, "_blank");
 });
 
+setTimeout(function(){
+  if (document.body.clientWidth < 1024) {
+
+$(".filter_panel").hide();};
+},3500);
+
+setTimeout(function(){
+  $(window).scroll(function(){
+  if (document.body.clientWidth < 1024) {
+
+$(".filter_panel").hide();};
+});
+
+},500);
+
+
+if (document.body.clientWidth < 1024) {
+
+$(".filter_panel").show();};
+
 });
 
 

@@ -29,7 +29,7 @@ $global_filter_items= array();
    " disabled>
  
   <div class="panel filter_panel">
-      <div class="label-container">
+      <div class="label-container noMedium">
 
       <div class="label-filters-container">
 
@@ -42,7 +42,7 @@ $global_filter_items= array();
       </div>
 
 
-      <div class="filters">
+      <div class="filters noMedium">
 
 
 
@@ -108,8 +108,12 @@ $global_filter_items= array();
     </div>
     </div>
         <div class="label-buttons-container">
+
+                    <p class="filter_banner">
+                                  <?php echo  wpm_translate_string( "[:en]Some archive features are not available from mobile, visit us from your computer for the full experience![:it]Alcune funzionalità dell'archivio non sono disponibili da mobile, visitaci dal tuo computer per l'esperienza compelta![:]", $language = '' ); ?>
+                    </p>
         
-                  <div class="panelthemes filter_panel">
+                  <div class="panelthemes filter_panel noMedium">
                             <div class="label-filtersthemes-container">
                                 <h1 class="label-filters">
                                   <?php echo  wpm_translate_string( "[:en]Specificity[:it]Specificità[:]", $language = '' ); ?>
@@ -215,10 +219,10 @@ $global_filter_items= array();
                     </select>
                   </div>
                   </div>
-      <button type="button" class="braketed" id="btn-expt-filter">
+      <button type="button" class="braketed noMedium" id="btn-expt-filter">
         <?php echo  wpm_translate_string( "[:en]Export Selection[:it]Esporta Selezione[:]", $language = '' ); ?>
       </button>
-        <button type="button" class="braketed" id="btn-reset-filter">
+        <button type="button" class="braketed noMedium" id="btn-reset-filter">
         <?php echo  wpm_translate_string( "[:en]Reset Filter[:it]Reset Filtri[:]", $language = '' ); ?>
       </button>
     </div>
