@@ -615,7 +615,7 @@ setTimeout(function(){
   if (document.body.clientWidth < 1024) {
 
 $(".filter_panel").hide();};
-},3500);
+},5500);
 
 setTimeout(function(){
   $(window).scroll(function(){
