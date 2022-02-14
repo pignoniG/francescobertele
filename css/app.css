@@ -1324,6 +1324,9 @@ div.ouvre-grid{
     /* onair  extra medium*/
 
         @media only screen and (min-width: 63.9375em)  {
+            p.filter_banner{
+                display: none;
+            }
         }
 
     /* onair  medium*/
