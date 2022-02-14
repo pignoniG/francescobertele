@@ -110,7 +110,7 @@ $global_filter_items= array();
         <div class="label-buttons-container">
 
                     <p class="filter_banner">
-                                  <?php echo  wpm_translate_string( "[:en]Some archive features are not available from mobile, visit us from your computer for the full experience![:it]Alcune funzionalità dell'archivio non sono disponibili da mobile, visitaci dal tuo computer per l'esperienza compelta![:]", $language = '' ); ?>
+                                  <?php echo  wpm_translate_string( "[:en]Some archive features are not available from mobile, visit us from your computer for the full experience![:it]Alcune funzionalità dell'archivio non sono disponibili da mobile, visitaci dal tuo computer per l'esperienza completa![:]", $language = '' ); ?>
                     </p>
         
                   <div class="panelthemes filter_panel noMedium">
