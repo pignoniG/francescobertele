@@ -983,7 +983,7 @@
     div#container-disclaimer {
     opacity: 0;
     text-align: center;
-    transform: translate(0%, 50%);
+    margin-top: 70px;
     }
     div#container-disclaimer.blocked {
    opacity:1;
