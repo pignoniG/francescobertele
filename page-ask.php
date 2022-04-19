@@ -31,6 +31,11 @@ get_header(); ?>
 				  data-textnav="<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>
 				  </button>
+				  <button class="accordion braketed ask-tab"  data-targhet="#press"
+				   data-textnav="<?php echo  wpm_translate_string( "[:en]Press releases[:it]Comunicati stampa[:]", $language = '' ); ?>">
+  					<?php echo  wpm_translate_string( "[:en]Press releases[:it]Comunicati stampa[:]", $language = '' ); ?>
+				  </button>
+
 				
 			</div>
 
@@ -56,6 +61,21 @@ get_header(); ?>
 			</div>
 
 			<?php  include(locate_template('template-parts/content-ask-bibliography.php')); ?>
+
+
+			<div class="ask-content grid-x" id="press">
+				<div class="cell small-12 medium-12 large-12 ask-separator">
+					<h3 id="">
+						<?php echo  wpm_translate_string( "[:en]Press releases[:it]Comunicati stampa[:]", $language = '' ); ?>
+					</h3>
+				</div>
+  				<div class="cell small-12 medium-10 large-8 inside large-offset-4 medium-offset-2">
+				
+					<?php if (wpm_get_language()=="it") {the_field('ask_press'); }?>	
+  					<?php if (wpm_get_language()=="en") {the_field('ask_press'); }?>	
+				</div>
+
+			</div>
 
 
 
