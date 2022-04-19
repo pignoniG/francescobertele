@@ -129,7 +129,7 @@
 
             </a>
             <br>
-            <img style="width:100px;" src="https://worldbeyondwar.org/wp-content/uploads/2014/06/pledgesigner.jpg">
+            <img style="width:100px;" src="https://francescobertele.net/wp-content/uploads/2022/04/pledgesigner.jpg">
 		</div>
 </div>
 <div id="banner-dimmer" href="#" onclick="closeBan()" class="">&nbsp;</div>
