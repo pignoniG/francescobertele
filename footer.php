@@ -64,8 +64,8 @@
         <div class="sidenav-description">
 
             <a target="_blank" href="https://www.instagram.com/franz_sella/"> <i class="fab fa-instagram"></i></a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCwK35sNDRUZGncY8VFtbLWw/videos?view_as=subscriber"> <i class="fab fa-youtube-square"></i></a>
-            <a target="_blank" href="https://vimeo.com/franzsella"> <i class="fab fa-vimeo-v"></i></a>
+           <!--  <a target="_blank" href="https://www.youtube.com/channel/UCwK35sNDRUZGncY8VFtbLWw/videos?view_as=subscriber"> <i class="fab fa-youtube-square"></i></a>
+            <a target="_blank" href="https://vimeo.com/franzsella"> <i class="fab fa-vimeo-v"></i></a> -->
             <a target="_blank" href="https://t.me/f_nius"> <i class="fab fa-telegram"></i></a>
             <!-- <a target="_blank" href="https://fbnonportfolio.blogspot.com/"> <i class="far fa-newspaper"></i></a> -->
             <a target="_blank" href="https://pensierif.blogspot.com/"> 
@@ -93,7 +93,7 @@
                 </svg>
 
             </a>
-            <a target="_blank" href="https://twitter.com/franzsella"> <i class="fab fa-twitter"></i></a>
+       <!--      <a target="_blank" href="https://twitter.com/franzsella"> <i class="fab fa-twitter"></i></a> -->
         
         
           
