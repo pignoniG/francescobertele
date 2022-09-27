@@ -34,8 +34,10 @@
         <a class="braketed home" href="<?php echo wpm_translate_url( home_url(), $language = '' );?>">Ho</a> -->
         <a class="braketed onair" href="<?php echo wpm_translate_url( get_page_link(80), $language = '' );?>">On</a>
         <span class="hidden-onair">ONAIR</span>
-        <a class="braketed oeuvre" href="<?php echo wpm_translate_url( get_page_link(74), $language = '' );?>">Oe</a>
-        <span class="hidden-oeuvre">OEUVRE</span>
+        <a class="braketed oeuvre" href="<?php echo wpm_translate_url( get_page_link(1110), $language = '' );?>">Pf</a>
+        <span class="hidden-oeuvre">PORTFOLIO</span>
+        <a class="braketed oeuvre" href="<?php echo wpm_translate_url( get_page_link(74), $language = '' );?>">Ar</a>
+        <span class="hidden-oeuvre"><?php echo  wpm_translate_string( "[:en]ARCHIVE[:it]ARCHIVIO[:]", $language = '' ); ?></span>
         <a class="braketed ask" href="<?php echo wpm_translate_url( get_page_link(190), $language = '' );?>">sK</a>
         <span class="hidden-ask">ASK</span>
         <!-- <a class="braketed mad" href="<?php echo wpm_translate_url( get_page_link(), $language = '' );?>">AD</a> -->

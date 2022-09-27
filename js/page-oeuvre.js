@@ -162,7 +162,13 @@ jQuery("#accordionFilters").on('click', function( event ){
   });
 
   function ceckRes(){
-    if (document.body.clientWidth < 1024) {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const force = urlParams.get('force')
+
+    
+
+    if (document.body.clientWidth < 1024 && !force) {
 
       document.getElementById('btn-reset-filter').click();
       $(".filter_panel").hide();

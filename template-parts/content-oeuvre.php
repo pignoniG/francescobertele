@@ -68,17 +68,9 @@
 
     			<a id="button-shop-modal" class="button-shop oeuvre <?php echo filter_var( mytranslate_force(get_field("project_status"),"en"), FILTER_SANITIZE_URL);?>">
 
-    				<?php 
-    				
-    					echo  $status;
+    				<?php echo  $status;?>
 
-
-    				?>
-
-
-    					
-
-    				</a>
+    			</a>
 
     		<?php endif;?>
 
@@ -92,7 +84,10 @@
 	<!-- SCHEDA -->
 	<?php if( get_field('project_corpus') ):?>
 
-    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><br><br>CORPUS:<br><?php the_field('project_corpus'); ?></p>
+    <p class="_BodyText" style="border-bottom: 1px dashed #FFF;"><br><br>CORPUS:<br><?php the_field('project_corpus'); ?><br> <a href="./oeuvre/?force=True#filter=.project_corpus_<?php echo myUrlEncode (filter_var(get_field("project_corpus")[0], FILTER_SANITIZE_URL))  ?>
+	">../<?php echo  wpm_translate_string( "[:en]Related Objects[:it] Oggetti correlati[:]", $language = '' ); ?></a></p>
+
+    
 
 	<?php endif;?>
 

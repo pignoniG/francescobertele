@@ -311,6 +311,16 @@
 
 /* general fine */
 /* oeuvre inizio */
+    div.grid_portfolio{
+        padding-top: 120px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 45px;
+
+    }
+    body.page-id-1117{
+        background-color:#eeeef2;
+    }
 	div.ouvre_project_box{
 		/* margin-right: 10px; */
        	width: calc(33% - 3.5vw);
@@ -322,6 +332,13 @@
         padding-bottom: 45px;
         cursor: pointer;
 	}
+    div.portfolio_project_box{
+        /* margin-right: 10px; */
+ 
+        /* padding: 10px 5px; */
+        box-sizing: border-box;
+        padding-bottom: 45px;
+    }
 
 	div.ouvre_project_box:hover img{
         transition-duration: 400ms;
@@ -331,7 +348,7 @@
 	
 	}
 
-	div.ouvre_project_box .title-line {
+	div.ouvre_project_box .title-line ,div.portfolio_project_box .title-line {
 		display: flex;
 		justify-content: space-between;
 		margin-left: 12%;
@@ -339,8 +356,15 @@
 		border-bottom: 1px dashed black;
 		margin-bottom: 22px;
 	}
+    div.portfolio_project_box .title-line {
+  
+        margin-left: 0%;
+        margin-right: 0%;
+       
+    }
 
-	div.ouvre_project_box .title-line h4{
+
+	div.ouvre_project_box .title-line h4, div.portfolio_project_box .title-line h4{
 		
 		font-size: 10px;
 		font-family: founders-grotesk-mono;
@@ -351,17 +375,71 @@
 
 	}
 
-	div.ouvre_project_box .title-line h3.ouvre_project {
+
+	div.ouvre_project_box .title-line h3.ouvre_project,div.portfolio_project_box .title-line h3.ouvre_project {
 		font-size: 14px;
 		margin: 0;
 		padding-bottom: 8px;
 	}
+    div.portfolio_project_box div.title-line:hover{ 
+   
+        cursor: pointer;
+
+    }
+    div.portfolio_project_box div.title-line:hover h3.ouvre_project{ 
+        color: red;
+
+
+    }
 	div.ouvre_project_box img{
 		position: relative;
 		margin: 0;
 		width: 70%;
 		margin-bottom: 15px;
 	}
+    div.portfolio_project_box img{
+        position: relative;
+        margin: 0;
+        width: 95%;
+        margin-bottom: 15px;
+    }
+    div.portfolio_project_box .description-box p{
+        margin: 0;
+         color: black;
+            font-size: 16px;
+            text-align: left;
+            padding: 0;
+            overflow: hidden;
+     
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 10;
+            line-clamp: 10;
+            -webkit-box-orient: vertical;
+
+    }
+    div.portfolio_project_box .description-box{
+               margin-bottom: 20px;
+           
+
+    }
+    div.pro-links{
+            border-bottom: 1px dashed black;
+            padding-bottom: 22px;
+            font-size: 14px;
+
+    }
+
+    div.pro-links a{
+        color: black;
+        float: right;
+        padding-left: 25px;
+    }
+    div.pro-links a:hover{
+        color: red;
+    }
+
+
 
 
 	div.ouvre_project_box .pro-deets {
@@ -1160,6 +1238,12 @@ div.ouvre-grid{
 	/* oeuvre  medium*/
 
 		@media only screen and (max-width: 63.9375em)  {
+
+            div.portfolio_project_box img{
+         
+                width: 100%;
+        
+            }
 
             button.accordion, #btn-reset-filter, #btn-expt-filter{
 

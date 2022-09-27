@@ -213,7 +213,23 @@ function oeuvre_js(){
 add_action('wp_enqueue_scripts', 'oeuvre_js');
 
 
+function portfolio_js(){
+   if( is_page('portfolio') ){
 
+
+   		wp_enqueue_script( 'francescobertele-select-js', get_template_directory_uri() . '/js/select2.min.js', array(), _S_VERSION, true );
+
+
+   		wp_enqueue_script( 'francescobertele-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), _S_VERSION, true );
+
+   		wp_enqueue_script( 'francescobertele-imagesloaded', get_template_directory_uri() . '/js/	imagesloaded.pkgd.min.js', array(), _S_VERSION, true );
+
+   	
+    	wp_enqueue_script( 'francescobertele-page-portfolio', get_template_directory_uri() . '/js/page-portfolio.js', array(), '1', true );
+
+    }
+}
+add_action('wp_enqueue_scripts', 'portfolio_js');
 
 function onair_js(){
    if( is_page('onair') ){
@@ -295,6 +311,7 @@ remove_image_size('post-thumbnail');
 if ( function_exists( 'fly_add_image_size' ) ) {
     fly_add_image_size( 'hd-for-interface',2500, 2500, false );
     fly_add_image_size( 'hd-for-pdf',1000, 1000, false );
+    fly_add_image_size( 'thumbnail-hd-for-interface', 1000, 2000, false ); 
     fly_add_image_size( 'thumbnail-medium-for-interface', 600, 600, false ); 
     fly_add_image_size( 'thumbnail-small-for-interface', 350, 350, false ); 
 }
