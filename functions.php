@@ -195,7 +195,7 @@ add_action('wp_enqueue_scripts', 'ask_js');
 
 
 function oeuvre_js(){
-   if( is_page('oeuvre') ){
+   if( is_page('archive') ){
 
 
    		wp_enqueue_script( 'francescobertele-select-js', get_template_directory_uri() . '/js/select2.min.js', array(), _S_VERSION, true );
