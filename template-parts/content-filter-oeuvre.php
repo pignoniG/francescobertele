@@ -18,7 +18,7 @@ $global_filter_items= array();
 
 
 <div id="sort-filter">
-    <h1 class="title">Oeuvre  <span class="section-subtitle">
+    <h1 class="title"><?php echo  wpm_translate_string( "[:en]Archive:it]Archivio[:]", $language = '' ); ?>  <span class="section-subtitle">
       <?php echo  wpm_translate_string( "[:en]artist archive[:it]archivio d'artista[:]", $language = '' ); ?>
     </span></h1>
   <!-- Filter Div -->
