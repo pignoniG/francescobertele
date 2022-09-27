@@ -180,6 +180,20 @@
 
 
     <p class="_BodyText" ><?php echo  wpm_translate_string( "[:en]SOURCES AND DOCUMENTS[:it]FONTI E DOCUMENTI[:]", $language = '' ); ?>:
+    	
+
+    	   <?php if( have_rows('project_other_links') ):
+
+			?> <br>../<?php echo  wpm_translate_string( "[:en]Links[:it]Links[:]", $language = '' ); ?>: <?php
+		    // Loop through rows.
+		    while( have_rows('project_other_links') ) : the_row();
+
+		    	?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_other_link')['url']; ?>"><?php echo (get_sub_field('project_other_link')['title']); ?></a> <?php
+
+		    endwhile;
+			?>  <?php 
+		endif ?> 
+
     	<?php if( have_rows('project_images') ):
 
 			?> <br>../<?php echo  wpm_translate_string( "[:en]Images[:it]Immagini[:]", $language = '' ); ?>: <?php
