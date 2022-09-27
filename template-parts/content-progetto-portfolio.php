@@ -49,7 +49,7 @@
 	Scheda tecnica[:]", $language = '' ); ?></a>
 	
 
-	<a href="./oeuvre/?force=True#filter=.project_corpus_<?php echo myUrlEncode (filter_var(get_field("project_corpus")[0], FILTER_SANITIZE_URL)) ?>
+	<a href="<?php echo wpm_translate_url( get_page_link(74), $language = '' );?>/?force=True#filter=.project_corpus_<?php echo myUrlEncode (filter_var(get_field("project_corpus")[0], FILTER_SANITIZE_URL)) ?>
 	">> <?php echo  wpm_translate_string( "[:en]Related Objects[:it] Oggetti correlati[:]", $language = '' ); ?></a>
 	</div> 
 </div>
