@@ -42,6 +42,9 @@ get_header(); ?>
         		'order' => 'DESC'
     		),	
 		);
+		$id_list= "";
+
+	
 			$custom_query = new WP_Query( $args );
 			// The Loop!
 			if ($custom_query->have_posts()) {
@@ -51,8 +54,14 @@ get_header(); ?>
 			   			     $custom_query->the_post();	
 			   			     include(locate_template('template-parts/content-progetto-portfolio.php'));
 			   			     $progetti_counter++;
+			   			     $id_list=$id_list.get_the_ID().",";
+					
 			   	}		
 			}
+
+
+
+			
 			?>
 		</div>
 
@@ -61,6 +70,11 @@ get_header(); ?>
     <h1 class="title">Portfolio  <span class="section-subtitle">
       <?php echo  wpm_translate_string( "[:en]artist portfolio[:it]portfolio d'artista[:]", $language = '' ); ?>
     </span></h1>
+    <button type="button" style="margin-right: 5vw;" onclick="window.open('https://francescobertele.net/pdf/?project=<?php echo $id_list?>', '_blank')" class="braketed accordion" id="btn-expt_portfolio">
+    Download Portfolio</button>
+    
+
+
   <!-- Filter Div -->
 
 </div>
@@ -70,9 +84,7 @@ get_header(); ?>
 		</main><!-- #main -->
 
 
-<?php
-
-
+<?php 
 
 
 get_footer();
