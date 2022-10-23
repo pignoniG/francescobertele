@@ -265,7 +265,20 @@ $pdf = new PDF();
 $pdf->AddFont('foundersmono','','founders-grotesk-mono-web-regular.php');
 
 $file_title = date("m.d.y"); 
-$filecounter=0;     
+$filecounter=0;  
+
+//front
+
+
+    $pdf->SetTopMargin(0);
+    $pdf->AddPage();
+    $pdf->SetFont('foundersmono','',10);
+
+   
+    $pdf->imageUniformToFill("https://francescobertele.net/wp-content/uploads/2022/10/f_portfolio_cover_front.jpg", -15, 0,240, 297, "C");//$alignment "B", "T", "L", "R", "C"
+
+
+//front
 
 foreach ($projects as $project_id) {
 	if( has_category('oeuvre',$project_id) ){
@@ -417,6 +430,33 @@ else{
 
 }
     
+
+    $pdf->SetTopMargin(0);
+    $pdf->AddPage();
+
+   
+    $pdf->imageUniformToFill("https://francescobertele.net/wp-content/uploads/2022/10/f_portfolio_cover_rear.jpg", -15, 0,240, 297, "C");//$alignment "B", "T", "L", "R", "C"
+
+    $pdf->SetXY(0 , 230);
+    $pdf->SetLeftMargin(80);
+    $pdf->SetAutoPageBreak(true, 0);
+    $pdf->SetFont('foundersmono','',6);
+    $pdf->SetTextColor(10,10,10);
+    
+    $pdf->Write(3,"cntcts\nwww > https://francescobertele.net/\nig  > @franz_sella\nt   > https://t.me/f_nius\nem  > fb@francescobertele.net\nph  > +39 328 5639720");
+    $pdf->SetXY(0 , 282.5);
+    $pdf->SetLeftMargin(25);
+    $pdf->Write(5,"P.IVA 03687100135");
+    $pdf->SetLeftMargin(55);
+    $pdf->SetTextColor(255,15,15);
+    $pdf->Write(5,"f' archive ");
+     $pdf->SetTextColor(10,10,10);
+    $pdf->Write(5,"portfolio by francesco bertelé is licensed under CC BY-NC-SA 4.0");
+
+
+
+
+
 
 $pdf->Output("I",$file_title.".pdf");
 ?>
