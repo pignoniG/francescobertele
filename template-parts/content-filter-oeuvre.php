@@ -22,8 +22,11 @@ $global_filter_items= array();
       <?php echo  wpm_translate_string( "[:en]artist archive[:it]archivio d'artista[:]", $language = '' ); ?>
     </span></h1>
   <!-- Filter Div -->
-  <button class="accordion braketed noMedium" id="accordionFilters" >
-  <?php echo  wpm_translate_string( "[:en]Filter[:it]Filtri[:]", $language = '' ); ?>
+  <button class="accordion braketed noMedium" id="accordionFilters_s" >
+  <?php echo  wpm_translate_string( "[:en]Show Filters[:it] Mostra Filtri[:]", $language = '' ); ?>
+</button>
+  <button style="display:none;" class="accordion braketed noMedium" id="accordionFilters_h" >
+  <?php echo  wpm_translate_string( "[:en]Hide Filters[:it] Nascondi Filtri[:]", $language = '' ); ?>
 </button>
   <input type="text" id="quicksearch" class="quicksearch noMedium" placeholder="<?php echo  wpm_translate_string( "[:en]Search[:it]Cerca[:]", $language = '' ); ?>
    " disabled>
