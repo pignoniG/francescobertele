@@ -71,7 +71,7 @@ get_header(); ?>
       <?php echo  wpm_translate_string( "[:en]artist portfolio[:it]portfolio d'artista[:]", $language = '' ); ?>
     </span></h1>
     <button type="button" style="margin-right: 5vw;" onclick="window.open('https://francescobertele.net/pdf/?project=<?php echo $id_list?>', '_blank')" class="braketed accordion" id="btn-expt_portfolio">
-    Download Portfolio</button>
+    <?php echo  wpm_translate_string( "[:en]Download Portfolio[:it]Scarica Portfolio[:]", $language = '' ); ?></button>
     
 
 
