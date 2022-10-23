@@ -70,8 +70,8 @@ get_header(); ?>
     <h1 class="title">Portfolio  <span class="section-subtitle">
       <?php echo  wpm_translate_string( "[:en]artist portfolio[:it]portfolio d'artista[:]", $language = '' ); ?>
     </span></h1>
-    <button type="button" style="margin-right: 5vw;" onclick="window.open('https://francescobertele.net/pdf/?project=<?php echo $id_list?>', '_blank')" class="braketed accordion" id="btn-expt_portfolio">
-    <?php echo  wpm_translate_string( "[:en]Download Portfolio[:it]Scarica Portfolio[:]", $language = '' ); ?></button>
+    <button type="button"  onclick="window.open('https://francescobertele.net/pdf/?project=<?php echo $id_list?>', '_blank')" class="braketed accordion portfolio" id="btn-expt_portfolio">
+    <?php echo  wpm_translate_string( "[:en]Download[:it]Scarica[:]", $language = '' ); ?> <span class="noMedium"><?php echo  wpm_translate_string( "[:en] Portfolio[:it] Portfolio[:]", $language = '' ); ?></span></button>
     
 
 

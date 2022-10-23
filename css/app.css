@@ -789,6 +789,12 @@
             margin-top: 5px;
             
         }
+        button.accordion.portfolio{
+
+            margin-right: 5vw;
+            
+        }
+
 
         #btn-reset-filter{
             padding-bottom: 3px;
@@ -1253,6 +1259,14 @@ div.ouvre-grid{
                             border-top-width: 4px !important;
 
             }
+
+            button.accordion.portfolio{
+
+                            margin-right: calc(5vw + 120px);
+                           
+
+            }
+
 
 
 
