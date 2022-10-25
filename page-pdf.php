@@ -274,8 +274,15 @@ $filecounter=0;
     $pdf->AddPage();
     $pdf->SetFont('foundersmono','',10);
 
+    $images = get_field('portfolio_rear_cover');
+
+ 
+
+
+   $tumbnail_url = fly_get_attachment_image_src( $images[rand(0,count($images))],'ultra-hd-for-pdf' )['src'];
+
    
-    $pdf->imageUniformToFill("https://francescobertele.net/wp-content/uploads/2022/10/f_portfolio_cover_front.jpg", -15, 0,240, 297, "C");//$alignment "B", "T", "L", "R", "C"
+    $pdf->imageUniformToFill($tumbnail_url, -15, 0,240, 297, "C");//$alignment "B", "T", "L", "R", "C"
 
 
 //front
@@ -304,6 +311,7 @@ foreach ($projects as $project_id) {
 
 
 		$pdf->imageUniformToFill($tumbnail_url, 10, 25,175, 240, "C");//$alignment "B", "T", "L", "R", "C"
+
 		
 
 
@@ -443,7 +451,7 @@ else{
     $pdf->SetFont('foundersmono','',6);
     $pdf->SetTextColor(10,10,10);
     
-    $pdf->Write(3,"cntcts\nwww > https://francescobertele.net/\nig  > @franz_sella\nt   > https://t.me/f_nius\nem  > fb@francescobertele.net\nph  > +39 328 5639720");
+    $pdf->Write(3,"cntcts\nwww > https://francescobertele.net//\nig  > @franz_sella\nt   > https://t.me/f_nius\nem  > fb@francescobertele.net\nph  > +39 379 2164533");
     $pdf->SetXY(0 , 282.5);
     $pdf->SetLeftMargin(25);
     $pdf->Write(5,"P.IVA 03687100135");
@@ -451,7 +459,7 @@ else{
     $pdf->SetTextColor(255,15,15);
     $pdf->Write(5,"f' archive ");
      $pdf->SetTextColor(10,10,10);
-    $pdf->Write(5,"portfolio by francesco bertelé is licensed under CC BY-NC-SA 4.0");
+    $pdf->Write(5,"portfolio is licensed under CC BY-NC-SA 4.0");
 
 
 
