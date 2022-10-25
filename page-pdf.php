@@ -456,7 +456,7 @@ else{
     $pdf->SetTextColor(10,10,10);
     
     $pdf->Write(3,"cntcts\nwww > https://francescobertele.net//\nig  > @franz_sella\nt   > https://t.me/f_nius\nem  > fb@francescobertele.net\nph  > +39 379 2164533");
-    $pdf->SetXY(0 , 282.5);
+    $pdf->SetXY(0 , 282.8);
     $pdf->SetLeftMargin(25);
     $pdf->Write(5,"P.IVA 03687100135");
     $pdf->SetLeftMargin(55);
