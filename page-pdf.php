@@ -374,7 +374,7 @@ foreach ($projects as $project_id) {
 	
 	
 		if( get_field('project_object_type',$project_id)): 
-			$string = "../".wpm_translate_string( "[:en]Object[:it]Oggetto[:]", $language = '' )." ";
+			$string = "../".wpm_translate_string( "[:en]Object[:it]Oggetto[:]", $language = '' ).": ";
 				
 				 
 			foreach( get_field('project_object_type',$project_id) as $type_i ): 
