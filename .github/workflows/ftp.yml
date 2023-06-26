@@ -11,6 +11,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp.francescobertele.net/public_html/wp-content/themes/francescobertele
+        server: ftp.francescobertele.net
         username: francescobertele
+        server-dir: public_html/wp-content/themes/francescobertele/
         password: ${{ secrets.FTP_PASSWORD }}
