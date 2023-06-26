@@ -14,4 +14,3 @@ jobs:
         server: ftp://ftp.francescobertele.net//public_html/wp-content/themes/francescobertele
         username: francescobertele
         password: ${{ secrets.FTP_PASSWORD }}
-        git-ftp-args: --insecure # if your certificate is setup correctly this can be removed
