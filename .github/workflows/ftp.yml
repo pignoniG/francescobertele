@@ -9,7 +9,7 @@ jobs:
       with:
         fetch-depth: 2
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ftp.francescobertele.net//public_html/wp-content/themes/francescobertele
         username: francescobertele
