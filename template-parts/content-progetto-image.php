@@ -105,7 +105,7 @@ foreach ($filter_items as $filter_item) {
 
 
 	    	
-		   
+		   <snip class="keyword_item parentcorpus">#parentcorpus</snip>
 			<?php
 			
 			// Check rows exists.
@@ -116,6 +116,7 @@ foreach ($filter_items as $filter_item) {
 			
 			        // Load sub field value.
 			        $sub_value = get_sub_field('project_keyword');
+				    
 			        ?><snip class="keyword_item">#<?php echo($sub_value); ?></snip>
 			
 			
