@@ -332,7 +332,14 @@
         padding-bottom: 45px;
         cursor: pointer;
 	}
-
+	div.ouvre_project_box snip.keyword_item.parentcorpus{
+		display:none;
+		color: red;
+	}
+	div.ouvre_project_box.project_corpus_parent_1 snip.keyword_item.parentcorpus{
+		display: inline-block;
+		
+	}
 	 /*div.ouvre_project_box.project_corpus_parent_1{
 	display:none;
 	} */
