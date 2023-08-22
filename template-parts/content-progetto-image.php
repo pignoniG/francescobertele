@@ -77,6 +77,7 @@ foreach ($filter_items as $filter_item) {
 <div class="pro-deets">
 	  <div class="tag-list">
 	    <span>
+		    <snip class="keyword_item parentcorpus">#parentcorpus</snip>
 	    	
 		    <?php $project_themes_items = array("project_specificity","project_body","project_breath","project_imagination","project_identity");
 		
@@ -105,7 +106,7 @@ foreach ($filter_items as $filter_item) {
 
 
 	    	
-		   <snip class="keyword_item parentcorpus">#parentcorpus</snip>
+		   
 			<?php
 			
 			// Check rows exists.
