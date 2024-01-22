@@ -66,7 +66,7 @@ get_header(); ?>
 			<div class="ask-content grid-x" id="press">
 				<div class="cell small-12 medium-12 large-12 ask-separator">
 					<h3 id="">
-						<?php echo  wpm_translate_string( "[:en]Press releases[:it]Comunicati stampa[:]", $language = '' ); ?>
+						<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>
 					</h3>
 				</div>
   				<div class="cell small-12 medium-10 large-8 inside large-offset-4 medium-offset-2">
