@@ -32,6 +32,7 @@
 			$args = array(
 				'post_type'         => 'progetto',
 						'cat' => 12,
+					'posts_per_page' => -1,
         				'post_status' => 'publish',
         				'meta_key'			=> 'project_date',
 						'orderby'			=> 'meta_value',
