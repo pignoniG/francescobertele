@@ -32,8 +32,8 @@ get_header(); ?>
   					<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>
 				  </button>
 				  <button class="accordion braketed ask-tab"  data-targhet="#press"
-				   data-textnav="<?php echo  wpm_translate_string( "[:en]Press releases[:it]Comunicati stampa[:]", $language = '' ); ?>">
-  					<?php echo  wpm_translate_string( "[:en]Press releases[:it]Comunicati stampa[:]", $language = '' ); ?>
+				   data-textnav="<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>">
+  					<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>
 				  </button>
 
 				
