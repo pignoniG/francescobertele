@@ -338,8 +338,15 @@ foreach ($projects as $project_id) {
 
 		if( get_field('project_corpus',$project_id) ):
 			$pdf->Write(5,"\nCORPUS: ".iconv('utf-8', 'cp1252', implode(", ",get_field('project_corpus',$project_id))));
+            $pdf->Write(5,"\n");
+       
+            $pdf->SetFont('','U');
+
+            $pdf->WriteHTML("<a stile='text-decoration:underline' target='_blank' href=".wpm_translate_url( get_page_link(74), $language = '' )."/?force=True#filter=.project_corpus_".myUrlEncode (filter_var(get_field("project_corpus",$project_id)[0], FILTER_SANITIZE_URL)).">../".wpm_translate_string( "[:en]Related Objects[:it] Oggetti correlati[:]", $language = '' )."</a>");
+            $pdf->SetFont('','');
 		endif;
-	
+
+
 		if( have_rows('project_keywords',$project_id) ):
 	
 			$string = wpm_translate_string( "[:en]KEYWORD[:it]PAROLE CHIAVE[:]", $language = '' ).": ";
