@@ -2296,6 +2296,13 @@ div.ouvre-grid{
         max-height: calc(100vh - 110px);
     }
 
+    .wp-block-video video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: calc(100vh - 110px);
+    }
+
     body.single.oeuvre div.menu-buttons,
     body.single.onair div.menu-buttons,
     body.single.onair div.sidenav-description,
