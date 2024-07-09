@@ -2377,6 +2377,11 @@ div.ouvre-grid{
         word-break: break-word;
     }
 
+    div.oeuvre-header div.titleBox{
+
+        float: left;
+    }
+
     div.oeuvre-header h1._TitleOU{
         font-family: PilatWide-Book;
         font-size: 18px;
@@ -2447,7 +2452,11 @@ div.ouvre-grid{
     body.single.oeuvre a.button-shop.oeuvre.onsale {
         background: transparent;
         border: 1.5px solid forestgreen; 
-    }
+       
+        float: left;
+        margin-left: 20px;
+        margin-top: 5px;
+        }
 
     body.single.oeuvre a.button-shop.oeuvre.activable {
         background: transparent;
@@ -2509,12 +2518,13 @@ div.ouvre-grid{
     }
 
     div.oeuvre-header ,div.text-description-overflow {
-        border-left: 1px solid white;
-        box-shadow: 0px 0px 8px 4px #060606;
-        padding: 5px;
-        background-color: #1b1b1b;
-        padding-right: 15px;
-        padding-left: 15px;
+        /*border-left: 1px solid white;
+      box-shadow: 0px 0px 8px 4px #060606;*/
+        padding: 10px;
+        background-color: rgba(27,27,27,0.8);
+        padding-right: 35px;
+        padding-left: 35px;
+
     }
 
 
@@ -2818,8 +2828,39 @@ div.ouvre-grid{
     
  body.single.oeuvre div.text-description-overflow{
  
-        width: calc(25% - 18px);
+         width: calc(40% - 18px);
+         transition: right 0.5s;
+         position: fixed;
+         border-bottom:solid; 
+         border-bottom-width: 1px;
+         padding-bottom: 100px;
+
+
      }
+
+
+div.oeuvre-header button.accordion {
+ 
+
+        float: right;
+    position: absolute;
+    width: auto;
+    /* clear: both; */
+    display: block;
+    /* margin-right: 10px; */
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 0px;
+    margin-right: 0px;
+    color: white;
+    bottom: 10px;
+    right: 30px;}
+        
+body.single.oeuvre div.text-description-overflow.hidden{
+    width: calc(40% - 18px);
+    
+    right: calc(-40% - 18px);
+}
 
     /* project ouvre extra medium*/
 
@@ -2832,8 +2873,10 @@ div.ouvre-grid{
 
              body.single.oeuvre div.text-description-overflow{
 
-                width: calc(41.66667% - 18px);
+                width: calc(45% - 18px);
             }
+
+
 
              div#onair-trust-container-leftcolumn {
                 display: inline-block;
@@ -2858,7 +2901,23 @@ div.ouvre-grid{
                 width: 90vw;
             }
             
+            body.single.oeuvre a.button-shop.oeuvre.onsale {
+      
+                background: transparent;
+                border: 1.5px solid forestgreen;
+                 clear: none;
+                float: right;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 5px;
+                margin-bottom: 40px;
 
+            }
+        
+            div.oeuvre-header div.titleBox {
+                width: calc(100vw - 200px);
+
+            }
             div.text-description-overflow-onair span._CatOU.cat-n{
                 position: relative;
                 right: 0;
@@ -2875,6 +2934,11 @@ div.ouvre-grid{
     /* project ouvre mobile*/
 
         @media screen and (max-width: 39.9375em) {
+                div.oeuvre-header{
+                padding-right: 20px;
+                padding-left:20px;
+            }
+       
             body.single.oeuvre div.text-description-overflow{
 
                 width:100%;
@@ -2914,7 +2978,9 @@ div.ouvre-grid{
             }
 
             div.oeuvre-header{
-                background-color: #1b1b1bbf;
+                
+                
+
             }
 
             div.cell.conten_project_body {

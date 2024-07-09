@@ -82,7 +82,7 @@ jQuery(document).ready(function(){
 
 
 jQuery("#accordionFilters_h").on('click', function( event ){
-  $(this).toggleClass("active");
+
   $(this).toggle();
   jQuery("#accordionFilters_s").toggle();
   $(".filter_panel").toggle();
@@ -90,7 +90,7 @@ jQuery("#accordionFilters_h").on('click', function( event ){
   });
 
 jQuery("#accordionFilters_s").on('click', function( event ){
-  $(this).toggleClass("active");
+
   $(this).toggle();
   jQuery("#accordionFilters_h").toggle();
   $(".filter_panel").toggle();

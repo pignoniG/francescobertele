@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="grid-x">
-		<div class="cell small-12 medium-7 large-9 small-order-2 conten_project_body">
+		<div class="cell small-12 medium-12 large-12 small-order-2 conten_project_body">
 	
 			<?php
 			the_content(
@@ -35,17 +35,17 @@
 			
 		</div>
 
-		<div class="cell small-12 medium-5 small-order-1 large-3 oeuvre-header">
+		<div class="cell small-12 medium-12 small-order-1 large-12 oeuvre-header">
 
+			<div class="titleBox">
+				
+			
 	
     		<h1 class="_TitleOU" ><?php the_title(); ?></h1>
     		<?php if( get_field('project_code') ):?>
     			<span class="_CatOU"><?php the_field('project_code'); ?> <br></span>
     		<?php endif;?>
-    	</div>
-
-    	<div class="cell small-12 medium-5 large-3 small-order-3 text-description-overflow">
-
+    		</div>
 
 
     		<?php if( get_field('project_status') ):?>
@@ -73,6 +73,19 @@
     			</a>
 
     		<?php endif;?>
+
+    		  <button class="accordion braketed noMedium" id="datasheet_s" >
+			   		<?php echo  wpm_translate_string( "[:en]Show Datasheet[:it] Mostra Scheda[:]", $language = '' ); ?>
+			 </button>
+			   <button style="display:none;" class="accordion braketed noMedium" id="datasheet_h" >
+			   		<?php echo  wpm_translate_string( "[:en]Hide Datasheet[:it] Nascondi Scheda[:]", $language = '' ); ?>
+			 </button>
+
+    	</div>
+
+    	<div class="cell small-12 medium-6 large-6 small-order-3 text-description-overflow hidden">
+
+
 
 
 
