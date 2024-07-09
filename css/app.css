@@ -2833,6 +2833,8 @@ div.ouvre-grid{
          position: fixed;
          border-bottom:solid; 
          border-bottom-width: 1px;
+         border-left: solid;
+            border-left-width: 1px;
          padding-bottom: 100px;
 
 
