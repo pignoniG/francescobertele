@@ -211,14 +211,18 @@ function TextWithRotation($x, $y, $txt, $txt_angle, $font_angle=0)
 // Page header
 function Header()
 {
+     
+            // ...
+       
 	GLOBAL $project_title;
 	
 	$this->SetTopMargin(10);
     // Logo
 
+    if (!$this->skipHeader) {
     // Arial bold 15
-    $this->imageUniformToFill("https://www.francescobertele.net/logo.png", 195, 10,10, 10, "C");//$alignment "B", "T", "L", "R", "C"
-    // Arial bold 15
+        $this->imageUniformToFill("https://www.francescobertele.net/logo.png", 195, 10,10, 10, "C");//$alignment "B", "T", "L", "R", "C"
+    }// Arial bold 15
     $this->SetFont('foundersmono','',16);
     
     $project_title = html_entity_decode($project_title );
@@ -228,8 +232,8 @@ function Header()
     $project_title = iconv('utf-8', 'cp1252', $project_title);
 
 	//$project_title =htmlspecialchars_decode($project_title);
-
-	$this->WriteHTML($project_title);
+    if (!$this->skipHeader) {
+	   $this->WriteHTML($project_title);}
 	$this->SetFont('foundersmono','',10);
 
 	$this->TextWithDirection(200,115,$_SERVER['REMOTE_ADDR']." _ ".date("m/d/y") ,'D');
@@ -240,9 +244,10 @@ function Header()
     // Arial italic 8
     $this->SetFont('foundersmono','',10);
     // Page number
-
-    $this->WriteHTML("<a target='_blank' href=".get_permalink($project_id).">".get_permalink($project_id)."</a>");
-    $this->SetY(10);
+    if (!$this->skipHeader) {
+        $this->WriteHTML("<a target='_blank' href=".get_permalink($project_id).">".get_permalink($project_id)."</a>");
+    }$this->SetY(10);
+     
 }
 
 // Page footer
@@ -262,7 +267,7 @@ function Footer()
 $projects=array(44,45);
 $projects=$_REQUEST['project'];
 $projects= preg_split('/,/', $projects); 
-
+$pdf->skipHeader = true;
 $pdf = new PDF();
 $pdf->AddFont('foundersmono','','founders-grotesk-mono-web-regular.php');
 
@@ -270,7 +275,7 @@ $file_title = date("m.d.y");
 $filecounter=0;  
 
 //front
-
+   
 
     $pdf->SetTopMargin(0);
     $pdf->AddPage();
@@ -290,6 +295,54 @@ $filecounter=0;
 
 
 //front
+
+
+
+    $pdf->AddPage();
+    $pdf->SetTopMargin(0);
+    $pdf->SetRightMargin(30);
+    $pdf->SetTopMargin(30);
+
+    
+        if( get_field('portfolio_biography',190) ):
+            $pdf->SetFont('foundersmono','',16);
+
+
+            $pdf->Write(5,"\n\n".wpm_translate_string( "[:en]Biography[:it]Biografia[:]", $language = '' ).": \n");
+            $pdf->Write(5,"\n");
+            $pdf->SetFont('foundersmono','',10);
+    
+
+            $text=  get_field('portfolio_biography',190);
+            //$text=  iconv('utf-8', 'cp1252', $text);
+
+            $text = iconv('utf-8', 'cp1252', $text);
+
+
+            //$text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
+
+            //$text = htmlspecialchars_decode($text );
+            
+            //$text = str_replace("&#8217;","'",$text);
+            //$text = str_replace("&#039;","'",$text);
+    
+    
+            //
+            
+    
+                
+
+
+                
+
+
+            $pdf->WriteHTML($text);
+
+        endif;
+
+
+//front
+ $pdf->skipHeader = false;
 
 foreach ($projects as $project_id) {
 	if( has_category('oeuvre',$project_id) ){
@@ -449,6 +502,51 @@ else{
 
 }
     
+
+ $pdf->SetFillColor(255);
+ $pdf->skipHeader = true;
+ $pdf->AddPage();
+
+    $pdf->SetTopMargin(0);
+    $pdf->SetRightMargin(30);
+    $pdf->SetTopMargin(0);
+
+
+    
+        if( get_field('portfolio_cv',190) ):
+            $pdf->SetFont('foundersmono','',16);
+
+            $pdf->Write(5,"\n\n".wpm_translate_string( "[:en]Curriculum Vitae[:it]Curriculum Vitae[:]", $language = '' ).": \n");
+            $pdf->Write(5,"\n");
+            $pdf->SetFont('foundersmono','',10);
+            
+
+            $text=  get_field('portfolio_cv',190);
+            //$text=  iconv('utf-8', 'cp1252', $text);
+
+            $text = iconv('utf-8', 'cp1252', $text);
+
+
+            //$text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
+
+            //$text = htmlspecialchars_decode($text );
+            
+            //$text = str_replace("&#8217;","'",$text);
+            //$text = str_replace("&#039;","'",$text);
+    
+    
+            //
+            
+    
+                
+
+
+                
+
+
+            $pdf->WriteHTML($text);
+
+        endif;
 
     $pdf->SetTopMargin(0);
     $pdf->AddPage();
