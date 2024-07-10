@@ -54,6 +54,7 @@ get_header(); ?>
 			);
 
 			$custom_query = new WP_Query( $args );
+			$progetti_counter = 0;
 
 			// The Loop!
 			if ($custom_query->have_posts()) {

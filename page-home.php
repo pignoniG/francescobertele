@@ -47,16 +47,19 @@ get_header();
 </div>
 
 	 <script type="text/javascript">
+
 	 	var homeBackgrounds = [<?php 
+	 		
 			$images = get_field('home_images');
 			if( $images ): 
 				$i=0;
+				
 				foreach( $images as $image ):
 					$tumbnail_url = fly_get_attachment_image_src( $image,'hd-for-interface' )['src'];
 
 					if ($i>0) {echo (',');}
 			    	echo '"'.$tumbnail_url.'"' ;
-			    	$i=i+1;
+			    	$i=$i+1;
 				endforeach;
 			endif;?>];
 

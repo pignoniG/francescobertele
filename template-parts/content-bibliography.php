@@ -49,8 +49,11 @@
 					?> <br>../<?php echo  wpm_translate_string( "[:en]Links[:it]Risorse[:]", $language = '' ); ?>: <?php
 		    			// Loop through rows.
 		    			while( have_rows('project_links') ) : the_row();
+		    				if (!empty(get_sub_field('project_link'))) {
+		    					// code...
+		    				
 						?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_link')['url']; ?>"><?php echo get_sub_field ('project_link')['title']; ?></a> <?php
-		
+						}
 		    			endwhile;
 					?>  
 				<?php endif ?> 

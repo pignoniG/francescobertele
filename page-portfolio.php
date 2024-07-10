@@ -48,6 +48,7 @@ get_header(); ?>
 			$custom_query = new WP_Query( $args );
 			// The Loop!
 			if ($custom_query->have_posts()) {
+				 $progetti_counter = 0;
 			    ?>
 			   		<?php
 			   			while ($custom_query->have_posts()) {
