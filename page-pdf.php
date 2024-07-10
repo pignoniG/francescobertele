@@ -303,7 +303,9 @@ $filecounter=0;
     $pdf->SetRightMargin(30);
     $pdf->SetTopMargin(30);
 
-    
+$pdf->WriteHTML($text);
+
+
         if( get_field('portfolio_biography',190) ):
             $pdf->SetFont('foundersmono','',16);
 
@@ -311,12 +313,16 @@ $filecounter=0;
             $pdf->Write(5,"\n\n".wpm_translate_string( "[:en]Biography[:it]Biografia[:]", $language = '' ).": \n");
             $pdf->Write(5,"\n");
             $pdf->SetFont('foundersmono','',10);
+
+
     
 
             $text=  get_field('portfolio_biography',190);
             //$text=  iconv('utf-8', 'cp1252', $text);
 
             $text = iconv('utf-8', 'cp1252', $text);
+            $text = str_replace("&#8217;","'",$text);
+
 
 
             //$text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
@@ -342,7 +348,7 @@ $filecounter=0;
 
 
 //front
- $pdf->skipHeader = false;
+
 
 foreach ($projects as $project_id) {
 	if( has_category('oeuvre',$project_id) ){
@@ -361,6 +367,7 @@ foreach ($projects as $project_id) {
 	if( has_post_thumbnail($project_id)){
 		$pdf->SetTopMargin(10);
 		$pdf->AddPage();
+        $pdf->skipHeader = false;
 		
 		$pdf->SetFont('foundersmono','',10);
 
@@ -532,6 +539,7 @@ else{
             //$text = htmlspecialchars_decode($text );
             
             //$text = str_replace("&#8217;","'",$text);
+            $text = str_replace("&#8217;","'",$text);
             //$text = str_replace("&#039;","'",$text);
     
     
