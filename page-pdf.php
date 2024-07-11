@@ -523,7 +523,7 @@ else{
 
 
     
-        if( get_field('portfolio_cvx',190) ):
+        if( get_field('portfolio_cv',190) ):
             $pdf->SetFont('foundersmono','',16);
 
             $pdf->Write(5,"\n\n".wpm_translate_string( "[:en]Curriculum Vitae[:it]Curriculum Vitae[:]", $language = '' ).": \n");
@@ -555,7 +555,7 @@ else{
                 
 
 
-            $pdf->WriteHTML($text);
+            $pdf->Write(5,$text);
 
         endif;
 
