@@ -2,7 +2,7 @@
 require('fpdf/fpdf.php');
 
 $project_title;
-$project_id;
+$project_id = null;
 
 
 class PDF extends FPDF
@@ -245,7 +245,10 @@ function Header()
     $this->SetFont('foundersmono','',10);
     // Page number
     if (!$this->skipHeader) {
-        $this->WriteHTML("<a target='_blank' href=".get_permalink($project_id).">".get_permalink($project_id)."</a>");
+        if($project_id){
+              $this->WriteHTML("<a target='_blank' href=".get_permalink($project_id).">".get_permalink($project_id)."</a>");
+        }
+      
     }$this->SetY(10);
      
 }
