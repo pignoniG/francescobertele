@@ -74,10 +74,10 @@
 
     		<?php endif;?>
 
-    		  <button class="accordion braketed noMedium" id="datasheet_s" >
+    		  <button class="accordion braketed " id="datasheet_s" >
 			   		<?php echo  wpm_translate_string( "[:en]Show Datasheet[:it] Mostra Scheda[:]", $language = '' ); ?>
 			 </button>
-			   <button style="display:none;" class="accordion braketed noMedium" id="datasheet_h" >
+			   <button style="display:none;" class="accordion braketed " id="datasheet_h" >
 			   		<?php echo  wpm_translate_string( "[:en]Hide Datasheet[:it] Nascondi Scheda[:]", $language = '' ); ?>
 			 </button>
 
