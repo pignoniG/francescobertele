@@ -2427,6 +2427,7 @@ div.ouvre-grid{
 
      body.single.oeuvre div.text-description-overflow{
         margin-right: 18px;
+        height: ;
        
      }
     
@@ -2455,6 +2456,7 @@ div.ouvre-grid{
         text-transform: uppercase;
         padding-top: 20px;
         font-size: 8px;
+        margin-bottom: 27px;
     }
 
 
@@ -2970,6 +2972,7 @@ body.single.oeuvre div.text-description-overflow.hidden{
 
                 width:100%;
                 margin-right: 0px;
+                height: 100%;
             }
 
             p._BodyText.abstract {
@@ -3011,7 +3014,7 @@ body.single.oeuvre div.text-description-overflow.hidden{
             }
 
             div.cell.conten_project_body {
-                padding-top: 100px;
+                padding-top: 120px;
             }
 
             div.text-description-overflow {
