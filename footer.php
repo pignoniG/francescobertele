@@ -66,6 +66,7 @@
         <div class="sidenav-description">
 
             <a target="_blank" href="https://www.instagram.com/franz_sella/"> <i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://it.pinterest.com/franzsella/f-archive/"> <i class="fab fa-pinterest"></i></a>
            <!--  <a target="_blank" href="https://www.youtube.com/channel/UCwK35sNDRUZGncY8VFtbLWw/videos?view_as=subscriber"> <i class="fab fa-youtube-square"></i></a>
             <a target="_blank" href="https://vimeo.com/franzsella"> <i class="fab fa-vimeo-v"></i></a> -->
             <a target="_blank" href="https://t.me/f_nius"> <i class="fab fa-telegram"></i></a>
@@ -117,9 +118,7 @@
             | P.IVA: 03687100135 | f’ archive <?php echo date("Y"); ?></p>
             <p class="_BodyText" style="text-align:center;">
                  <?php echo  wpm_translate_string( "[:en]web design and development by [:it]web design e sviluppo di [:]", $language = '' ); ?>
-                 <a style="text-decoration:underline;" target="_blank" href="https://www.simone-ellero.eu/">simone ellero</a> e <a style="text-decoration:underline;" target="_blank" href="https://giovannipignoni.com/">giovanni pignoni</a> <br> 
-                  <?php echo  wpm_translate_string( "[:en]copy by [:it]copy di [:]", $language = '' ); ?>
-                  <a style="text-decoration:underline;" target="_blank" href="https://www.instagram.com/gaiascrivecose/">gaia greco</a>.
+                 <a style="text-decoration:underline;" target="_blank" href="https://www.simone-ellero.eu/">simone ellero</a> e <a style="text-decoration:underline;" target="_blank" href="https://giovannipignoni.com/">giovanni pignoni</a>.
 
             </p>
             <br>
