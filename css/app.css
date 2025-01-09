@@ -2527,8 +2527,7 @@ div.ouvre-grid{
         letter-spacing: normal;
         line-height: 12px;
         color: white;
-        margin-bottom: 20px;
-        display: block;
+
 
     }
 
@@ -2897,6 +2896,14 @@ body.single.oeuvre div.text-description-overflow.hidden{
     /* project ouvre medium*/
 
         @media only screen and (max-width: 63.9375em)  {
+
+                div.oeuvre-header span._CatOU{
+
+        margin-bottom: 20px;
+        display: block;
+
+    }
+
 
             body.single.oeuvre a.button-shop.oeuvre.sold,
             body.single.oeuvre a.button-shop.oeuvre.onsale,
