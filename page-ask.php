@@ -31,10 +31,12 @@ get_header(); ?>
 				  data-textnav="<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>
 				  </button>
-				  <button class="accordion braketed ask-tab"  data-targhet="#press"
+				 <?php /* hide press
+     					<button class="accordion braketed ask-tab"  data-targhet="#press"
 				   data-textnav="<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>
 				  </button>
+     				 */ ?>
 
 				
 			</div>
@@ -63,7 +65,8 @@ get_header(); ?>
 			<?php  include(locate_template('template-parts/content-ask-bibliography.php')); ?>
 
 
-	<?php /*	<div class="ask-content grid-x" id="press">
+	<?php /*	hide press
+ 				<div class="ask-content grid-x" id="press">
 				<div class="cell small-12 medium-12 large-12 ask-separator">
 					<h3 id="">
 						<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>
