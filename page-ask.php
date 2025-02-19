@@ -63,7 +63,7 @@ get_header(); ?>
 			<?php  include(locate_template('template-parts/content-ask-bibliography.php')); ?>
 
 
-			<div class="ask-content grid-x" id="press">
+	<?php /*	<div class="ask-content grid-x" id="press">
 				<div class="cell small-12 medium-12 large-12 ask-separator">
 					<h3 id="">
 						<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>
@@ -76,9 +76,7 @@ get_header(); ?>
 				</div>
 
 			</div>
-
-
-
+	*/ ?>
 
 
 		</main><!-- #main -->
