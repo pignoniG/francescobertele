@@ -2,7 +2,7 @@
 $( document ).ready(
     function(){ 
 
-
+/* 
   $("#button-shop-modal").click(function(){
         if (!$(this).hasClass( "sold" )) {
         $("#oeuvre-buy-container").toggleClass("blocked");
@@ -19,7 +19,7 @@ $( document ).ready(
        
         $("body").removeClass("modal_open");
     }); 
-
+*/ 
     jQuery("#datasheet_h").on('click', function( event ){
 
   $(this).toggle();
