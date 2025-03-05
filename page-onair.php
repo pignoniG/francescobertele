@@ -22,7 +22,7 @@ get_header(); ?>
 
 
 			<div id="sort-filter">
-    			<h1 class="title">Onair  <span class="section-subtitle"> <?php echo  wpm_translate_string( "[:en]active productions[:it]produzioni in corso[:]", $language = '' ); ?> </span></h1>
+    			<h1 class="title">Onair </h1>
 			</div>
 		<div class="onair_flow">
 	

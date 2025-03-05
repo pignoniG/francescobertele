@@ -18,9 +18,7 @@ $global_filter_items= array();
 
 
 <div id="sort-filter">
-    <h1 class="title"><?php echo  wpm_translate_string( "[:en]Archive[:it]Archivio[:]", $language = '' ); ?>  <span class="section-subtitle">
-      <?php echo  wpm_translate_string( "[:en]artist archive[:it]archivio d'artista[:]", $language = '' ); ?>
-    </span></h1>
+    <h1 class="title"><?php echo  wpm_translate_string( "[:en]Archive[:it]Archivio[:]", $language = '' ); ?> </h1>
   <!-- Filter Div -->
   <button class="accordion braketed noMedium" id="accordionFilters_s" >
   <?php echo  wpm_translate_string( "[:en]Show Filters[:it] Mostra Filtri[:]", $language = '' ); ?>
