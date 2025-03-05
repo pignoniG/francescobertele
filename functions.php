@@ -152,10 +152,8 @@ function francescobertele_scripts() {
 
 	wp_style_add_data( 'francescobertele-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'francescobertele-awesome',  'https://kit.fontawesome.com/a228223d23.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'francescobertele-awesome',  'https://kit.fontawesome.com/83e66a748b.js', array(), _S_VERSION, true );
 
-
-	
 
 	wp_enqueue_script( 'francescobertele-vendor', get_template_directory_uri() . '/js/vendor.js', array(), _S_VERSION, true );
 
