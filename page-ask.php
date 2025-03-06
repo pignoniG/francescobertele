@@ -18,13 +18,14 @@ get_header(); ?>
 			<div id="sort-filter" class="">
     			<h1 class="title">Ask <span class="ask-nav noDesktop arrowed">Themes</span></h1>
 
-    			  <button class="accordion braketed ask-tab"  data-targhet="#themes"
-    			  data-textnav="<?php echo  wpm_translate_string( "[:en]Themes[:it]Temi[:]", $language = '' ); ?>">
-  					<?php echo  wpm_translate_string( "[:en]Themes[:it]Temi[:]", $language = '' ); ?>
-				  </button>
+
 				   <button class="accordion braketed ask-tab"  data-targhet="#biography"
 				   data-textnav="<?php echo  wpm_translate_string( "[:en]Biography[:it]Biografia[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Biography[:it]Biografia[:]", $language = '' ); ?>
+				  </button>
+				  <button class="accordion braketed ask-tab"  data-targhet="#themes"
+    			  data-textnav="<?php echo  wpm_translate_string( "[:en]Themes[:it]Temi[:]", $language = '' ); ?>">
+  					<?php echo  wpm_translate_string( "[:en]Themes[:it]Temi[:]", $language = '' ); ?>
 				  </button>
 
 				  <button class="accordion braketed ask-tab"  data-targhet="#bibliography"
@@ -46,8 +47,7 @@ get_header(); ?>
 
 				
 
-			<?php  include(locate_template('template-parts/content-ask-themes.php')); ?>
-
+			
 			<div class="ask-content grid-x" id="biography">
 				<div class="cell small-12 medium-12 large-12 ask-separator">
 					<h3 id="">
@@ -61,6 +61,8 @@ get_header(); ?>
 				</div>
 
 			</div>
+			<?php  include(locate_template('template-parts/content-ask-themes.php')); ?>
+
 
 			<?php  include(locate_template('template-parts/content-ask-bibliography.php')); ?>
 
