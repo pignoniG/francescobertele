@@ -311,10 +311,107 @@
 
 /* general fine */
 /* oeuvre inizio */
+div.section {
+    height:     100vh;
+    width:     100vw;
+    overflow: hidden;
+}
+div.image-box{
+
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;}
+
+
+ div.image-box   .title-line {
+display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom: 1px dashed black;
+    margin-bottom: 0px;
+    padding-top: 70px;
+    text-shadow: rgba(255,255,255, 1) 0px 0px 10px;
+}
+
+div.section.project-info .title-line {
+display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom: 1px dashed black;
+    margin-bottom: 0px;
+    padding-top: 70px;
+    text-shadow: rgba(255,255,255, 1) 0px 0px 10px;
+}
+
+div.section.project-info .description-box{
+       margin: 0;
+       padding-left: 5%;
+       padding-right: 5%;
+       color: black;
+       height: 80vh -118px;
+        font-size: 24px;
+        text-align: left;
+        
+        overflow: hidden;
+     
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 15;
+        line-clamp: 15;
+        -webkit-box-orient: vertical;
+
+}
+
+div.section.project-info div.pro-links{
+    position: relative;
+    
+    width: 95vw;
+    margin-top: 60px;
+    padding-bottom: 22px;
+    font-size: 20px;
+    text-shadow: rgba(255,255,255, 1) 0px 0px 10px;
+     
+
+    }
+div.image-box  div.pro-links{
+    position: relative;
+    top: calc(100vh - 205px);
+    width: 95vw;
+    /* padding-left: 5%; */
+    padding-bottom: 22px;
+    font-size: 20px;
+    text-shadow: rgba(255,255,255, 1) 0px 0px 10px;
+     
+
+    }
+
+   div.image-box  div.pro-links a{
+        color: red;
+
+        float: right;
+        padding-left: 25px;
+    }
+  div.image-box  div.pro-links a:hover{
+        color: black;
+    }
+   div.section.project-info  div.pro-links a{
+        color: red;
+
+        float: right;
+        padding-left: 25px;
+    }
+  div.section.project-info  div.pro-links a:hover{
+        color: black;
+    }
+
+
     div.grid_portfolio{
         padding-top: 120px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
         padding-bottom: 45px;
 
     }
@@ -411,7 +508,7 @@
     div.portfolio_project_box img{
         position: relative;
         margin: 0;
-        width: 95%;
+        width: 100%;
         margin-bottom: 15px;
     }
     div.portfolio_project_box .description-box p{
@@ -434,22 +531,7 @@
            
 
     }
-    div.pro-links{
-            border-bottom: 1px dashed black;
-            padding-bottom: 22px;
-            font-size: 14px;
-
-    }
-
-    div.pro-links a{
-        color: black;
-        float: right;
-        padding-left: 25px;
-    }
-    div.pro-links a:hover{
-        color: red;
-    }
-
+   
 
 
 
@@ -1309,7 +1391,17 @@ div.ouvre-grid{
 
 	/* oeuvre  mobile*/
 
+
 		@media screen and (max-width: 39.9375em) {
+
+                div.section.project-info .description-box{
+              
+                 font-size: 18px;
+
+                 webkit-line-clamp: 10;
+                 line-clamp: 10;
+             }
+
 
             div#myBanner.blocked {
                 top: 25%;

@@ -17,7 +17,7 @@
 get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
-		<div class="grid-x grid_portfolio">
+		<div class="fullpage" id="fullpage">  
 	
 			<?php
 
