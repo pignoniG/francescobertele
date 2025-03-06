@@ -56,7 +56,7 @@ get_header(); ?>
 			   			while ($custom_query->have_posts()) {
 			   			     	$custom_query->the_post();
 								$img_caption = $i.'/'.$count;
-								$img_url = fly_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail-medium-for-interface' )['src'];
+								$img_url = fly_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail-hd-for-interface' )['src'];
 								?>
 								
 								<a  style="background-image: url(<?php echo $img_url;?>); " class="carousel-cell" href="<?php echo get_permalink();?>"  data-alt="<?php echo get_the_title();?>" data-number="<?php echo $img_caption ; ?>" ></a>

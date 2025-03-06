@@ -1363,21 +1363,25 @@ div.ouvre-grid{
     div.onair_flow{
         margin-top: calc(50vh - 25vh);
         margin-top: calc(var(--app-height) * 0.5 - var(--app-height) * 0.25);
+        margin-top: 60px;
 
         
-        margin-left: 6vw;
-        margin-right: 6vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
 
     div.onair_flow a.carousel-cell {
-        width: 33vw;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        height: 50vh;
+        width: 90vw;
+        padding-left: 0vw;
+        padding-right: 0vw;
+        height: calc(91vh -  60px);
         background-clip: content-box;
-        max-height: 33vw;
+
         background-position: center;
         background-size: cover;
+    }
+    body.page-id-80{
+        margin-bottom: 0px;
     }
 
     div.onair_flow .flickity-prev-next-button.previous {
@@ -1411,7 +1415,7 @@ div.ouvre-grid{
     div.onair_flow p.main-carousel-caption 
     {
         margin-top: 20px;
-        width: 33vw;
+        width: 90vw;
         padding-left: 1vw;
         padding-right: 1vw;
         margin-left: auto;
@@ -1459,7 +1463,7 @@ div.ouvre-grid{
             div.onair_flow p.main-carousel-caption 
             {
                 
-               width: 60vw;
+               width: 90vw;
                 padding-left: 2vw;
                 padding-right: 2vw;
                
@@ -1471,26 +1475,27 @@ div.ouvre-grid{
 
             div.onair_flow{
                 
-                margin-top: calc(50vh - 27vh);
+                /* margin-top: calc(50vh - 27vh);
                 margin-top: calc(var(--app-height) * 0.5 - var(--app-height) * 0.27);
                 margin-left: 8vw;
-                margin-right: 8vw;
+                margin-right: 8vw;*/
+
             }
         
             div.onair_flow a.carousel-cell {
-                width: 60vw;
-                padding-left: 2vw;
-                padding-right: 2vw;
-                height: 50vh;
-                max-height: 60vw;
+                 width: 90vw;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                height: calc(90vh - 60px);
+            
                 
             }
         
             div.onair_flow .flickity-prev-next-button.previous {
-                left: calc(-2.5vw - 22px);
+                left: calc(1.5vw - 22px);
             }
             div.onair_flow .flickity-prev-next-button.next {
-                right: calc(-2.5vw - 22px);
+                right: calc(-0.5vw - 22px);
             }
         
         
@@ -1510,7 +1515,7 @@ div.ouvre-grid{
             div.onair_flow{
                 margin-top: calc(40vh - 25vh);
                 margin-top: calc(var(--app-height) * 0.4 - var(--app-height) * 0.25);
-                
+                 margin-top:70px;
                 margin-left: 0;
                 margin-right: 0;
             }
@@ -1521,11 +1526,11 @@ div.ouvre-grid{
                 padding-right: 2vw;}
 
             div.onair_flow a.carousel-cell {
-                width: 80vw;
+                width: 85vw;
                 padding-left: 2vw;
                 padding-right: 2vw;
-                height:70vh;
-                max-height: 90vw;
+                height: calc( 90vh - 100px);
+                max-height: 90vh;
                 
             }
         
@@ -2254,9 +2259,12 @@ div.ouvre-grid{
 
     /* project ouvre general*/
 
-    body.single.oeuvre,
-    body.single.onair{
+    body.single.oeuvre{
         background-color: #1b1b1b;
+
+    }
+    body.single.onair{
+        background-color: whitesmoke;
 
     }
 
