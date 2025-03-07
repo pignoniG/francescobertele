@@ -2889,6 +2889,7 @@ div.ouvre-grid{
                 vertical-align: top;
                 width: 56vw;
                 overflow: auto;
+                font-size: 16px;
                 
             }
             .status-p-onair{
