@@ -13,7 +13,7 @@
 
 	<div class="text-description-overflow-onair">
 
-    	<h1 class="_TitleOU" style="border-bottom: 1px solid white;"><?php the_title(); ?>
+    	<h1 class="_TitleOU" style="border-bottom: 1px solid black;"><?php the_title(); ?>
     		<?php if( get_field('project_code') ):?> <span class="_CatOU cat-n"> <?php the_field('project_code'); ?> </span> <?php endif;?>
     	</h1>
 
