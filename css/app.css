@@ -332,7 +332,7 @@ display: flex;
     border-bottom: 1px dashed black;
     margin-bottom: 0px;
     padding-top: 70px;
-    text-shadow: rgba(255,255,255, 1) 0px 0px 10px;
+    text-shadow: -1px -1px 20px #FFF, 1px -1px 20px #FFF, -1px 1px 20px #FFF, 1px 1px 20px #FFF;
 }
 
 div.section.project-info .title-line {
@@ -342,8 +342,8 @@ display: flex;
     padding-right: 5%;
     border-bottom: 1px dashed black;
     margin-bottom: 0px;
-    padding-top: 70px;
-    text-shadow: rgba(255,255,255, 1) 0px 0px 10px;
+    padding-top: 70px;li
+    text-shadow: -1px -1px 20px #FFF, 1px -1px 20px #FFF, -1px 1px 20px #FFF, 1px 1px 20px #FFF;
 }
 
 div.section.project-info .description-box{
@@ -352,7 +352,7 @@ div.section.project-info .description-box{
        padding-right: 5%;
        color: black;
        height: 80vh -118px;
-        font-size: 24px;
+       
         text-align: left;
         
         overflow: hidden;
@@ -371,7 +371,7 @@ div.section.project-info div.pro-links{
     width: 95vw;
     margin-top: 60px;
     padding-bottom: 22px;
-    font-size: 20px;
+
     text-shadow: rgba(255,255,255, 1) 0px 0px 10px;
      
 
@@ -382,8 +382,8 @@ div.image-box  div.pro-links{
     width: 95vw;
     /* padding-left: 5%; */
     padding-bottom: 22px;
-    font-size: 20px;
-    text-shadow: rgba(255,255,255, 1) 0px 0px 10px;
+
+    text-shadow: -1px -1px 20px #FFF, 1px -1px 20px #FFF, -1px 1px 20px #FFF, 1px 1px 20px #FFF;
      
 
     }
@@ -418,6 +418,13 @@ div.image-box  div.pro-links{
     body.page-id-1117{
         background-color:#eeeef2;
     }
+    body.page-id-1117 div.menu-buttons,body.page-id-1117 #sort-filter{
+     background-color: #ffffff30
+    }
+    body.page-id-80 div.menu-buttons,body.page-id-80 #sort-filter{
+     background-color: #ffffff30
+    }
+
 	div.ouvre_project_box{
 		/* margin-right: 10px; */
        	width: calc(33% - 3.5vw);
@@ -1453,20 +1460,25 @@ div.ouvre-grid{
 
 
     div.onair_flow{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         margin-top: calc(50vh - 25vh);
         margin-top: calc(var(--app-height) * 0.5 - var(--app-height) * 0.25);
-        margin-top: 60px;
+        margin-top: 0px;
 
         
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
     }
 
     div.onair_flow a.carousel-cell {
-        width: 90vw;
+        width: 100vw;
         padding-left: 0vw;
         padding-right: 0vw;
-        height: calc(100vh -  180px);
+        height: calc(100vh -  0px);
         background-clip: content-box;
 
         background-position: center;
@@ -1477,11 +1489,15 @@ div.ouvre-grid{
     }
 
     div.onair_flow .flickity-prev-next-button.previous {
-        left: calc(-1.2vw - 24px);
+        left: 24px;
+        position: fixed;
         background: transparent!important;
+        color: red;
     }
     div.onair_flow .flickity-prev-next-button.next {
-        right: calc(-1.2vw - 34px);
+        color: red;
+        right:  14px;
+        position: fixed;
         background: transparent!important;
     }
     div.onair_flow .flickity-prev-next-button svg{
@@ -1506,12 +1522,15 @@ div.ouvre-grid{
     }
     div.onair_flow p.main-carousel-caption 
     {
-        margin-top: 20px;
-        width: 90vw;
-        padding-left: 1vw;
-        padding-right: 1vw;
+        margin-top: 0px;
+        width: 100vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
         margin-left: auto;
         margin-right: auto;
+        position: fixed;
+        bottom: 60px;
+          text-shadow: -1px -1px 20px #FFF, 1px -1px 20px #FFF, -1px 1px 20px #FFF, 1px 1px 20px #FFF;
         
     }
     div.onair_flow span.caption.number{
@@ -1575,25 +1594,25 @@ div.ouvre-grid{
             }
         
             div.onair_flow a.carousel-cell {
-                 width: 90vw;
-                padding-left: 4vw;
-                padding-right: 4vw;
-                height: calc(90vh - 60px);
+                 width: 100vw;
+                padding-left: 0vw;
+                padding-right: 0vw;
+                height: calc(100vh - 0px);
             
                 
             }
         
             div.onair_flow .flickity-prev-next-button.previous {
-                left: calc(1.5vw - 22px);
+                left: 24px;
             }
             div.onair_flow .flickity-prev-next-button.next {
-                right: calc(-0.5vw - 22px);
+                right: 14;
             }
         
         
             div.onair_flow .flickity-prev-next-button.next::after, 
             div.onair_flow .flickity-prev-next-button.previous::after{
-                font-size: 30px;
+                font-size: 40px;
             }
             }
     
@@ -1613,9 +1632,9 @@ div.ouvre-grid{
             }
         
              div.onair_flow p.main-carousel-caption 
-            {width: 80vw;
-                padding-left: 2vw;
-                padding-right: 2vw;}
+            {width: 100vw;
+                padding-left: 4vw;
+                padding-right: 4vw;}
 
             div.onair_flow a.carousel-cell {
                 width: 85vw;

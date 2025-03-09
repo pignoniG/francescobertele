@@ -68,7 +68,7 @@ foreach ($filter_items as $filter_item) {
 
 	<?php 
 	if( has_post_thumbnail()){
-		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail-medium-for-interface' )['src'];
+		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id(),'hd-for-interface' )['src'];
 		echo '<img src="'. $tumbnail_url.'">';
 	}
 	?>
