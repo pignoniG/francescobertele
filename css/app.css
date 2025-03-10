@@ -336,10 +336,17 @@ display: flex;
     margin-bottom: 0px;
     padding-top: 70px;
     text-shadow: -1px -1px 20px #FFF, 1px -1px 20px #FFF, -1px 1px 20px #FFF, 1px 1px 20px #FFF;
+    font-size: 16px;
 }
-
+ div.image-box   .title-line  h3,div.section.project-info .title-line h3{
+       font-size: 16px;
+ }
+  div.image-box   .title-line  h4,div.section.project-info .title-line h4{
+       font-size: 14px;
+ }
 div.section.project-info .title-line {
 display: flex;
+ font-size: 16px;
     justify-content: space-between;
     padding-left: 5%;
     padding-right: 5%;

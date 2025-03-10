@@ -20,7 +20,7 @@
 
 	<?php 
 		if( has_post_thumbnail()){
-			$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail-hd-for-interface' )['src'];
+			$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id(),'hd-for-interface' )['src'];
 		
 		}
 
