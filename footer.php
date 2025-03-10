@@ -111,8 +111,9 @@
             
             
             <a class="customfollow-icon mail" target="_blank" href="mailto:fb@francescobertele.net">
-                <i class="far fa-envelope"></i>
+                <i class="far fa-envelope"></i> 
             </a>
+
             <br>
             <p class="_BodyText" style="text-align:center;">francesco bertelé 
              <?php echo  wpm_translate_string( "[:en]official website [:it]sito web ufficiale [:]", $language = '' ); ?>
@@ -130,8 +131,11 @@
                 <i class="fab fa-creative-commons-sa" aria-hidden="true"></i>
 
             </a>
+
             <br>
             <img style="width:100px; margin-bottom:30px;" src="https://francescobertele.net/wp-content/uploads/2022/04/pledgesigner.jpg">
+            <br>
+             <img style="width:100px; margin-bottom:30px;" src="https://francescobertele.net/wp-content/uploads/2025/03/qr-signal.png">
 		</div>
 </div>
 <div id="banner-dimmer" href="#" onclick="closeBan()" class="">&nbsp;</div>
