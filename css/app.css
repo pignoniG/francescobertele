@@ -1935,12 +1935,12 @@ div.ouvre-grid{
 
     div.bib_modal .inner_modal{
         cursor: initial;
-        width: 30vw;
+        width: 80vw;
         position: absolute;
         transition-duration: 500ms;
         transition-property: left;
         overflow-y: scroll;
-        left: -30vw;
+        left: -80vw;
         top: 0;
         bottom: 0;
         height: 100vh;
@@ -1959,6 +1959,23 @@ div.ouvre-grid{
     div.bib_modal.active .inner_modal{
         left: 0;
 
+    }
+
+    div.cell.content_bib_image {
+        max-width: 100%;
+        display: block;
+        text-align: left;
+
+
+    }
+
+    div.cell.content_bib_image img{
+
+
+        width: 300px;
+        padding: 20px;
+        display: inline-block;
+        
     }
 
     div.text-description-overflow-bibliography h1._TitleOU{
@@ -2038,8 +2055,8 @@ div.ouvre-grid{
      }
     div.cell.content_bib_image{
         
-        float: right;
-        text-align: center;
+
+
         padding: 20px;}
 
     div.cell.content_bib_image img{
@@ -2077,10 +2094,7 @@ div.ouvre-grid{
 
          }
 
-    
 
-    
-    
 
     /* ask  extra medium*/
 
@@ -2092,12 +2106,22 @@ div.ouvre-grid{
          @media only screen and (max-width: 63.9375em)  {
 
 
+                div.cell.content_bib_image img{
+
+
+                    width: 36vw;
+                    padding: 20px;
+                    display: inline-block;
+                    
+                }
+
+
              div.bib_modal .inner_modal{
                 
-                width: 60vw;
+                width: 80vw;
                 
         
-                left: -60vw;}
+                left: -80vw;}
 
 
             div.cell.content_bib_body,
@@ -2223,6 +2247,17 @@ div.ouvre-grid{
     /* ask  mobile*/
 
         @media screen and (max-width: 39.9375em) {
+            
+              div.cell.content_bib_image img{
+            
+            
+                  width: 100%;
+                  padding: 20px;
+                  display: inline-block;
+                  
+              }
+            
+
 
             div.bib_modal .inner_modal{
                 
