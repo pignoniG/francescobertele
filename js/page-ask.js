@@ -95,9 +95,7 @@ var src = $(this).attr('src');
         }, 300);}
 
         else{
-          $('html, body').stop().animate({
-          'scrollTop': 0
-          }, 200, 'swing', function () {});
+       
         }
 
 
