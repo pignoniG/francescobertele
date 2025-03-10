@@ -65,7 +65,9 @@
         }
      
 
-
+.img-enlargeable{
+    cursor: zoom-in;
+}
 
 		._BodyText, ._BodyText_no_spaces {
             font-size: 13px;
@@ -84,6 +86,7 @@
 		    text-align: left;
  	}		
 
+ 
 
         #c-left, #c-right {
             background: transparent;
