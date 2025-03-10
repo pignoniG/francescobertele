@@ -2451,7 +2451,7 @@ div.ouvre-grid{
 
 
 
-    body.single.oeuvre #c-left,
+    body.single.oeuvre #c-left
 {  
          border-right: 1px solid white;
     }
@@ -2479,7 +2479,7 @@ div.ouvre-grid{
     }
 
 
-     body.single.oeuvre #c-left p, body.single.oeuvre #c-right p,
+     body.single.oeuvre #c-left p, body.single.oeuvre #c-right p
    {
     
          
@@ -2487,13 +2487,13 @@ div.ouvre-grid{
          text-shadow: 0px 0px 20px #000;
      }
      
-     body.single.oeuvre #c-right,
+     body.single.oeuvre #c-right
      {
          right: 0;
          border-left: 1px solid white;
      }
 
-    body.single.oeuvre ._BodyText,body.single.oeuvre ._BodyText_no_spaces ,
+    body.single.oeuvre ._BodyText,body.single.oeuvre ._BodyText_no_spaces 
     {
 
         color: white;
@@ -2516,11 +2516,12 @@ div.ouvre-grid{
         color: white;
     }
 
-    body.single.oeuvre div.menu-buttons .left,
+    body.single.oeuvre div.menu-buttons .left
  {
         color: white;
     }
-    body.single.oeuvre .banner,
+
+    body.single.oeuvre .banner
    {
         background-color: #5d5d5dd6;
     }
