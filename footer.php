@@ -112,7 +112,9 @@
             
             <a class="customfollow-icon mail" target="_blank" href="mailto:fb@francescobertele.net">
                 <i class="far fa-envelope"></i> 
+
             </a>
+             <a target="_blank" style="margin-left: 20px; bottom: 2px; position: relative;" href="https://signal.me/#eu/nwnL9X_qTywvDlEa71imrToaV-xT0Ptdoawyi1ZI5ORtlK5Hwx9IhojW2SX9qunD"> <i class="fa-brands fa-signal-messenger"></i></a>
 
             <br>
             <p class="_BodyText" style="text-align:center;">francesco bertelé 
@@ -134,8 +136,7 @@
 
             <br>
             <img style="width:100px; margin-bottom:30px;" src="https://francescobertele.net/wp-content/uploads/2022/04/pledgesigner.jpg">
-            <br>
-             <img style="width:100px; margin-bottom:30px;" src="https://francescobertele.net/wp-content/uploads/2025/03/qr-signal.png">
+            
 		</div>
 </div>
 <div id="banner-dimmer" href="#" onclick="closeBan()" class="">&nbsp;</div>
