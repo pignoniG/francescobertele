@@ -10,6 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+
 	<div class="grid-x">
 		<div class="cell content_bib_body">
 			<div class="text-description-overflow-bibliography">
@@ -26,7 +28,7 @@
 
 			
 			    		// Loop through rows.
-			    		while( have_rows('project_related_list') ) : the_row();
+			    		while( have_rows('project_related_list_nor') ) : the_row(); // disabled
 			
 			       			// Load sub field value.
 			        		$featured_post = get_sub_field('project_related');
@@ -36,7 +38,55 @@
 			   		<?php endwhile;?>
 
 					</p>
+					<p>
+					<?php
+						
+
+					
+						// prepare query args
+						$args = array(
+						'post_type'         => 'progetto',
+						'cat' => 13,
+						
+						'nopaging' => true,
+        				'post_status' => 'publish',
+        				'meta_key'			=> 'project_date',
+						'orderby'			=> 'meta_value',
+						'order'				=> 'DESC'
+					);
+						
+						// Perform the query
+	
+						$posts = get_posts( $args );
+	
+
+						foreach( $posts as $post ):
+						
+						
+						 if( have_rows('project_bibliography_links', $post->ID) ):
+
+        				 	while ( have_rows('project_bibliography_links', $post->ID) ) : the_row();
+        				 		$bib_id = get_sub_field('project_bibliography_link', $post->ID);
+        				 		
+        				 	
+        				 		if ($bib_id == get_the_ID()) {?>
+
+        				 			<a href="<?php echo get_the_permalink( $post->ID); ?>"><?php echo get_the_title( $post->ID); ?></a>
+        				 			<?php
+
+        				 		}
+				
+    						endwhile;
+        				 endif;
+						
+						endforeach;
+												?>
+
+
+					</p>
 				<?php endif;?>
+
+
 
 
 		    		<?php if( get_field('project_exhibition') ):?> <p class="_BodyText" style="margin-bottom: 0px;"><?php echo  wpm_translate_string( "[:en]EXHIBITION[:it]ESPOSIZIONE[:]", $language = '' ); ?>:</p><?php the_field('project_exhibition'); ?><?php endif;?>

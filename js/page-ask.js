@@ -162,8 +162,11 @@ var src = $(this).attr('src');
       $("div.bib_modal").removeClass("active");
       $("#"+$(this).attr('data-modal')).addClass("active");
       $("body").addClass("modal_open");
-      
-  
+      console.log($(this).parents(".ask-content.grid-x"));
+
+
+      window.location.hash = $(this).parents(".ask-content.grid-x").attr('id') +"?"+$(this).attr('data-modal').replace('modal','');;
+
     });  
 
 
@@ -171,6 +174,7 @@ $("div.bib_modal").click(function(){
       event.stopPropagation();
       $("div.bib_modal").removeClass("active");
       $("body").removeClass("modal_open");
+      window.location.hash = $(this).parents(".ask-content.grid-x").attr('id') ;
     }); 
 
   $("div.inner_modal").click(function(){
@@ -182,6 +186,7 @@ $("div.bib_modal").click(function(){
       event.stopPropagation();
       $("div.bib_modal").removeClass("active");
       $("body").removeClass("modal_open");
+       window.location.hash = $(this).parents(".ask-content.grid-x").attr('id') ;
     }); 
 
 
@@ -219,10 +224,29 @@ $("div.bib_modal").click(function(){
        
       }
 
-    	var hash = $(location).attr('hash');
+      var vars = $(location).attr('hash').split('?');
+
+    	var hash = vars[0];
+
 
     	if (hash == "") { $('[data-targhet="#themes"]').trigger('click'); }
-    	else{ 			  $('[data-targhet="'+hash+'"]').trigger('click');}
+    	else{ 			  $('[data-targhet="'+hash+'"]').trigger('click');
+
+        if (vars[1]=="") { console.log("vars[1]");}
+        else{
+
+         console.log(vars[1]);
+          $('[data-modal="modal'+vars[1]+'"]').trigger('click');
+        }
+
+
+       
+
+
+
+
+
+    }
 
       
 

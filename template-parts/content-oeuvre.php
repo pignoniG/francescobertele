@@ -255,7 +255,30 @@ Scheda informativa[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="cu
 
 
 
-        <?php if( get_field('project_bibliography') ):?> <p>../<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: <?php the_field('project_bibliography'); ?></p>  <?php endif;?>
+      
+
+         <?php if( have_rows('project_bibliography_links') ):?> <p>../<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: 
+
+
+         	<?php 
+         	while ( have_rows('project_bibliography_links') ) : the_row();
+         		$bib_id = get_sub_field('project_bibliography_link');
+         		$bib_link =   "./ask/#bibliography?".myUrlEncode (filter_var($bib_id, FILTER_SANITIZE_URL)) ;
+
+         		 ?> 	<br><a href=" <?php echo $bib_link; ?>"> <?php 
+         		 
+        		 echo  get_the_title($bib_id);
+
+        		  ?> 	</a> <?php 
+    		endwhile;
+         ?></p>  
+
+     	<?php endif;?>
+
+
+
+
+
         <?php if( get_field('project_exhibition') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esposta a[:]", $language = '' ); ?>: <?php the_field('project_exhibition'); ?> </p><?php endif;?>
 		<?php if( get_field('project_collection') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Collection[:it]Collezione[:]", $language = '' ); ?>: <?php echo mytranslate(get_field('project_collection')); ?> </p><?php endif;?>
     
