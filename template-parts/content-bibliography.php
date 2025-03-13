@@ -18,32 +18,14 @@
 		    		<h1 class="_TitleOU" style="border-bottom: 1px solid black;"> <?php the_title(); ?> </h1> 
 		    		<?php if( get_field('project_code') ):?><span class="_CatOU"><?php the_field('project_code'); ?> </span> <?php endif;?>
 		    		<?php if( get_field('project_isbn') ):?><span class="_CatOU">ISBN: <?php the_field('project_isbn'); ?> </span> <?php endif;?>
-		    		<?php
 
-				// Check rows exists.
-				if( have_rows('project_related_list') ):
 
-					?> <p class="_BodyText" style="margin-bottom: 10px;"><?php echo  wpm_translate_string( "[:en]RELATED WORK[:it]LAVORI CORRELATI[:]", $language = '' ); ?>:<br>
+		    		 <p class="_BodyText" style="margin-bottom: 10px;"><?php echo  wpm_translate_string( "[:en]RELATED WORK[:it]LAVORI CORRELATI[:]", $language = '' ); ?>:<br>
+		
 					<?php
-
-			
-			    		// Loop through rows.
-			    		while( have_rows('project_related_list_nor') ) : the_row(); // disabled
-			
-			       			// Load sub field value.
-			        		$featured_post = get_sub_field('project_related');
-			        		$permalink = get_permalink( $featured_post->ID );
-        					$title = get_the_title( $featured_post->ID );
-        					?><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
-			   		<?php endwhile;?>
-
-					</p>
-					<p>
-					<?php
-						
-
-					
 						// prepare query args
+
+						$currentID= get_the_ID();
 						$args = array(
 						'post_type'         => 'progetto',
 						'cat' => 13,
@@ -58,6 +40,7 @@
 						// Perform the query
 	
 						$posts = get_posts( $args );
+
 	
 
 						foreach( $posts as $post ):
@@ -69,7 +52,7 @@
         				 		$bib_id = get_sub_field('project_bibliography_link', $post->ID);
         				 		
         				 	
-        				 		if ($bib_id == get_the_ID()) {?>
+        				 		if ($bib_id == $currentID) {?>
 
         				 			<a href="<?php echo get_the_permalink( $post->ID); ?>"><?php echo get_the_title( $post->ID); ?></a>
         				 			<?php
@@ -84,7 +67,7 @@
 
 
 					</p>
-				<?php endif;?>
+				
 
 
 
