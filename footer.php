@@ -71,7 +71,7 @@
             <a target="_blank" href="https://vimeo.com/franzsella"> <i class="fab fa-vimeo-v"></i></a> -->
             <a target="_blank" href="https://t.me/f_nius"> <i class="fab fa-telegram"></i></a>
 
-            <a target="_blank" href="https://signal.me/#eu/nwnL9X_qTywvDlEa71imrToaV-xT0Ptdoawyi1ZI5ORtlK5Hwx9IhojW2SX9qunD"> <i class="fa-brands fa-signal-messenger"></i></a>
+    
             <a target="_blank" href="https://pensierif.blogspot.com/"> 
 
 
