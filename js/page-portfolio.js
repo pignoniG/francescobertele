@@ -41,12 +41,12 @@ function scrollToSection(direction) {
                  targetIndex = indexID +1
             }
 
-            console.log("in view indexID",indexID);
-            console.log("selected targetIndex",targetIndex);
-            console.log("scrolling to",targetIndex);
+            // console.log("in view indexID",indexID);
+             //console.log("selected targetIndex",targetIndex);
+             //console.log("scrolling to",targetIndex);
 
             let offset = $("#"+targetIndex.toString()).offset().top + scrollPosition ;
-                console.log(" offset  to", offset );
+             //    console.log(" offset  to", offset );
 
                  $('.fullpage').stop().animate({
 
