@@ -314,7 +314,21 @@
 
 /* general fine */
 /* oeuvre inizio */
+#fullpage{
+   scroll-snap-type: y mandatory;
+   overflow: scroll;
+    height: 100vh;
+ 
+
+}
 div.section {
+
+  scroll-snap-align: start;
+
+
+
+ scroll-snap-align: center;
+
     height:     100vh;
     width:     100vw;
     overflow: hidden;
@@ -426,7 +440,10 @@ div.image-box  div.pro-links{
 
     }
     body.page-id-1117{
-        background-color:#eeeef2;
+        background-color: #eeeef2;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
     }
     body.page-id-1117 div.menu-buttons,body.page-id-1117 #sort-filter{
      background-color: #ffffff30
@@ -1375,7 +1392,7 @@ div.ouvre-grid{
 
             button.accordion.portfolio{
 
-                            margin-right: calc(5vw + 120px);
+                         
                            
 
             }
@@ -1415,7 +1432,7 @@ div.ouvre-grid{
               
                  font-size: 18px;
 
-                 webkit-line-clamp: 10;
+                -webkit-line-clamp: 10;
                  line-clamp: 10;
              }
 

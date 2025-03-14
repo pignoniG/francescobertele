@@ -1,12 +1,35 @@
+
+
+
 $(document).ready(function() {
-    $('#fullpage').fullpage({
+
+
+    function scrollToSection(direction) {
+        console.log(direction)
+        let $sections = $('.section'); // Select all sections
+        let scrollPosition = $(".fullpage").scrollTop(); // Current scroll position
+        let targetIndex = -1;
+
+        $sections.each(function (index) {
+            let sectionTop = $(this).offset().top;
+            if (scrollPosition < sectionTop + $(this).outerHeight() / 2) {
+                targetIndex = direction === 'next' ? index + 1 : index - 1;
+                return false; // Exit loop when we find the first matching section
+            }
+        });
+
+        if (targetIndex >= 0 && targetIndex < $sections.length) {
+            $(".fullpage").animate({ scrollTop: $sections.eq(targetIndex).offset().top }, 1);
+        }
+           };
+     //$('#fullpage').fullpage({
         //options here
-        autoScrolling:true,
-        scrollHorizontally: false,
-        scrollBar:true,
-        scrollingSpeed:400,
-        scrollOverflow: false
-    });
+     //    autoScrolling:true,
+    //     scrollHorizontally: false,
+    //     scrollBar:true,
+    //     scrollingSpeed:400,
+    //     scrollOverflow: false
+    // });
 
    
 
@@ -19,11 +42,14 @@ var clickY = event.clientY; // Get Y-coordinate of the click
         return; // Do nothing if a link is clicked
     }
 
+    var y = $("#fullpage").scrollTop();  //your current y position on the page
+
+
 
     if (clickY > screenHeight / 2) {
-        fullpage_api.moveSectionDown(); // Click on bottom half
+      scrollToSection('next');
     } else {
-        fullpage_api.moveSectionUp(); // Click on top half
+      scrollToSection('prev');
     }
 
 });
