@@ -216,7 +216,7 @@ function portfolio_js(){
 
 
    		wp_enqueue_script( 'francescobertele-select-js', get_template_directory_uri() . '/js/select2.min.js', array(), _S_VERSION, true );
-   		wp_enqueue_script( 'francescobertele-fullpage-js', get_template_directory_uri() . '/js/fullPage.js', array(), _S_VERSION, true );
+   		
 
 
    		
