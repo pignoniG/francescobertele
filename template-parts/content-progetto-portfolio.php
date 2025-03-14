@@ -32,14 +32,7 @@
 	    	<h3 class="ouvre_project" ><?php echo get_the_title();?></h3>
 	    	<h4> <?php the_field('project_code');?> </h4>
 		</div>
-		<div class="pro-links">
-
-		<a href="<?php echo get_permalink();?>">> <?php echo  wpm_translate_string( "[:en]Project Datasheet[:it]
-		Scheda tecnica[:]", $language = '' ); ?></a>
-		
 	
-		
-		</div> 
 
 	</div>
 

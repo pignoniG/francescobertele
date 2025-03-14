@@ -318,6 +318,8 @@
    scroll-snap-type: y mandatory;
    overflow: scroll;
     height: 100vh;
+    max-height: -webkit-fill-available;
+
  
 
 }
@@ -330,6 +332,7 @@ div.section {
  scroll-snap-align: center;
 
     height:     100vh;
+    max-height: -webkit-fill-available;
     width:     100vw;
     overflow: hidden;
 }
