@@ -4,7 +4,7 @@ $(document).ready(function() {
         autoScrolling:true,
         scrollHorizontally: false,
         scrollBar:true,
-        scrollingSpeed:4,
+        scrollingSpeed:400,
         scrollOverflow: false
     });
 
