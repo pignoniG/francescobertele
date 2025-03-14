@@ -358,6 +358,16 @@ display: flex;
  div.image-box   .title-line  h3,div.section.project-info .title-line h3{
        font-size: 16px;
  }
+
+  div.image-box   .title-line  a h3,div.section.project-info .title-line a h3{
+           text-decoration: underline;
+ }
+
+  div.image-box   .title-line  a:hover h3,div.section.project-info .title-line a:hover h3{
+       text-decoration: none;
+ }
+
+
   div.image-box   .title-line  h4,div.section.project-info .title-line h4{
        font-size: 14px;
  }

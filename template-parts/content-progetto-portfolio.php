@@ -29,10 +29,17 @@
 	
 	<div class="image-box"  style="background-image: url(<?php echo $tumbnail_url; ?> );">
 		<div class="title-line">
-	    	<h3 class="ouvre_project" ><?php echo get_the_title();?></h3>
+			<a href="<?php echo get_permalink();?>">
+		
+	    	<h3 class="ouvre_project" ><?php echo get_the_title();?></h3></a>
 	    	<h4> <?php the_field('project_code');?> </h4>
 		</div>
+
+
+		
 	
+		
+
 
 	</div>
 
@@ -40,7 +47,9 @@
 <div class="section project-info">
 
 	<div class="title-line ">
-	    <h3 class="ouvre_project" ><?php echo get_the_title();?></h3>
+	   <a href="<?php echo get_permalink();?>">
+		
+	    	<h3 class="ouvre_project" ><?php echo get_the_title();?></h3></a>
 	    <h4> <?php the_field('project_code');?> </h4>
 	</div>
 	
