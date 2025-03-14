@@ -3,7 +3,8 @@ $(document).ready(function() {
         //options here
         autoScrolling:true,
         scrollHorizontally: false,
-    
+        scrollBar:true,
+        scrollingSpeed:4,
         scrollOverflow: false
     });
 
