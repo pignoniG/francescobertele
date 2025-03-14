@@ -457,6 +457,8 @@ div.image-box  div.pro-links{
         overflow: hidden;
         padding: 0;
         margin: 0;
+        user-select: none;
+        -webkit-user-select: none;
     }
     body.page-id-1117 div.menu-buttons,body.page-id-1117 #sort-filter{
      background-color: #ffffff30

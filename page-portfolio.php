@@ -51,11 +51,13 @@ get_header(); ?>
 				 $progetti_counter = 0;
 			    ?>
 			   		<?php
+			   		$indexport = 0 ;
 			   			while ($custom_query->have_posts()) {
 			   			     $custom_query->the_post();	
 			   			     include(locate_template('template-parts/content-progetto-portfolio.php'));
 			   			     $progetti_counter++;
 			   			     $id_list=$id_list.get_the_ID().",";
+			   			     $indexport = $indexport +1 ;
 					
 			   	}		
 			}

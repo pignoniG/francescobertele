@@ -14,7 +14,7 @@
 
 
 
-<div class="section">
+<div class="section scrollablebox" id="<?php echo $indexport ;?>" >
 
 
 
@@ -44,7 +44,8 @@
 	</div>
 
 </div>	
-<div class="section project-info">
+<?php $indexport = $indexport +1 ;?>
+<div class="section project-info scrollablebox" id="<?php echo $indexport ;?>">
 
 	<div class="title-line ">
 	   <a href="<?php echo get_permalink();?>">
@@ -71,8 +72,7 @@
 
 	<div class="pro-links">
 
-	<a href="<?php echo get_permalink();?>">> <?php echo  wpm_translate_string( "[:en]Project Datasheet[:it]
-	Scheda tecnica[:]", $language = '' ); ?></a>
+
 	
 
 	<a href="<?php echo wpm_translate_url( get_page_link(74), $language = '' );?>/?force=True#filter=.project_corpus_<?php echo myUrlEncode (filter_var(get_field("project_corpus")[0], FILTER_SANITIZE_URL)) ?>
