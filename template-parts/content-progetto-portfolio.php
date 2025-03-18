@@ -72,6 +72,9 @@
 
 	<div class="pro-links">
 
+	<a href="<?php echo get_permalink();?>">> <?php echo  wpm_translate_string( "[:en]Project Datasheet[:it]
+		Scheda tecnica[:]", $language = '' ); ?></a>
+
 
 	
 
