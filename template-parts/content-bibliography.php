@@ -26,7 +26,7 @@
 						// prepare query args
 
 						$currentID= get_the_ID();
-						$args = array(
+						$argss = array(
 						'post_type'         => 'progetto',
 						'cat' => 13,
 						
@@ -39,38 +39,32 @@
 						
 						// Perform the query
 	
-						$posts = get_posts( $args );
+						$stiposts = get_posts( $argss );
 
 	
 
-						foreach( $posts as $post ):
+						foreach( $stiposts as $stopost ):
 						
 						
-						 if( have_rows('project_bibliography_links', $post->ID) ):
+						 if( have_rows('project_bibliography_links', $stopost->ID) ):
 
-        				 	while ( have_rows('project_bibliography_links', $post->ID) ) : the_row();
-        				 		$bib_id = get_sub_field('project_bibliography_link', $post->ID);
+        				 	while ( have_rows('project_bibliography_links', $stopost->ID) ) : the_row();
+        				 		$bib_id = get_sub_field('project_bibliography_link', $stopost->ID);
         				 		
         				 	
         				 		if ($bib_id == $currentID) {?>
 
-        				 			<a href="<?php echo get_the_permalink( $post->ID); ?>"><?php echo get_the_title( $post->ID); ?></a>
+        				 			<a href="<?php echo get_the_permalink( $stopost->ID); ?>"><?php echo get_the_title( $stopost->ID); ?></a>
         				 			<?php
-
         				 		}
 				
     						endwhile;
         				 endif;
-						
-						endforeach;
-												?>
-
+						endforeach;						
+					?>
 
 					</p>
 				
-
-
-
 
 		    		<?php if( get_field('project_exhibition') ):?> <p class="_BodyText" style="margin-bottom: 0px;"><?php echo  wpm_translate_string( "[:en]EXHIBITION[:it]ESPOSIZIONE[:]", $language = '' ); ?>:</p><?php the_field('project_exhibition'); ?><?php endif;?>
 		    		<?php if( get_field('project_publisher') ):?> <p class="_BodyText" style="margin-bottom: 0px;"><?php echo  wpm_translate_string( "[:en]PUBLISHER[:it]EDITORE[:]", $language = '' ); ?>:</p><?php the_field('project_publisher'); ?><?php endif;?>
