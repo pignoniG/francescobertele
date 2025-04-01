@@ -1569,13 +1569,13 @@ div.ouvre-grid{
     {
         margin-top: 0px;
         width: 100vw;
+        color: #FF0000;
         padding-left: 5vw;
         padding-right: 5vw;
         margin-left: auto;
         margin-right: auto;
         position: fixed;
         bottom: 60px;
-          text-shadow: -1px -1px 20px #FFF, 1px -1px 20px #FFF, -1px 1px 20px #FFF, 1px 1px 20px #FFF;
         
     }
     div.onair_flow span.caption.number{
