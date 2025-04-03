@@ -1685,7 +1685,7 @@ div.ouvre-grid{
                 width: 85vw;
                 padding-left: 2vw;
                 padding-right: 2vw;
-                height: calc( 90vh - 100px);
+                height: calc( 95vh - 170px);
                 max-height: 90vh;
                 
             }
