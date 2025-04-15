@@ -89,6 +89,7 @@
  
 
         #c-left, #c-right {
+            pointer-events:none;
             background: transparent;
             position: fixed;
             top: 0;
@@ -105,6 +106,7 @@
 
 
 		#c-left p,  #c-right p{
+            pointer-events:none;
         	line-height: 17px;
 			font-size: 13px;
 			font-family: "founders-grotesk-mono";
