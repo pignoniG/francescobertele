@@ -40,7 +40,7 @@
 
 		    ?>
 
-		    <model-viewer alt="" src="<?php echo get_sub_field('project_3d'); ?>"  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer> <?php
+		    <model-viewer alt="" src="<?php echo get_sub_field('project_3d'); ?>"  shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y"></model-viewer> <?php
 
 		    endwhile;
 			?>  <?php 
