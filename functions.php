@@ -203,7 +203,7 @@ function oeuvre_js(){
 
    		wp_enqueue_script( 'francescobertele-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), _S_VERSION, true );
 
-   		wp_enqueue_script( 'francescobertele-model-viewer', get_template_directory_uri() . '/js/model-viewer.min.js', array(), '1', true );
+   		
     	wp_enqueue_script( 'francescobertele-page-oeuvre', get_template_directory_uri() . '/js/page-oeuvre.js', array(), '1', true );
 
     }
@@ -262,6 +262,8 @@ add_action('wp_enqueue_scripts', 'onair_s_js');
 
 function oeuvre_s_js(){
     if( is_single() && has_category('oeuvre') ){
+
+    	wp_enqueue_script( 'francescobertele-model-viewer', get_template_directory_uri() . '/js/model-viewer.min.js', array(), '1', true );
     	
     	wp_enqueue_script( 'francescobertele-single-oeuvre', get_template_directory_uri() . '/js/single-oeuvre.js', array(), _S_VERSION, true );
     	wp_enqueue_style( 'francescobertele-style-w3', get_template_directory_uri() . '/css/w3.css' );
