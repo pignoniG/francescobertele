@@ -33,6 +33,20 @@
 			?>
 	
 			
+
+		<?php if( have_rows('project_3ds') ):
+
+		    while( have_rows('project_3ds') ) : the_row();
+
+		    ?>
+
+		    <model-viewer alt="" src="<?php echo get_sub_field('project_3d'); ?>"  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer> <?php
+
+		    endwhile;
+			?>  <?php 
+		endif ?> 
+
+
 		</div>
 
 		<div class="cell small-12 medium-12 small-order-1 large-12 oeuvre-header">
@@ -239,7 +253,6 @@
 
 
 
-
         <?php if( get_field('project_pdf') ):?> <br>../<?php echo  wpm_translate_string( "[:en]Presentation[:it]Presentazione[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="customfollow-icon download" href="<?php echo get_field('project_pdf')['url']; ?>"><?php echo get_field('project_pdf')['filename']; ?></a> 
 
         <?php endif;?>
@@ -255,20 +268,51 @@ Scheda informativa[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="cu
 
 
 
-      
+         <?php if( get_field('project_bibliography') && !have_rows('project_bibliography_links') ):?> <p><br>../<?php echo  wpm_translate_string("[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: <?php the_field('project_bibliography'); ?> </p><?php endif;?>
 
-         <?php if( have_rows('project_bibliography_links') ):?> <p>../<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: 
+         <?php if( have_rows('project_bibliography_links')  ):?> <p>../<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>: 
 
 
          	<?php 
          	while ( have_rows('project_bibliography_links') ) : the_row();
          		$bib_id = get_sub_field('project_bibliography_link');
          		$bib_link =   "./ask/#bibliography?".myUrlEncode (filter_var($bib_id, FILTER_SANITIZE_URL)) ;
+         		$bib_isbn = "isbn: ".get_field('project_isbn',$bib_id);
+         		$bib_date = get_field('project_date',$bib_id);
+         		$bib_publisher = get_field('project_publisher',$bib_id);
+         		
 
          		 ?> 	<br><a href=" <?php echo $bib_link; ?>"> <?php 
          		 
-        		 echo  get_the_title($bib_id);
+        		 echo  get_the_title($bib_id)." [".$bib_date." ".$bib_isbn."]";
+     
+        		  ?> 	</a> <?php 
+    		endwhile;
+         ?></p>  
 
+     	<?php endif;?>
+
+
+
+        <?php if( get_field('project_exhibition') && !have_rows('project_exhibition_links') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esposta a[:]", $language = '' ); ?>: <?php the_field('project_exhibition'); ?> </p><?php endif;?>
+
+
+        <?php if( have_rows('project_exhibition_links') ):?> <p>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esposta a[:]", $language = '' ); ?>: 
+
+
+         	<?php 
+         	while ( have_rows('project_exhibition_links') ) : the_row();
+         		$exib_id = get_sub_field('project_exhibition_link');
+         		$exib_link =   "./ask/#exhibition?".myUrlEncode (filter_var($exib_id, FILTER_SANITIZE_URL)) ;
+
+         		$exib_luogo = get_field('project_luogo',$exib_id);
+         		$exib_date = get_field('project_date',$exib_id);
+       
+
+         		 ?> 	<br><a href=" <?php echo $exib_link; ?>"> <?php 
+         		 
+        		 echo  get_the_title($exib_id).", ".$exib_luogo.". ".$exib_date;
+     
         		  ?> 	</a> <?php 
     		endwhile;
          ?></p>  
@@ -279,7 +323,7 @@ Scheda informativa[:]", $language = '' ); ?> [pdf]: <a target="_blank" class="cu
 
 
 
-        <?php if( get_field('project_exhibition') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esposta a[:]", $language = '' ); ?>: <?php the_field('project_exhibition'); ?> </p><?php endif;?>
+
 		<?php if( get_field('project_collection') ):?> <p><br>../<?php echo  wpm_translate_string( "[:en]Collection[:it]Collezione[:]", $language = '' ); ?>: <?php echo mytranslate(get_field('project_collection')); ?> </p><?php endif;?>
     
     <p class="_BodyText" style="border-bottom: 1px dashed #FFF;">   

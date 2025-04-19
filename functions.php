@@ -203,7 +203,7 @@ function oeuvre_js(){
 
    		wp_enqueue_script( 'francescobertele-imagesloaded', get_template_directory_uri() . '/js/	imagesloaded.pkgd.min.js', array(), _S_VERSION, true );
 
-   	
+   		wp_enqueue_script( 'francescobertele-page-oeuvre', get_template_directory_uri() . '/js/model-viewer.min.js', array(), '1', true );
     	wp_enqueue_script( 'francescobertele-page-oeuvre', get_template_directory_uri() . '/js/page-oeuvre.js', array(), '1', true );
 
     }
