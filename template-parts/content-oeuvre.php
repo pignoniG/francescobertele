@@ -40,7 +40,11 @@
 
 		    ?>
 
-		    <model-viewer alt="" src="<?php echo get_sub_field('project_3d'); ?>"  shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y"></model-viewer> <?php
+		    <model-viewer  src="<?php echo get_sub_field('project_3d'); ?>"  shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y"></model-viewer> 
+
+		    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+		    <?php
 
 		    endwhile;
 			?>  <?php 
