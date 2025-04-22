@@ -32,21 +32,30 @@ get_header(); ?>
 				  data-textnav="<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>
 				  </button>
-				 <?php /* hide press
+
+				<?php  /*<button class="accordion braketed ask-tab"  data-targhet="#exhibition"
+				  data-textnav="<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esposizioni[:]", $language = '' ); ?>">
+  					<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esposizioni[:]", $language = '' ); ?>
+				  </button>
+
+		
+
      					<button class="accordion braketed ask-tab"  data-targhet="#press"
 				   data-textnav="<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>">
   					<?php echo  wpm_translate_string( "[:en]Press releases[:it]Rassegna stampa[:]", $language = '' ); ?>
 				  </button>
-     				 */ ?>
+
+					*/?>
+		
+
+
+     			
 
 				
 			</div>
 
 
 			
-
-				
-
 			
 			<div class="ask-content grid-x" id="biography">
 				<div class="cell small-12 medium-12 large-12 ask-separator">
@@ -65,9 +74,12 @@ get_header(); ?>
 
 
 			<?php  include(locate_template('template-parts/content-ask-bibliography.php')); ?>
+	
+			<?php 	  /*include(locate_template('template-parts/content-ask-exhibition.php'));*/  ?>
 
 
-	<?php /*	hide press
+			<?php 	  /*
+
  				<div class="ask-content grid-x" id="press">
 				<div class="cell small-12 medium-12 large-12 ask-separator">
 					<h3 id="">
@@ -81,7 +93,7 @@ get_header(); ?>
 				</div>
 
 			</div>
-	*/ ?>
+			*/  ?>
 
 
 		</main><!-- #main -->

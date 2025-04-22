@@ -66,7 +66,35 @@
 					</p>
 				
 
-		    		<?php if( get_field('project_exhibition') ):?> <p class="_BodyText" style="margin-bottom: 0px;"><?php echo  wpm_translate_string( "[:en]EXHIBITION[:it]ESPOSIZIONE[:]", $language = '' ); ?>:</p><?php the_field('project_exhibition'); ?><?php endif;?>
+		    		<?php if( get_field('project_exhibition') && !have_rows('project_related_exibitions')  ):?> <p class="_BodyText" style="margin-bottom: 0px;"><?php echo  wpm_translate_string( "[:en]EXHIBITION[:it]ESPOSIZIONE[:]", $language = '' ); ?>:</p><?php the_field('project_exhibition'); ?><?php endif;?>
+
+
+     				 <?php if( have_rows('project_related_exibitions') ):?> <p>../<?php echo  wpm_translate_string( "[:en]Exhibition[:it]Esposta a[:]", $language = '' ); ?>: 
+
+
+     				  	<?php 
+     				  	while ( have_rows('project_related_exibitions') ) : the_row();
+     				  		$exib_id = get_sub_field('project_related_exibition');
+     				  		$exib_link =   "./ask/#exhibition?".myUrlEncode (filter_var($exib_id, FILTER_SANITIZE_URL)) ;
+
+     				  		$exib_luogo = get_field('project_luogo',$exib_id);
+     				  		$exib_date = get_field('project_date',$exib_id);
+     				
+
+     				  		 ?> 	<br><a href=" <?php echo $exib_link; ?>"> <?php 
+     				  		 
+     				 		 echo  get_the_title($exib_id).", ".$exib_luogo.". ".$exib_date;
+     
+     				 		  ?> 	</a> <?php 
+    					endwhile;
+     				  ?></p>  
+
+     				<?php endif;?>
+
+
+
+
+
 		    		<?php if( get_field('project_publisher') ):?> <p class="_BodyText" style="margin-bottom: 0px;"><?php echo  wpm_translate_string( "[:en]PUBLISHER[:it]EDITORE[:]", $language = '' ); ?>:</p><?php the_field('project_publisher'); ?><?php endif;?>
 		<?php if( get_field('project_links') || get_field('project_files')  ):?> <p class="_BodyText" ><?php echo  wpm_translate_string( "[:en]SOURCES AND REFERENCE DOCUMENTS[:it]FONTI E DOCUMENTI DI RIFERIMENTO[:]", $language = '' ); ?>:
 		    	<br>

@@ -10,11 +10,11 @@
 
 ?>
 
-<div class="ask-content grid-x" id="bibliography">
+<div class="ask-content grid-x" id="exhibition">
 
 	<div class="cell small-12 medium-12 large-12 ask-separator">
 		<h3>
-			<?php echo  wpm_translate_string( "[:en]Bibliography[:it]Bibliografia[:]", $language = '' ); ?>
+			<?php echo  wpm_translate_string( "[:en]Exhibitions[:it]Esibizioni[:]", $language = '' ); ?>
 		</h3>
 	</div>
 
@@ -31,8 +31,8 @@
 
 			$args = array(
 				'post_type'         => 'progetto',
-						'cat' => 12,
-					'posts_per_page' => -1,
+						'cat' => 15,
+						'posts_per_page' => -1,
         				'post_status' => 'publish',
         				'meta_key'			=> 'project_date',
 						'orderby'			=> 'meta_value',
@@ -53,7 +53,10 @@
 
 			   			     $biblio_current_data= get_field('project_date');
 			   			     $biblio_current_titolo= get_the_title();
-			   			     $biblio_current_isbn= get_field('project_isbn');
+			   			     $biblio_current_luogo= get_field('project_luogo');
+
+
+			   		
 			   			     
 			   			     $biblio_current_link= get_permalink();
 			   			     $biblio_current_image = "";
@@ -70,18 +73,14 @@
 
         							<a  target="_blank"><?php echo $biblio_current_titolo; ?></a>
 
-        							<?php if( get_field('project_isbn') ):?> <a class="isbn noMobile" target="_blank">ISBN:<?php echo $biblio_current_isbn; ?></a> <?php endif;?>
-
-
-
         							<span class="bilbio_image" style="background-image: url('<?php echo $biblio_current_image; ?>');"></span>
-
 
 
         							<div class="bib_modal" id="<?php echo('modal'.get_the_ID())?>" >
         								<div class="inner_modal">
 										    		<a class="close-modal">&times;</a>
-										 		 <?php get_template_part( 'template-parts/content-bibliography', get_post_type() );?>
+
+										 		 <?php get_template_part( 'template-parts/content-exhibition', get_post_type() );?>
         								</div>
 
 										 
@@ -90,6 +89,7 @@
 
   
     								</td>
+    							
   								</tr>
 
 							<?php
