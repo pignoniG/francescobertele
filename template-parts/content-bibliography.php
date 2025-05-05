@@ -40,6 +40,7 @@
 						// Perform the query
 	
 						$stiposts = get_posts( $argss );
+						$noNewBib= True;
 
 	
 
@@ -52,7 +53,8 @@
         				 		$bib_id = get_sub_field('project_bibliography_link', $stopost->ID);
         				 		
         				 	
-        				 		if ($bib_id == $currentID) {?>
+        				 		if ($bib_id == $currentID) {
+        				 			$noNewBib= False;?>
 
         				 			<a href="<?php echo get_the_permalink( $stopost->ID); ?>"><?php echo get_the_title( $stopost->ID); ?></a>
         				 			<?php
@@ -62,6 +64,29 @@
         				 endif;
 						endforeach;						
 					?>
+
+
+				
+					<?php
+
+
+			    		// Loop through rows.
+					if ($noNewBib) {
+						// code...
+					
+			    		while( have_rows('project_related_list') ) : the_row();
+
+			       			// Load sub field value.
+			        		$featured_post = get_sub_field('project_related');
+			        		$permalink = get_permalink( $featured_post->ID );
+        					$title = get_the_title( $featured_post->ID );
+        					?><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
+			   		<?php endwhile;
+
+			   		}?>
+
+
+
 
 					</p>
 				
