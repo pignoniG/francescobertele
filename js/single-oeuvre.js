@@ -50,7 +50,7 @@ var src = $(this).attr('src');
 });
 
 
-/* 
+
   $("#button-shop-modal").click(function(){
         if (!$(this).hasClass( "sold" )) {
         $("#oeuvre-buy-container").toggleClass("blocked");
@@ -67,7 +67,7 @@ var src = $(this).attr('src');
        
         $("body").removeClass("modal_open");
     }); 
-*/ 
+
     jQuery("#datasheet_h").on('click', function( event ){
 
   $(this).toggle();
