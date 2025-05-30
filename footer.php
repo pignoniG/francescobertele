@@ -110,7 +110,7 @@
         <div id="container-disclaimer" class="">
             
             
-            <a class="customfollow-icon mail" target="_blank" href="mailto:fb@francescobertele.net">
+            <a class="customfollow-icon mail" target="_blank" href="mailto:info@francescobertele.net">
                 <i class="far fa-envelope"></i> 
 
             </a>
