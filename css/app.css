@@ -2660,15 +2660,13 @@ div.ouvre-grid{
     body.single.oeuvre a.button-shop.oeuvre.onsale {
         background: transparent;
         border: 1.5px solid forestgreen; 
-       
-        float: left;
-        margin-left: 20px;
-        margin-top: 5px;
+   
         }
 
     body.single.oeuvre a.button-shop.oeuvre.activable {
         background: transparent;
         border: 1.5px solid darkturquoise;
+
     }
 
 
