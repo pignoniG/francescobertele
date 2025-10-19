@@ -328,7 +328,7 @@ $pdf->WriteHTML($text);
 
 
 
-            //$text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
+            $text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
 
             //$text = htmlspecialchars_decode($text );
             
@@ -337,13 +337,6 @@ $pdf->WriteHTML($text);
     
     
             //
-            
-    
-                
-
-
-                
-
 
             $pdf->WriteHTML($text);
 
@@ -375,10 +368,13 @@ foreach ($projects as $project_id) {
 		$pdf->SetFont('foundersmono','',10);
 
 		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id($project_id),'hd-for-pdf' )['src'];
+        if ($tumbnail_url) {
+            $pdf->imageUniformToFill($tumbnail_url, 10, 25,175, 240, "C");//$alignment "B", "T", "L", "R", "C"
+
+        }
 
 
-		$pdf->imageUniformToFill($tumbnail_url, 10, 25,175, 240, "C");//$alignment "B", "T", "L", "R", "C"
-
+		
 		
 
 
