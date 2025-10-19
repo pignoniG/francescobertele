@@ -394,8 +394,10 @@ $filecounter=0;
    $tumbnail_url = fly_get_attachment_image_src( $images[rand(0,count($images))],'ultra-hd-for-pdf' )['src'];
 
 
-   
-    $pdf->imageUniformToFill($tumbnail_url, -15, 0,240, 297, "C");//$alignment "B", "T", "L", "R", "C"
+   if ($tumbnail_url) {
+       $pdf->imageUniformToFill($tumbnail_url, -15, 0,240, 297, "C");//$alignment "B", "T", "L", "R", "C"
+   }
+    
     $pdf->imageUniformToFill("https://francescobertele.net/wp-content/uploads/2022/10/logo.png", 100, 143-10,20, 20, "C");//$alignment "B", "T", "L", "R", "C"
 
 
