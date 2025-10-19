@@ -109,14 +109,15 @@ function OpenTag($tag, $attr)
 {
     //Opening tag
     switch($tag){
-        case 'STRONG':
-            $this->SetStyle('B',true);
-            break;
-        case 'EM':
-            $this->SetStyle('I',true);
-            break;
-        case 'B':
-        case 'I':
+        //disabilitato fino a che nonan vermo bold e italic
+        // case 'STRONG':
+        //     $this->SetStyle('B',true);
+        //     break;
+        // case 'EM':
+        //     $this->SetStyle('I',true);
+        //     break;
+        // case 'B':
+        // case 'I':
         case 'U':
             $this->SetStyle($tag,true);
             break;
@@ -161,8 +162,7 @@ function CloseTag($tag)
         $tag='B';
     if($tag=='EM')
         $tag='I';
-    //if($tag=='B' || $tag=='I' || $tag=='U') #disabilitato fino a che non avremo font adatta
-    if($tag=='U')
+    if($tag=='B' || $tag=='I' || $tag=='U') 
         $this->SetStyle($tag,false);
     if($tag=='A')
         $this->HREF='';
