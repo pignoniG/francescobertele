@@ -429,7 +429,8 @@ $pdf->WriteHTML($text);
 
             $text = iconv('utf-8', 'cp1252', $text);
             $text = str_replace("&#8217;","'",$text);
-
+            $text = str_replace("&#038;","&",$text);
+         
 
 
             //$text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
