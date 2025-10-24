@@ -10,7 +10,7 @@
 
 ?>
 
-<div class="ask-content grid-x" id="exhibition">
+<div class="ask-content grid-x hiddetoallbutme" id="exhibition">
 
 	<div class="cell small-12 medium-12 large-12 ask-separator">
 		<h3>

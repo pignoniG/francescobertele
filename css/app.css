@@ -43,11 +43,11 @@
 
 	/* general  general*/
 
-		body {
-			background: whitesmoke;
-			font-family: "founders-grotesk-web",sans-serif;
-            padding-bottom: 50px;
+		body:not(.logged-in) .hiddetoallbutme{
+			display: none!important;
 		}
+
+
 
 		h1, h2, h3, h4, h5, h6 {
 		font-family: "founders-grotesk-web",sans-serif;

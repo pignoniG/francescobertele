@@ -9,11 +9,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-
-	<div class="grid-x">
+	<div class="grid-x  ">
 		<div class="cell content_bib_body">
 			<div class="text-description-overflow-bibliography">
 		    		<h1 class="_TitleOU" style="border-bottom: 1px solid black;"> <?php the_title(); ?> <?php if( get_field('project_luogo') ):?><span class="_CatOU"><?php echo get_field('project_luogo'); ?> </span> <?php endif;?></h1> 
@@ -84,8 +82,9 @@
          		$bib_isbn = "isbn: ".get_field('project_isbn',$bib_id);
          		$bib_date = get_field('project_date',$bib_id);
          		$bib_publisher = get_field('project_publisher',$bib_id);
-         		
-
+         		$exibition_attachment = get_field('exibition_attachment',$bib_id);
+				$exhibition_link = get_field('exhibition_link',$bib_id);
+ 
          		 ?> 	<br><a href=" <?php echo $bib_link; ?>"> <?php 
          		 
         		 echo  get_the_title($bib_id)." [".$bib_date." ".$bib_isbn."]";
@@ -133,6 +132,3 @@
 
 	
 	
-
-	
-</article><!-- #post-<?php the_ID(); ?> -->
