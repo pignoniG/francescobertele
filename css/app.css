@@ -2016,7 +2016,7 @@ div.ouvre-grid{
     div.cell.content_bib_image img{
 
 
-        width: 300px;
+        width: 24vw;
         padding: 20px;
         display: inline-block;
         
@@ -2153,7 +2153,7 @@ div.ouvre-grid{
                 div.cell.content_bib_image img{
 
 
-                    width: 36vw;
+                    width: 35vw;
                     padding: 20px;
                     display: inline-block;
                     
