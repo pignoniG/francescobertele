@@ -12,9 +12,9 @@ $(document).mouseup(function(e)
 $(document).ready(function() 
     { 
 
-      onDomChange(function(){ 
+
    
-        $('.content_bib_image img').not(".img-enlargeable").addClass('img-enlargeable').click(function() {
+        $('.content_bib_image img').click(function() {
 
 
           var src = $(this).attr('src');
@@ -60,7 +60,6 @@ $(document).ready(function()
             });
           });
 
-      });
 
 
 
