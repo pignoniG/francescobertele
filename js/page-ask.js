@@ -195,8 +195,9 @@ $("div.bib_modal").click(function(){
 
 
 		$("button.ask-tab").click(function(){
+		if(!$(this).hasClass("hiddetoallbutme")){
 
-      $("span.ask-nav ").text($(this).attr('data-textnav'));
+      $("span.ask-nav ").text($(this).attr('data-textnav'));}
       $("button.ask-tab").removeClass("active")
       $(this).addClass("active")
 
