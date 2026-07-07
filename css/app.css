@@ -2285,8 +2285,8 @@ div.ouvre-grid{
              div.ask-content#become-a-trustee .inside,
              div.ask-content#bibliography .inside,
              div.ask-content#artistic_dir .inside{
-                padding-right: 10px;
-                padding-left: 10px;
+                #padding-right: 10px;
+                #padding-left: 10px;
              }
 
              td.col-title {
