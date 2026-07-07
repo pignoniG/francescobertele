@@ -136,8 +136,10 @@ $(document).ready(function()
       
 
       if (topElement != lastElement) {
+		  console.log(lastElement);
+		  console.log(lastElement.hasClass("hiddetoallbutme"));
 
-		  if (!lastElement.hasClass("hiddetoallbutme")){
+	
         		var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]')
         
 
@@ -148,7 +150,7 @@ $(document).ready(function()
        			 $("span.ask-nav ").text(bottone.attr('data-textnav'));
          			lastElement=topElement;
 
-     		 }}
+     		 }
 
 
     });
