@@ -106,7 +106,7 @@ $(document).ready(function()
 		});   
 
 
-    $("span.ask-nav ").click(function(){
+    $("span. ").click(function(){
       $("#sort-filter").toggleClass("open");
       });
 
@@ -136,17 +136,18 @@ $(document).ready(function()
       
 
       if (topElement != lastElement) {
-        var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]')
+		  if (!lastElement.classList.contains("hiddetoallbutme")){
+        		var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]')
         
 
-        $("button.ask-tab").removeClass("active")
-        bottone.addClass("active")
+       			 $("button.ask-tab").removeClass("active")
+        		bottone.addClass("active")
 
 
-        $("span.ask-nav ").text(bottone.attr('data-textnav'));
-         lastElement=topElement;
+       			 $("span.ask-nav ").text(bottone.attr('data-textnav'));
+         			lastElement=topElement;
 
-      }
+     		 }}
 
 
     });
