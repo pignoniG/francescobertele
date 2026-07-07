@@ -1733,6 +1733,25 @@ div.ouvre-grid{
         
     }
 
+	div.ask-content#press{
+		text-transform: lowercase;
+		color: black;
+		font-family: PilatWide-Book;
+		color: #000;
+		letter-spacing: 0.02em;
+		line-height: 1.2;
+		font-weight: 400;
+		text-transform: lowercase;
+		font-style: normal;
+		text-decoration: none;
+		text-indent: 0em;
+		border-bottom: none;
+		text-align: left;
+		margin: 0!important;
+		line-height: 1;
+		font-size: 13px;
+	}
+
     div.ask-content .inside{
         min-height: 0vh;
     }
