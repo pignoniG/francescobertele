@@ -1764,6 +1764,11 @@ div.ouvre-grid{
 		width: 80px;
 		float: left;
 		display: inline;
+		font-size: 13px;
+		width: 80px;
+		vertical-align: top;
+		font-family: founders-grotesk-mono;
+		padding: 0.19rem 0rem 0.5rem;
 	}
 
 
