@@ -1757,7 +1757,8 @@ div.ouvre-grid{
 	
 	}	
 	#press a{
-		#margin-left:80px;
+		display: block;
+		margin-left: 80px;
 	}
 	#press span.pressYear{
 		width: 80px;
