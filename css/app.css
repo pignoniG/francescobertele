@@ -1733,7 +1733,7 @@ div.ouvre-grid{
         
     }
 
-	div.ask-content#press{
+	#press p, #press ul, #press li, #press a {
 		text-transform: lowercase;
 		color: black;
 		font-family: PilatWide-Book;
@@ -1749,9 +1749,7 @@ div.ouvre-grid{
 		text-align: left;
 		line-height: 1;
 		font-size: 13px;
-	}
-	div.ask-content#press p{
-	margin-bottom: 0em;}
+		margin-bottom: 0em;}
 
 
     div.ask-content .inside{
