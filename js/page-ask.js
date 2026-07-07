@@ -136,20 +136,11 @@ $(document).ready(function()
       
 
       if (topElement != lastElement) {
-		  console.log(lastElement);
-		  console.log(lastElement.hasClass("hiddetoallbutme"));
-
-	
-        		var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]')
-        
-
-       			 $("button.ask-tab").removeClass("active")
-        		bottone.addClass("active")
-
-
+		  var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]');
+			  $("button.ask-tab").removeClass("active");
+				  bottone.addClass("active");
        			 $("span.ask-nav ").text(bottone.attr('data-textnav'));
-         			lastElement=topElement;
-
+         		lastElement=topElement;
      		 }
 
 
