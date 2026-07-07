@@ -136,13 +136,17 @@ $(document).ready(function()
       
 
       if (topElement != lastElement) {
-		  var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]');
-			  $("button.ask-tab").removeClass("active");
-				  bottone.addClass("active");
-       			 $("span.ask-nav ").text(bottone.attr('data-textnav'));
-         		lastElement=topElement;
-     		 }
+        var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]')
+        
 
+        $("button.ask-tab").removeClass("active")
+        bottone.addClass("active")
+
+
+        $("span.ask-nav ").text(bottone.attr('data-textnav'));
+         lastElement=topElement;
+
+      }
 
     });
 
