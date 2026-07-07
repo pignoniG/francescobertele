@@ -106,7 +106,7 @@ $(document).ready(function()
 		});   
 
 
-    $("span. ").click(function(){
+    $("span.ask-nav ").click(function(){
       $("#sort-filter").toggleClass("open");
       });
 
@@ -147,6 +147,7 @@ $(document).ready(function()
          lastElement=topElement;
 
       }
+
 
     });
 
