@@ -137,7 +137,7 @@ $(document).ready(function()
 
       if (topElement != lastElement) {
 		  
-		if(!lastElement.classList.contains("hiddetoallbutme")){
+		if(!topElement.hasClass("hiddetoallbutme")){
 			  
 		  
 		
