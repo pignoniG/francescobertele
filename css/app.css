@@ -1747,10 +1747,12 @@ div.ouvre-grid{
 		text-indent: 0em;
 		border-bottom: none;
 		text-align: left;
-		margin: 0!important;
 		line-height: 1;
 		font-size: 13px;
 	}
+	div.ask-content#press p{
+	margin-bottom: 0em;}
+
 
     div.ask-content .inside{
         min-height: 0vh;
