@@ -1759,6 +1759,7 @@ div.ouvre-grid{
 	#press a{
 		display: block;
 		margin-left: 80px;
+		padding: 0rem 0rem 0.5rem;
 	}
 	#press span.pressYear{
 		width: 80px;
