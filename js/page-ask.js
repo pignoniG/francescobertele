@@ -136,6 +136,7 @@ $(document).ready(function()
       
 
       if (topElement != lastElement) {
+		  console.log(lastElement.classList);
 		  if (!lastElement.classList.contains("hiddetoallbutme")){
         		var bottone= $('[data-targhet="#'+topElement.attr("id")+'"]')
         
