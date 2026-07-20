@@ -2,9 +2,9 @@ $( document ).ready(
     function(){ 
 
 
-onDomChange(function(){ 
+
    
-        $('.wp-block-image img').not(".img-enlargeable").addClass('img-enlargeable').click(function() {
+        $('.wp-block-image img').click(function() {
 var src = $(this).attr('src');
 
   if ($(this).attr("srcset")) {
@@ -48,7 +48,7 @@ var src = $(this).attr('src');
   });
 });
 
-});
+
 
 
 
