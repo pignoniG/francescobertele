@@ -67,8 +67,9 @@
      
 
 .img-enlargeable,
-article.category-oeuvre wp-block-image img,
-div.content_bib_image img{
+article.category-oeuvre figure.wp-block-image img,
+div.content_bib_image img,
+body.onair figure.wp-block-image img{
     cursor: zoom-in;
 }
 
