@@ -4,11 +4,12 @@ $( document ).ready(
 
 
    
-        $('.wp-block-image img').click(function() {
-var src = $(this).attr('src');
+   
+        $('.wp-block-image').click(function() {
+var src = $(this).children('img').attr('src');
 
-  if ($(this).attr("srcset")) {
-      src =$(this).attr("srcset").split(",").reduce(
+  if ($(this).children('img').attr("srcset")) {
+      src =$(this).children('img').attr("srcset").split(",").reduce(
         (acc, item) => {
           let [url, width] = item.trim().split(" ");
           width = parseInt(width);
@@ -19,6 +20,7 @@ var src = $(this).attr('src');
       ).url;
 
   }
+
 
   
   var modal;
