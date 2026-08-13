@@ -79,6 +79,7 @@ protected $U;
 protected $HREF;
 protected $fontlist;
 protected $issetfont;
+public $skipHeader = false;
 protected $issetcolor;
 
 function __construct($orientation='P', $unit='mm', $size='A4')
@@ -284,7 +285,7 @@ function PutLink($URL, $txt)
      * @param integer $val
      * @return integer
      */
-    protected function pixelsToMm(int $val) : int
+    protected function pixelsToMm(float $val) : int
     {
         return (int)(round($val * $this::MM_IN_INCH / $this::DPI));
     }
@@ -295,7 +296,7 @@ function PutLink($URL, $txt)
      * @param integer $val
      * @return integer
      */
-    protected function mmToPixels(int $val) : int
+    protected function mmToPixels(float $val) : int
     {
         return (int)(round($this::DPI * $val / $this::MM_IN_INCH));
     }
@@ -378,7 +379,7 @@ function Header()
     }// Arial bold 15
     $this->SetFont('foundersmono','',16);
     
-    $project_title = html_entity_decode($project_title );
+    $project_title = html_entity_decode((string) $project_title );
     $project_title = str_replace("&#039;","'",$project_title);
     
     //$project_title = str_replace("&#8217;","’",$project_title);
