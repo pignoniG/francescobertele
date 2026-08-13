@@ -99,7 +99,7 @@ function __construct($orientation='P', $unit='mm', $size='A4')
 function WriteHTML($html)
 {
     //HTML parser
-    $html=strip_tags($html,"<b><u><i><a><img><p><br><strong><em><font><tr><blockquote>"); //supprime tous les tags sauf ceux reconnus
+    $html=strip_tags((string) $html,"<b><u><i><a><img><p><br><strong><em><font><tr><blockquote>"); //supprime tous les tags sauf ceux reconnus
     $html=str_replace("\n",' ',$html); //remplace retour à la ligne par un espace
     $a=preg_split('/<(.*)>/U',$html,-1,PREG_SPLIT_DELIM_CAPTURE); //éclate la chaîne avec les balises
     foreach($a as $i=>$e)
@@ -465,9 +465,6 @@ $filecounter=0;
     $pdf->SetTopMargin(0);
     $pdf->SetRightMargin(30);
     $pdf->SetTopMargin(30);
-
-$pdf->WriteHTML($text);
-
 
         if( get_field('portfolio_biography',190) ):
             $pdf->SetFont('foundersmono','',16);
