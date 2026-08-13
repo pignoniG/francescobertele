@@ -603,7 +603,7 @@ $(window).resize(function() {
 
 
 
-$( "#btn-expt-filter" ).click(function() {
+$( "#btn-expt-filter" ).on('click', function() {
       if (window.location.href.indexOf("/it/") > -1) {
 
         var urlpdfist="https://francescobertele.net/it/pdf/?project="

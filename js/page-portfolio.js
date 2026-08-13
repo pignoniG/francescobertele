@@ -72,7 +72,7 @@ $(document).ready(function() {
 
    
 
-    $('#fullpage').click(function(){
+    $('#fullpage').on('click', function(){
 
     var clickY = event.clientY; // Get Y-coordinate of the click
     var screenHeight = $(window).height(); // Get the height of the viewport

@@ -5,7 +5,7 @@ $( document ).ready(
 
    
    
-        $('.wp-block-image').click(function() {
+        $('.wp-block-image').on('click', function() {
 var src = $(this).children('img').attr('src');
 
   if ($(this).children('img').attr("srcset")) {
@@ -39,7 +39,7 @@ var src = $(this).children('img').attr('src');
     top: '0',
     left: '0',
     cursor: 'zoom-out'
-  }).click(function() {
+  }).on('click', function() {
     removeModal();
   }).appendTo('body');
   //handling ESC
@@ -54,7 +54,7 @@ var src = $(this).children('img').attr('src');
 
 
 
-  $("#onair-more").click(function(){
+  $("#onair-more").on('click', function(){
         $("#onair-description-container").toggleClass("blocked");
         $("#onair-description-container-dimmer").toggleClass("blocked");
         $("#onair-more").toggleClass("active");
@@ -62,7 +62,7 @@ var src = $(this).children('img').attr('src');
     }); 
 
 
-    $(".modal_control").click(function(){
+    $(".modal_control").on('click', function(){
         $(".blocked").removeClass("blocked");
         $(".blocked").removeClass("blocked");
         $("#onair-more").removeClass("active");
@@ -71,7 +71,7 @@ var src = $(this).children('img').attr('src');
     }); 
 
 
-  $("#onair-trust").click(function(){
+  $("#onair-trust").on('click', function(){
         $("#onair-trust-container").toggleClass("blocked");
         $("#onair-trust-container-dimmer").toggleClass("blocked");
         $("#onair-trust").toggleClass("active");

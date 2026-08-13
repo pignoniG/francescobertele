@@ -19,14 +19,14 @@ $( document ).ready(
     });
 
 
-  $("#onair-ask_trustee").click(function(){
+  $("#onair-ask_trustee").on('click', function(){
         $("#onair-trust-container").toggleClass("blocked");
         $("#onair-trust-container-dimmer").toggleClass("blocked");
         $("#onair-trust").toggleClass("active");
 
         $("body").toggleClass("modal_open");
     }); 
-    $(".modal_control").click(function(){
+    $(".modal_control").on('click', function(){
         $(".blocked").removeClass("blocked");
         $(".blocked").removeClass("blocked");
         $("#onair-trust").removeClass("active");

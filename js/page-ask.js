@@ -14,7 +14,7 @@ $(document).ready(function()
 
 
    
-        $('.content_bib_image img').click(function() {
+        $('.content_bib_image img').on('click', function() {
 
 
           var src = $(this).attr('src');
@@ -49,7 +49,7 @@ $(document).ready(function()
               top: '0',
               left: '0',
               cursor: 'zoom-out'
-            }).click(function() {
+            }).on('click', function() {
               removeModal();
             }).appendTo('body');
             //handling ESC
@@ -65,7 +65,7 @@ $(document).ready(function()
 
 
     	
-		$("button.ask-sidebar").click(function(){
+		$("button.ask-sidebar").on('click', function(){
 
       if ($(this).hasClass("active") && window.innerWidth < 1024) {
         $("div.ask-themes").removeClass("visible");
@@ -106,7 +106,7 @@ $(document).ready(function()
 		});   
 
 
-    $("span.ask-nav ").click(function(){
+    $("span.ask-nav ").on('click', function(){
       $("#sort-filter").toggleClass("open");
       });
 
@@ -158,7 +158,7 @@ $(document).ready(function()
 
 
 
-    $(".col-title").click(function(){
+    $(".col-title").on('click', function(){
 
       $("div.bib_modal").removeClass("active");
       $("#"+$(this).attr('data-modal')).addClass("active");
@@ -171,19 +171,19 @@ $(document).ready(function()
     });  
 
 
-$("div.bib_modal").click(function(){
+$("div.bib_modal").on('click', function(){
       event.stopPropagation();
       $("div.bib_modal").removeClass("active");
       $("body").removeClass("modal_open");
       window.location.hash = $(this).parents(".ask-content.grid-x").attr('id') ;
     }); 
 
-  $("div.inner_modal").click(function(){
+  $("div.inner_modal").on('click', function(){
       event.stopPropagation();
     });
 
   
-  $("a.close-modal").click(function(){
+  $("a.close-modal").on('click', function(){
       event.stopPropagation();
       $("div.bib_modal").removeClass("active");
       $("body").removeClass("modal_open");
@@ -194,7 +194,7 @@ $("div.bib_modal").click(function(){
 
 
 
-		$("button.ask-tab").click(function(){
+		$("button.ask-tab").on('click', function(){
 		if(!$(this).hasClass("hiddetoallbutme")){
 
       $("span.ask-nav ").text($(this).attr('data-textnav'));}

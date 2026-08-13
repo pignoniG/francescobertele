@@ -3,7 +3,7 @@ $( document ).ready(
     function(){ 
 
    
-        $('.wp-block-image').click(function() {
+        $('.wp-block-image').on('click', function() {
 var src = $(this).children('img').attr('src');
 
   if ($(this).children('img').attr("srcset")) {
@@ -36,7 +36,7 @@ var src = $(this).children('img').attr('src');
     top: '0',
     left: '0',
     cursor: 'zoom-out'
-  }).click(function() {
+  }).on('click', function() {
     removeModal();
   }).appendTo('body');
   //handling ESC
@@ -51,7 +51,7 @@ var src = $(this).children('img').attr('src');
 
 
 
-  $("#button-shop-modal").click(function(){
+  $("#button-shop-modal").on('click', function(){
         if (!$(this).hasClass( "sold" )) {
         $("#oeuvre-buy-container").toggleClass("blocked");
         $("#oeuvre-buy-container-dimmer").toggleClass("blocked");
@@ -60,7 +60,7 @@ var src = $(this).children('img').attr('src');
     }); 
 
 
-    $(".modal_control").click(function(){
+    $(".modal_control").on('click', function(){
         $(".blocked").removeClass("blocked");
         $(".blocked").removeClass("blocked");
         $("#button-shop-modal").removeClass("active");
