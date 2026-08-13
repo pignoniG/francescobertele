@@ -121,7 +121,7 @@
 			<br>
             <p class="_BodyText" style="text-align:center;">francesco bertelé 
              <?php echo  wpm_translate_string( "[:en]official website [:it]sito web ufficiale [:]", $language = '' ); ?>
-            | P.IVA: 03687100135 | f’ archive <?php echo date("Y"); ?></p>
+            | P.IVA: 03687100135 | <?php echo date("Y"); ?></p>
             <p class="_BodyText" style="text-align:center;">
                  <?php echo  wpm_translate_string( "[:en]web design and development by [:it]web design e sviluppo di [:]", $language = '' ); ?>
                  <a style="text-decoration:underline;" target="_blank" href="https://www.simone-ellero.eu/">simone ellero</a> e <a style="text-decoration:underline;" target="_blank" href="https://giovannipignoni.com/">giovanni pignoni</a>.
