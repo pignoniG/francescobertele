@@ -341,11 +341,11 @@ add_filter('body_class','add_category_to_single');
     return $classes;
   }
 
-add_action('acf/init', function() {
+add_action('init', function() {
 	if( function_exists('acf_add_options_page') ) {
 		acf_add_options_page();
 	}
-});
+}, 20);
 
 
 
