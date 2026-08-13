@@ -33,6 +33,31 @@ function txtentities($html){
     return strtr($html, $trans);
 }
 
+//downloads a remote image to a local temp file using WP's HTTP API
+//(more reliable than relying on allow_url_fopen), returns local path or null
+function pdf_localize_image($url){
+    if(!preg_match('#^https?://#i',$url))
+        return $url;
+
+    $response = wp_remote_get($url, array('timeout' => 20));
+    if(is_wp_error($response) || wp_remote_retrieve_response_code($response) !== 200)
+        return null;
+
+    $body = wp_remote_retrieve_body($response);
+    if(empty($body))
+        return null;
+
+    $ext = strtolower(pathinfo(parse_url($url, PHP_URL_PATH), PATHINFO_EXTENSION));
+    if(!in_array($ext, array('jpg','jpeg','png','gif')))
+        $ext = 'jpg';
+
+    $tmpFile = wp_tempnam('pdf-img').'.'.$ext;
+    if(file_put_contents($tmpFile, $body) === false)
+        return null;
+
+    return $tmpFile;
+}
+
 
 
 class PDF extends FPDF
@@ -213,27 +238,39 @@ function PutLink($URL, $txt)
      */
     public function imageUniformToFill(string $imgPath, int $x = 0, int $y = 0, int $containerWidth = 210, int $containerHeight = 297, string $alignment = 'C')
     {
-        $size = $this->resizeToFit($imgPath, $containerWidth, $containerHeight);
+        $localPath = pdf_localize_image($imgPath);
+        if ($localPath === null) {
+            return;
+        }
+
+        $size = $this->resizeToFit($localPath, $containerWidth, $containerHeight);
         if ($size === null) {
+            if ($localPath !== $imgPath) {
+                @unlink($localPath);
+            }
             return;
         }
         list($width, $height) = $size;
 
         if ($alignment === 'R')
         {
-            $this->Image($imgPath, $x+$containerWidth-$width, $y+($containerHeight-$height)/2, $width, $height);
+            $this->Image($localPath, $x+$containerWidth-$width, $y+($containerHeight-$height)/2, $width, $height);
         }
         else if ($alignment === 'B')
         {
-            $this->Image($imgPath, $x, $y+$containerHeight-$height, $width, $height);
+            $this->Image($localPath, $x, $y+$containerHeight-$height, $width, $height);
         }
         else if ($alignment === 'C')
         {
-            $this->Image($imgPath, $x+($containerWidth-$width)/2, $y+($containerHeight-$height)/2, $width, $height);
+            $this->Image($localPath, $x+($containerWidth-$width)/2, $y+($containerHeight-$height)/2, $width, $height);
         }
         else
         {
-            $this->Image($imgPath, $x, $y, $width, $height);
+            $this->Image($localPath, $x, $y, $width, $height);
+        }
+
+        if ($localPath !== $imgPath) {
+            @unlink($localPath);
         }
     }
     
