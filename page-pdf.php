@@ -51,9 +51,13 @@ function pdf_localize_image($url){
     if(!in_array($ext, array('jpg','jpeg','png','gif')))
         $ext = 'jpg';
 
-    $tmpFile = wp_tempnam('pdf-img').'.'.$ext;
-    if(file_put_contents($tmpFile, $body) === false)
+    $base = tempnam(sys_get_temp_dir(), 'pdf-img');
+    $tmpFile = $base.'.'.$ext;
+    if(file_put_contents($tmpFile, $body) === false){
+        @unlink($base);
         return null;
+    }
+    @unlink($base);
 
     return $tmpFile;
 }
