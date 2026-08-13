@@ -39,13 +39,25 @@ function pdf_localize_image($url){
     if(!preg_match('#^https?://#i',$url))
         return $url;
 
+    static $cache = array();
+    if(array_key_exists($url, $cache))
+        return $cache[$url];
+
+    //same-host uploads can be read straight off disk, skipping the HTTP round-trip
+    $uploadDir = wp_get_upload_dir();
+    if(!empty($uploadDir['baseurl']) && stripos($url, $uploadDir['baseurl']) === 0){
+        $localFile = $uploadDir['basedir'].substr($url, strlen($uploadDir['baseurl']));
+        if(file_exists($localFile))
+            return $cache[$url] = $localFile;
+    }
+
     $response = wp_remote_get($url, array('timeout' => 20));
     if(is_wp_error($response) || wp_remote_retrieve_response_code($response) !== 200)
-        return null;
+        return $cache[$url] = null;
 
     $body = wp_remote_retrieve_body($response);
     if(empty($body))
-        return null;
+        return $cache[$url] = null;
 
     $ext = strtolower(pathinfo(parse_url($url, PHP_URL_PATH), PATHINFO_EXTENSION));
     if(!in_array($ext, array('jpg','jpeg','png','gif')))
@@ -55,11 +67,15 @@ function pdf_localize_image($url){
     $tmpFile = $base.'.'.$ext;
     if(file_put_contents($tmpFile, $body) === false){
         @unlink($base);
-        return null;
+        return $cache[$url] = null;
     }
     @unlink($base);
 
-    return $tmpFile;
+    register_shutdown_function(function() use ($tmpFile){
+        @unlink($tmpFile);
+    });
+
+    return $cache[$url] = $tmpFile;
 }
 
 
@@ -250,9 +266,6 @@ function PutLink($URL, $txt)
 
         $size = $this->resizeToFit($localPath, $containerWidth, $containerHeight);
         if ($size === null) {
-            if ($localPath !== $imgPath) {
-                @unlink($localPath);
-            }
             return;
         }
         list($width, $height) = $size;
@@ -272,10 +285,6 @@ function PutLink($URL, $txt)
         else
         {
             $this->Image($localPath, $x, $y, $width, $height);
-        }
-
-        if ($localPath !== $imgPath) {
-            @unlink($localPath);
         }
     }
     
