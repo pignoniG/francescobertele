@@ -447,7 +447,11 @@ $filecounter=0;
  
 
 
-   $tumbnail_url = fly_get_attachment_image_src( $images[rand(0,count($images))],'ultra-hd-for-pdf' )['src'];
+   $tumbnail_url = false;
+   if ( !empty($images) ) {
+       $tumbnail_src = fly_get_attachment_image_src( $images[rand(0,count($images)-1)],'ultra-hd-for-pdf' );
+       $tumbnail_url = $tumbnail_src ? $tumbnail_src['src'] : false;
+   }
 
 
    if ($tumbnail_url) {
