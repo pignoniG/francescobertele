@@ -596,6 +596,18 @@ jQuery('body').imagesLoaded().progress( function() {
 
 });
 
+// Re-layout the grid whenever an individual image finishes loading, so lazy-loaded
+// images (e.g. swapped in later by a caching/lazy-load plugin) still trigger a reflow.
+// 'load' doesn't bubble, so this listener must use the capture phase.
+var ouvreGridEl = document.querySelector('.ouvre-grid');
+if ( ouvreGridEl ) {
+  ouvreGridEl.addEventListener('load', function(e) {
+    if (e.target.tagName === 'IMG') {
+      jQuery('.ouvre-grid').isotope('layout');
+    }
+  }, true);
+}
+
 
 $(window).resize(function() {
    ceckRes();

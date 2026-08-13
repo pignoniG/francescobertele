@@ -66,10 +66,10 @@ foreach ($filter_items as $filter_item) {
 	</div>
 
 
-	<?php 
+	<?php
 	if( has_post_thumbnail()){
-		$tumbnail_url = fly_get_attachment_image_src( get_post_thumbnail_id(),'hd-for-interface' )['src'];
-		echo '<img src="'. $tumbnail_url.'">';
+		$fly_image = fly_get_attachment_image_src( get_post_thumbnail_id(),'hd-for-interface' );
+		echo '<img src="'. esc_url( $fly_image['src'] ) .'" width="'. esc_attr( $fly_image['width'] ) .'" height="'. esc_attr( $fly_image['height'] ) .'" loading="lazy">';
 	}
 	?>
 
