@@ -78,10 +78,12 @@
 
 			       			// Load sub field value.
 			        		$featured_post = get_sub_field('project_related');
+			        		if ( $featured_post ) :
 			        		$permalink = get_permalink( $featured_post->ID );
         					$title = get_the_title( $featured_post->ID );
         					?><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
-			   		<?php endwhile;
+			   		<?php endif;
+			   		endwhile;
 
 			   		}?>
 
@@ -129,10 +131,11 @@
 					?> <br>../<?php echo  wpm_translate_string( "[:en]Links[:it]Risorse[:]", $language = '' ); ?>: <?php
 		    			// Loop through rows.
 		    			while( have_rows('project_links') ) : the_row();
-		    				if (!empty(get_sub_field('project_link'))) {
+		    				$project_link = get_sub_field('project_link');
+		    				if (!empty($project_link)) {
 		    					// code...
-		    				
-						?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_link')['url']; ?>"><?php echo get_sub_field ('project_link')['title']; ?></a> <?php
+
+						?><a target="_blank" class="projects-link" href="<?php echo $project_link['url']; ?>"><?php echo $project_link['title']; ?></a> <?php
 						}
 		    			endwhile;
 					?>  
@@ -141,8 +144,11 @@
 					?> <br>../<?php echo  wpm_translate_string( "[:en]Files[:it]Documenti[:]", $language = '' ); ?>: <?php
 		    			// Loop through rows.
 		    			while( have_rows('project_files') ) : the_row();
-		    				?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_pdf')['url']; ?>"><?php echo get_sub_field ('project_pdf')['filename']; ?></a> <?php
-		    			endwhile;?>  
+		    				$project_pdf = get_sub_field('project_pdf');
+		    				if ( $project_pdf ) :
+		    				?><a target="_blank" class="projects-link" href="<?php echo $project_pdf['url']; ?>"><?php echo $project_pdf['filename']; ?></a> <?php
+		    				endif;
+		    			endwhile;?>
 				<?php endif ?> 
 
 		    </p><?php endif;?>

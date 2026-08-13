@@ -104,7 +104,10 @@
 		    // Loop through rows.
 		    while( have_rows('project_pdfs') ) : the_row();
 
-		    	?><a target="_blank" class="description-links" href="<?php echo get_sub_field('project_pdf')['url']; ?>"><?php echo (get_sub_field('project_pdf')['filename']); ?></a> <?php
+		    	$project_pdf = get_sub_field('project_pdf');
+		    	if ( $project_pdf ) :
+		    	?><a target="_blank" class="description-links" href="<?php echo $project_pdf['url']; ?>"><?php echo $project_pdf['filename']; ?></a> <?php
+		    	endif;
 
 		    endwhile;
 			?>  <?php 
@@ -117,7 +120,10 @@
 		    // Loop through rows.
 		    while( have_rows('project_images') ) : the_row();
 
-		    	?><a target="_blank" class="description-links" href="<?php echo get_sub_field('project_image')['url']; ?>"><?php echo (get_sub_field('project_image')['title']); ?></a> <?php
+		    	$project_image = get_sub_field('project_image');
+		    	if ( $project_image ) :
+		    	?><a target="_blank" class="description-links" href="<?php echo $project_image['url']; ?>"><?php echo $project_image['title']; ?></a> <?php
+		    	endif;
 
 		    endwhile;
 			?>  <?php 
@@ -129,7 +135,10 @@
 		    // Loop through rows.
 		    while( have_rows('project_videos') ) : the_row();
 
-		    	?><a target="_blank" class="description-links" href="<?php echo get_sub_field('project_video')['url']; ?>"><?php echo get_sub_field('project_video')['title']; ?></a> <?php
+		    	$project_video = get_sub_field('project_video');
+		    	if ( $project_video ) :
+		    	?><a target="_blank" class="description-links" href="<?php echo $project_video['url']; ?>"><?php echo $project_video['title']; ?></a> <?php
+		    	endif;
 
 		    endwhile;
 			?>  <?php 

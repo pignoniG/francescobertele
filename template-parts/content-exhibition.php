@@ -77,7 +77,6 @@
          	while ( have_rows('project_edition') ) : the_row();
          		$bib_id = get_sub_field('project_biblio');
 
-         		echo $bib_link;
          		$bib_link =   "./ask/#bibliography?".myUrlEncode (filter_var($bib_id, FILTER_SANITIZE_URL)) ;
          		$bib_isbn = "isbn: ".get_field('project_isbn',$bib_id);
          		$bib_date = get_field('project_date',$bib_id);
