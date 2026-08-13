@@ -226,7 +226,8 @@
 		    // Loop through rows.
 		    while( have_rows('project_other_links') ) : the_row();
 
-		    	?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_other_link')['url']; ?>"><?php echo (get_sub_field('project_other_link')['title']); ?></a> <?php
+		    	<?php $project_other_link = get_sub_field('project_other_link'); ?>
+		    	<a target="_blank" class="projects-link" href="<?php echo is_array($project_other_link) ? $project_other_link['url'] : $project_other_link; ?>"><?php echo is_array($project_other_link) ? $project_other_link['title'] : $project_other_link; ?></a> <?php
 
 		    endwhile;
 			?>  <?php 
@@ -238,7 +239,8 @@
 		    // Loop through rows.
 		    while( have_rows('project_images') ) : the_row();
 
-		    	?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_image')['url']; ?>"><?php echo (get_sub_field('project_image')['title']); ?></a> <?php
+		    	<?php $project_image = get_sub_field('project_image'); ?>
+		    	<a target="_blank" class="projects-link" href="<?php echo is_array($project_image) ? $project_image['url'] : $project_image; ?>"><?php echo is_array($project_image) ? $project_image['title'] : $project_image; ?></a> <?php
 
 		    endwhile;
 			?>  <?php 
@@ -250,7 +252,8 @@
 		    // Loop through rows.
 		    while( have_rows('project_videos') ) : the_row();
 
-		    ?><a target="_blank" class="projects-link" href="<?php echo get_sub_field('project_video')['url']; ?>"><?php echo get_sub_field('project_video')['title']; ?></a> <?php
+		    <?php $project_video = get_sub_field('project_video'); ?>
+		    <a target="_blank" class="projects-link" href="<?php echo is_array($project_video) ? $project_video['url'] : $project_video; ?>"><?php echo is_array($project_video) ? $project_video['title'] : $project_video; ?></a> <?php
 
 		    endwhile;
 			?>  <?php 
