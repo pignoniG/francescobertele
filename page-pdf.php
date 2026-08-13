@@ -382,7 +382,7 @@ function Header()
     $project_title = str_replace("&#039;","'",$project_title);
     
     //$project_title = str_replace("&#8217;","’",$project_title);
-    $project_title = iconv('utf-8', 'cp1252', $project_title);
+    $project_title = iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', $project_title);
 
 	//$project_title =htmlspecialchars_decode($project_title);
     if (!$this->skipHeader) {
@@ -480,9 +480,9 @@ $pdf->WriteHTML($text);
     
 
             $text=  get_field('portfolio_biography',190);
-            //$text=  iconv('utf-8', 'cp1252', $text);
+            //$text=  iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', $text);
 
-            $text = iconv('utf-8', 'cp1252', $text);
+            $text = iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', $text);
             $text = str_replace("&#8217;","'",$text);
             $text = str_replace("&#038;","&",$text);
          
@@ -563,7 +563,7 @@ foreach ($projects as $project_id) {
 		endif;
 
 		if( get_field('project_corpus',$project_id) ):
-			$pdf->Write(5,"\nCORPUS: ".iconv('utf-8', 'cp1252', implode(", ",get_field('project_corpus',$project_id))));
+			$pdf->Write(5,"\nCORPUS: ".iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', implode(", ",get_field('project_corpus',$project_id))));
             $pdf->Write(5,"\n");
        
             $pdf->SetFont('','U');
@@ -583,7 +583,7 @@ foreach ($projects as $project_id) {
 			    $string = $string."#".get_sub_field('project_keyword')." ";
 			       
 			endwhile;
-			$pdf->Write(5,"\n\n".iconv('utf-8', 'cp1252', $string));
+			$pdf->Write(5,"\n\n".iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', $string));
 		endif;
 	
 			$pdf->Write(5,"\n\n".wpm_translate_string( "[:en]CULTURAL DEFINITION[:it]DEFINIZIONE CULTURALE[:]", $language = '' ).":");
@@ -591,16 +591,16 @@ foreach ($projects as $project_id) {
 	
 	
 		if( get_field('project_edition',$project_id) ):
-			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Edition[:it]Edizione[:]", $language = '' ).": ".iconv('utf-8', 'cp1252', get_field('project_edition',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Edition[:it]Edizione[:]", $language = '' ).": ".iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', get_field('project_edition',$project_id)));
 		endif;
 	
 		if( get_field('project_sitetimes',$project_id) ):
-			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Site/times[:it]Siti/date[:]", $language = '' ).": ".iconv('utf-8', 'cp1252', get_field('project_sitetimes',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Site/times[:it]Siti/date[:]", $language = '' ).": ".iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', get_field('project_sitetimes',$project_id)));
 		endif;
 	
 		if( get_field('project_co-authors',$project_id) ):
 			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Co-authors[:it]Coautori[:]", $language = '' ).": ");
-			$pdf->WriteHTML(iconv('utf-8', 'cp1252', get_field('project_co-authors',$project_id)));
+			$pdf->WriteHTML(iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', get_field('project_co-authors',$project_id)));
 		endif;
 	
 		$pdf->Write(5,"\n\n".wpm_translate_string( "[:en]TECHNICAL DATA[:it]DATI TECNICI[:]", $language = '' ).":");
@@ -613,30 +613,30 @@ foreach ($projects as $project_id) {
 			foreach( get_field('project_object_type',$project_id) as $type_i ): 
 				$string =$string.$type_i." ";
 			endforeach;
-				$pdf->Write(5,"\n".iconv('utf-8', 'cp1252', mytranslate($string)));
+				$pdf->Write(5,"\n".iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', mytranslate($string)));
 		endif;
 	
 		if( get_field('project_matter_technique',$project_id) ):
 
 			
-			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Matter and technique[:it]Materiali e tecnica[:]", $language = '' ).": ".iconv('utf-8', 'cp1252',get_field('project_matter_technique',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Matter and technique[:it]Materiali e tecnica[:]", $language = '' ).": ".iconv('utf-8', 'cp1252//TRANSLIT//IGNORE',get_field('project_matter_technique',$project_id)));
 		endif;
 	
 		if( get_field('project_measures_weight',$project_id) ):
-			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Weight[:it]Peso[:]", $language = '' ).": ".iconv('utf-8', 'cp1252', get_field('project_measures_weight',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Weight[:it]Peso[:]", $language = '' ).": ".iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', get_field('project_measures_weight',$project_id)));
 		endif;
 	
 		if( get_field('project_measures',$project_id) ):
-			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Measures[:it]Misure[:]", $language = '' ).": ".iconv('utf-8', 'cp1252', get_field('project_measures',$project_id)));
+			$pdf->Write(5,"\n../".wpm_translate_string( "[:en]Measures[:it]Misure[:]", $language = '' ).": ".iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', get_field('project_measures',$project_id)));
 		endif;
 	
 		if( get_field('project_description',$project_id) ):
 			$pdf->Write(5,"\n\n".wpm_translate_string( "[:en]DESCRIPTION[:it]DESCRIZIONE[:]", $language = '' ).": \n");
 			
 			$text=  get_field('project_description',$project_id);
-            //$text=  iconv('utf-8', 'cp1252', $text);
+            //$text=  iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', $text);
 
-            $text = iconv('utf-8', 'cp1252', $text);
+            $text = iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', $text);
 
             // $text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
 
@@ -695,9 +695,9 @@ else{
             
 
             $text=  get_field('portfolio_cv',190);
-            //$text=  iconv('utf-8', 'cp1252', $text);
+            //$text=  iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', $text);
 
-            $text = iconv('utf-8', 'cp1252', $text);
+            $text = iconv('utf-8', 'cp1252//TRANSLIT//IGNORE', $text);
 
 
             //$text =mb_convert_encoding($text, "HTML-ENTITIES", "ISO-8859-1");
