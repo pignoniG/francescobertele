@@ -5,7 +5,6 @@ require('fpdf/fpdf.php');
 $project_title;
 $project_id = null;
 
-
 //function hex2dec
 //returns an associative array (keys: R,G,B) from
 //a hex html code (e.g. #3FE5AA)
@@ -372,9 +371,13 @@ function Footer()
 $projects=array(44,45);
 $projects=$_REQUEST['project'];
 $projects= preg_split('/,/', $projects); 
-$pdf->skipHeader = true;
 $pdf = new PDF();
+$pdf->skipHeader = true;
 $pdf->AddFont('foundersmono','','founders-grotesk-mono-web-regular.php');
+$pdf->AddFont('foundersmono','B','founders-grotesk-mono-web-regular.php');
+$pdf->AddFont('foundersmono','I','founders-grotesk-mono-web-regular.php');
+$pdf->AddFont('foundersmono','BI','founders-grotesk-mono-web-regular.php');
+
 
 $file_title = date("m.d.y"); 
 $filecounter=0;  
