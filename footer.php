@@ -117,8 +117,8 @@
              <a target="_blank" style="margin-left: 20px; bottom: 2px; position: relative;" href="https://signal.me/#eu/nwnL9X_qTywvDlEa71imrToaV-xT0Ptdoawyi1ZI5ORtlK5Hwx9IhojW2SX9qunD"> <i class="fa-brands fa-signal-messenger"></i></a>
 
             <br>
-			<p f' archive & studio is in Canzo (Italy) </p>
-			<br>
+			<p class="_BodyText" style="text-align:center;"> f' archive & studio is in Canzo (Italy) </p>
+			
             <p class="_BodyText" style="text-align:center;">francesco bertelé 
              <?php echo  wpm_translate_string( "[:en]official website [:it]sito web ufficiale [:]", $language = '' ); ?>
             | P.IVA: 03687100135 | <?php echo date("Y"); ?></p>
