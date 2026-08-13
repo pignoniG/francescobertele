@@ -213,7 +213,11 @@ function PutLink($URL, $txt)
      */
     public function imageUniformToFill(string $imgPath, int $x = 0, int $y = 0, int $containerWidth = 210, int $containerHeight = 297, string $alignment = 'C')
     {
-        list($width, $height) = $this->resizeToFit($imgPath, $containerWidth, $containerHeight);
+        $size = $this->resizeToFit($imgPath, $containerWidth, $containerHeight);
+        if ($size === null) {
+            return;
+        }
+        list($width, $height) = $size;
 
         if ($alignment === 'R')
         {
@@ -263,9 +267,16 @@ function PutLink($URL, $txt)
      * @param integer $maxHeight en mm
      * @return int[]
      */
-    protected function resizeToFit(string $imgPath, int $maxWidth = 210, int $maxHeight = 297) : array
+    protected function resizeToFit(string $imgPath, int $maxWidth = 210, int $maxHeight = 297) : ?array
     {
-        list($width, $height) = getimagesize($imgPath);
+        $imageSize = @getimagesize($imgPath);
+        if ($imageSize === false) {
+            return null;
+        }
+        list($width, $height) = $imageSize;
+        if (!$width || !$height) {
+            return null;
+        }
         $widthScale = $this->mmtopixels($maxWidth) / $width;
         $heightScale = $this->mmToPixels($maxHeight) / $height;
         $scale = min($widthScale, $heightScale);
