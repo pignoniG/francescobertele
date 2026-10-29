@@ -66,7 +66,7 @@
         <div class="sidenav-description">
 
             <a target="_blank" href="https://www.instagram.com/franz_sella/"> <i class="fab fa-instagram"></i></a>
-            <a target="_blank" href="https://it.pinterest.com/franzsella/f-archive/"> <i class="fab fa-pinterest"></i></a>
+            <a target="_blank" href="https://it.pinterest.com/franzsella/"> <i class="fab fa-pinterest"></i></a>
            <!--  <a target="_blank" href="https://www.youtube.com/channel/UCwK35sNDRUZGncY8VFtbLWw/videos?view_as=subscriber"> <i class="fab fa-youtube-square"></i></a>
             <a target="_blank" href="https://vimeo.com/franzsella"> <i class="fab fa-vimeo-v"></i></a> -->
             <a target="_blank" href="https://t.me/f_nius"> <i class="fab fa-telegram"></i></a>
