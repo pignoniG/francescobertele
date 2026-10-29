@@ -40,7 +40,6 @@
         <span class="hidden-oeuvre"><?php echo  wpm_translate_string( "[:en]ARCHIVE[:it]ARCHIVIO[:]", $language = '' ); ?></span>
         <a class="braketed ask" href="<?php echo wpm_translate_url( get_page_link(190), $language = '' );?>">sK</a>
         <span class="hidden-ask">ASK</span>
-        <!-- <a class="braketed mad" href="<?php echo wpm_translate_url( get_page_link(), $language = '' );?>">AD</a> -->
 
 
     </span>
